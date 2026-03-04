@@ -147,8 +147,8 @@ class MLCareerPredictor:
         features_df = pd.DataFrame([features_dict])[self.feature_columns]
         
         # Predict
-        placement_prob = self.placement_model.predict_proba(features_df)[0][1]
-        will_be_placed = self.placement_model.predict(features_df)[0]
+        placement_prob = float(self.placement_model.predict_proba(features_df)[0][1])
+        will_be_placed = bool(self.placement_model.predict(features_df)[0])
         
         # Determine confidence level
         if placement_prob >= 0.8 or placement_prob <= 0.2:
@@ -167,7 +167,7 @@ class MLCareerPredictor:
             recommendation = "Build your profile. Add skills, certifications, and internships."
         
         return {
-            'will_be_placed': bool(will_be_placed),
+            'will_be_placed': will_be_placed,
             'placement_probability': round(placement_prob * 100, 2),
             'confidence_level': confidence_level,
             'recommendation': recommendation,
@@ -204,7 +204,7 @@ class MLCareerPredictor:
         features_df = pd.DataFrame([features_dict])[self.feature_columns]
         
         # Predict salary
-        predicted_salary = self.salary_model.predict(features_df)[0]
+        predicted_salary = float(self.salary_model.predict(features_df)[0])
         
         # Calculate range (±15% for uncertainty)
         salary_range_min = predicted_salary * 0.85

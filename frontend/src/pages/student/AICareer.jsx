@@ -1,24 +1,33 @@
-﻿import { useState, useEffect } from 'react';
+﻿import { useState, useEffect, useRef } from 'react';
 import { useAuth } from '../../context/AuthContext';
 import aiApi from '../../api/ai.api';
 import { Loader, ErrorAlert } from '../../components/shared';
-import { FiTarget, FiTrendingUp, FiUsers, FiAward, FiBriefcase, FiBarChart2, FiCpu, FiAlertCircle } from 'react-icons/fi';
+import { FiTarget, FiTrendingUp, FiUsers, FiAward, FiBriefcase, FiBarChart2, FiCpu, FiAlertCircle, FiRefreshCw } from 'react-icons/fi';
 
 const AICareer = () => {
-  const { user } = useAuth();
+  const { user, profileVersion } = useAuth();
   const [tfidfData, setTfidfData] = useState(null);
   const [mlData, setMlData] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [refreshing, setRefreshing] = useState(false);
   const [error, setError] = useState('');
   const [activeTab, setActiveTab] = useState('tfidf'); // 'tfidf' or 'ml'
+  const isFirstRender = useRef(true);
 
   useEffect(() => {
-    fetchAIData();
-  }, []);
+    if (isFirstRender.current) {
+      isFirstRender.current = false;
+      fetchAIData(false);
+    } else {
+      // Profile was updated — silently re-fetch without full-page loader
+      fetchAIData(true);
+    }
+  }, [profileVersion]);
 
-  const fetchAIData = async () => {
+  const fetchAIData = async (isRefresh = false) => {
     try {
-      setLoading(true);
+      if (isRefresh) setRefreshing(true);
+      else setLoading(true);
       setError('');
 
       // Fetch both models in parallel
@@ -45,6 +54,7 @@ const AICareer = () => {
       setError('Failed to load AI recommendations');
     } finally {
       setLoading(false);
+      setRefreshing(false);
     }
   };
 
@@ -63,9 +73,20 @@ const AICareer = () => {
     <div className="space-y-6">
       {/* Header */}
       <div className="bg-gradient-to-r from-[#A8422F] via-[#C4503A] to-[#E77E69] rounded-xl p-6 text-white">
-        <div className="flex items-center gap-3 mb-2">
-          <FiTarget className="w-6 h-6" />
-          <h1 className="text-2xl font-bold">AI Career Recommendations</h1>
+        <div className="flex items-center justify-between">
+          <div className="flex items-center gap-3 mb-2">
+            <FiTarget className="w-6 h-6" />
+            <h1 className="text-2xl font-bold">AI Career Recommendations</h1>
+          </div>
+          <button
+            onClick={() => fetchAIData(true)}
+            disabled={refreshing}
+            title="Refresh recommendations"
+            className="flex items-center gap-1.5 bg-white/20 hover:bg-white/30 text-white text-sm px-3 py-1.5 rounded-lg transition-colors disabled:opacity-60"
+          >
+            <FiRefreshCw className={`w-4 h-4 ${refreshing ? 'animate-spin' : ''}`} />
+            {refreshing ? 'Refreshing…' : 'Refresh'}
+          </button>
         </div>
         <p className="text-rose-100">
           Personalized career paths powered by TF-IDF similarity and ML prediction models
@@ -280,7 +301,7 @@ const AICareer = () => {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <StatCard
                   title="Placement Probability"
-                  value={`${ml.placement_prediction?.placement_probability || 0}%`}
+                  value={`${parseFloat(ml.placement_prediction?.placement_probability || 0).toFixed(2)}%`}
                   icon={FiTarget}
                   color="green"
                 />
@@ -311,7 +332,7 @@ const AICareer = () => {
                       <div className="flex items-center justify-between mb-1">
                         <span className="text-sm text-gray-600">Placement Probability</span>
                         <span className="font-bold text-[#E77E69]">
-                          {ml.placement_prediction?.placement_probability}%
+                          {parseFloat(ml.placement_prediction?.placement_probability || 0).toFixed(2)}%
                         </span>
                       </div>
                       <div className="w-full bg-gray-200 rounded-full h-3">
@@ -323,7 +344,7 @@ const AICareer = () => {
                               ? 'bg-yellow-500'
                               : 'bg-red-500'
                           }`}
-                          style={{ width: `${ml.placement_prediction?.placement_probability || 0}%` }}
+                          style={{ width: `${Math.min(ml.placement_prediction?.placement_probability || 0, 100)}%` }}
                         />
                       </div>
                     </div>

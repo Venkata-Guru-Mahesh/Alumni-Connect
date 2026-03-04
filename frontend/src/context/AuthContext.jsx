@@ -18,6 +18,7 @@ export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [profile, setProfile] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [profileVersion, setProfileVersion] = useState(0);
   const navigate = useNavigate();
 
   // Initialize auth state from stored token
@@ -240,6 +241,7 @@ export const AuthProvider = ({ children }) => {
   const updateProfile = useCallback((updatedProfile) => {
     setProfile(updatedProfile);
     localStorage.setItem('profile', JSON.stringify(updatedProfile));
+    setProfileVersion(v => v + 1);
     
     // Also update user avatar if profile picture changed
     if (updatedProfile?.profilePicture || updatedProfile?.profileImage) {
@@ -281,6 +283,7 @@ export const AuthProvider = ({ children }) => {
     user,
     profile,
     loading,
+    profileVersion,
     isAuthenticated: !!user,
     login,
     register,
