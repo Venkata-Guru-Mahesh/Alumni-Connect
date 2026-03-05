@@ -566,10 +566,10 @@ class MLCareerAnalysisView(APIView):
         return success_response(data={
             **analysis,
             'models_used': {
-                'placement': 'XGBoost Classifier',
-                'salary': 'LightGBM Regressor'
+                'placement': 'Weighted Feature Scoring',
+                'salary': 'Profile-Based Estimation'
             },
-            'disclaimer': 'Analysis based on synthetic training data. Use as guidance, not guarantee.'
+            'disclaimer': 'Placement probability and salary estimates are based on your actual profile data. Use as guidance, not a guarantee.'
         })
 
 

@@ -68,16 +68,16 @@ axiosInstance.interceptors.response.use(
           break;
         case 403:
           // Forbidden - redirect to unauthorized page
-          console.error('Access forbidden:', response.data?.message);
+          console.error('Access forbidden:', response.data?.error?.message || response.data?.message);
           break;
         case 404:
-          console.error('Resource not found:', response.data?.message);
+          console.error('Resource not found:', response.data?.error?.message || response.data?.message);
           break;
         case 500:
-          console.error('Server error:', response.data?.message);
+          console.error('Server error:', response.data?.error?.message || response.data?.message);
           break;
         default:
-          console.error('API error:', response.data?.message);
+          console.error('API error:', response.data?.error?.message || response.data?.message);
       }
     } else if (error.request) {
       // Network error

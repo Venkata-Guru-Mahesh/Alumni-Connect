@@ -192,6 +192,7 @@ class AlumniProfile(models.Model):
     
     # Profile media
     profile_picture = models.URLField(blank=True, null=True)
+    resume = models.URLField(blank=True, null=True)
     
     # Current employment
     current_company = models.CharField(max_length=200, blank=True, null=True)

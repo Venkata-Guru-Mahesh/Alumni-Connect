@@ -394,7 +394,9 @@ const ManageStudents = () => {
                 <p className="text-xs text-gray-400 mb-2 font-medium uppercase tracking-wide">Skills</p>
                 <div className="flex flex-wrap gap-1.5">
                   {selectedStudent.skills.map((skill, i) => (
-                    <span key={i} className="px-2.5 py-1 bg-primary-50 text-primary-700 text-xs font-medium rounded-full border border-primary-200">{skill}</span>
+                    <span key={i} className="px-2.5 py-1 bg-primary-50 text-primary-700 text-xs font-medium rounded-full border border-primary-200">
+                      {typeof skill === 'object' ? (skill.name || JSON.stringify(skill)) : skill}
+                    </span>
                   ))}
                 </div>
               </div>

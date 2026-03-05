@@ -101,10 +101,24 @@ class CareerRecommendationEngine:
         
         recommendations = []
         alumni_list = list(alumni_profiles)
+        student_skills_lower = set(s.lower() for s in self._extract_skill_names(student.skills or []))
         
         for idx in top_indices:
             if similarities[idx] > 0:  # Only include if there's some similarity
                 alumni = alumni_list[idx]
+
+                # Skill-overlap based score (more meaningful than raw TF-IDF cosine %)
+                # 60% weight: % of mentor's skills the student already has
+                # 40% weight: % of student's skills the mentor can guide on
+                alumni_skills_lower = set(s.lower() for s in self._extract_skill_names(alumni.skills or []))
+                if alumni_skills_lower and student_skills_lower:
+                    overlap = len(student_skills_lower & alumni_skills_lower)
+                    pct_mentor = overlap / len(alumni_skills_lower)
+                    pct_student = overlap / len(student_skills_lower)
+                    similarity_score = round((pct_mentor * 0.6 + pct_student * 0.4) * 100, 1)
+                else:
+                    similarity_score = round(float(similarities[idx]) * 100, 1)
+
                 recommendations.append({
                     'alumni_id': alumni.user.id,
                     'name': alumni.user.full_name,
@@ -114,7 +128,7 @@ class CareerRecommendationEngine:
                     'industry': alumni.industry,
                     'skills': alumni.skills,
                     'expertise_areas': alumni.expertise_areas,
-                    'similarity_score': round(float(similarities[idx]) * 100, 2)
+                    'similarity_score': similarity_score
                 })
         
         return recommendations
@@ -157,10 +171,20 @@ class CareerRecommendationEngine:
         
         recommendations = []
         job_list = list(jobs)
-        
+        student_skills_lower = set(s.lower() for s in self._extract_skill_names(student.skills or []))
+
         for idx in top_indices:
             if similarities[idx] > 0:
                 job = job_list[idx]
+
+                # Skill overlap %: how many of the job's required skills the student has
+                required_lower = set(s.lower() for s in (job.skills_required or []))
+                if required_lower:
+                    matched = len(student_skills_lower & required_lower)
+                    match_score = round(matched / len(required_lower) * 100, 1)
+                else:
+                    match_score = round(float(similarities[idx]) * 100, 1)
+
                 recommendations.append({
                     'job_id': job.id,
                     'title': job.title,
@@ -170,7 +194,7 @@ class CareerRecommendationEngine:
                     'skills_required': job.skills_required,
                     'salary_min': str(job.salary_min) if job.salary_min else None,
                     'salary_max': str(job.salary_max) if job.salary_max else None,
-                    'match_score': round(float(similarities[idx]) * 100, 2)
+                    'match_score': match_score
                 })
         
         return recommendations
@@ -255,40 +279,45 @@ class CareerRecommendationEngine:
         except StudentProfile.DoesNotExist:
             return {}
         
-        student_skills = set(
-            s.lower() for s in self._extract_skill_names(student.skills)
-        )
+        student_skill_names = self._extract_skill_names(student.skills)
+        student_skills_lower = set(s.lower() for s in student_skill_names)
         
-        # Get in-demand skills from jobs
+        # Build a lookup: lowercase name -> {display_name, count}
+        # to preserve original capitalization from job postings
+        job_skills = {}  # lowercase -> {'name': original_case, 'count': int}
         jobs = Job.objects.filter(status='open')
-        
-        job_skills = {}
         for job in jobs:
             for skill in (job.skills_required or []):
-                skill_lower = skill.lower()
-                job_skills[skill_lower] = job_skills.get(skill_lower, 0) + 1
+                key = skill.lower()
+                if key not in job_skills:
+                    job_skills[key] = {'name': skill, 'count': 0}
+                job_skills[key]['count'] += 1
         
         # Sort by demand
         sorted_skills = sorted(
             job_skills.items(),
-            key=lambda x: x[1],
+            key=lambda x: x[1]['count'],
             reverse=True
         )
         
-        # Skills student has
+        # Skills student already has (in-demand, original case)
         matching_skills = [
-            s for s, _ in sorted_skills if s in student_skills
+            job_skills[s]['name']
+            for s, _ in sorted_skills if s in student_skills_lower
         ][:10]
         
-        # Skills student is missing (in-demand)
+        # Skills student is missing (in-demand, original case)
         missing_skills = [
-            {'skill': s, 'demand_count': c}
-            for s, c in sorted_skills
-            if s not in student_skills
+            {'skill': job_skills[s]['name'], 'demand_count': job_skills[s]['count']}
+            for s, _ in sorted_skills
+            if s not in student_skills_lower
         ][:10]
+        
+        # Current skills as plain name strings for display
+        current_skill_names = student_skill_names
         
         return {
-            'current_skills': list(student.skills or []),
+            'current_skills': current_skill_names,
             'matching_in_demand_skills': matching_skills,
             'recommended_skills_to_learn': missing_skills,
             'skill_coverage': (

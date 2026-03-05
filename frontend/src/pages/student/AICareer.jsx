@@ -117,7 +117,7 @@ const AICareer = () => {
           }`}
         >
           <FiCpu className="inline mr-1.5" />
-          ML Model (XGBoost)
+          ML Model (Profile Score)
         </button>
       </div>
 
@@ -155,10 +155,37 @@ const AICareer = () => {
           {/* Skill Gap Analysis */}
           {tfidf.skill_analysis && (
             <div className="bg-white rounded-xl shadow-sm border p-6">
-              <h2 className="text-lg font-semibold text-gray-900 mb-4">Skill Gap Analysis</h2>
+              <div className="flex items-start justify-between mb-4">
+                <div>
+                  <h2 className="text-lg font-semibold text-gray-900">Skill Gap Analysis</h2>
+                  <p className="text-xs text-gray-400 mt-0.5">Based on your profile skills vs. open job market demand</p>
+                </div>
+                {(tfidf.skill_analysis.current_skills || []).length > 0 && (
+                  <span className="text-xs bg-gray-100 text-gray-600 px-2.5 py-1 rounded-full font-medium">
+                    {tfidf.skill_analysis.current_skills.length} skills in profile
+                  </span>
+                )}
+              </div>
+
+              {/* Current skills row */}
+              {(tfidf.skill_analysis.current_skills || []).length > 0 && (
+                <div className="mb-5">
+                  <h3 className="text-sm font-medium text-gray-600 mb-1">Your Profile Skills</h3>
+                  <p className="text-xs text-gray-400 mb-2">All skills from your profile — used as input to both AI models</p>
+                  <div className="flex flex-wrap gap-1.5">
+                    {(tfidf.skill_analysis.current_skills || []).map((skill, i) => (
+                      <span key={i} className="px-2.5 py-0.5 bg-gray-100 text-gray-700 rounded-full text-xs font-medium">
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              )}
+
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                  <h3 className="text-sm font-medium text-gray-600 mb-3">Your Skills (In Demand)</h3>
+                  <h3 className="text-sm font-medium text-gray-600 mb-1">Matched In-Demand Skills</h3>
+                  <p className="text-xs text-gray-400 mb-2">Your skills that are actively required by open job postings</p>
                   <div className="flex flex-wrap gap-2">
                     {(tfidf.skill_analysis.matching_in_demand_skills || []).map((skill, i) => (
                       <span key={i} className="px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm">
@@ -166,18 +193,19 @@ const AICareer = () => {
                       </span>
                     ))}
                     {(tfidf.skill_analysis.matching_in_demand_skills || []).length === 0 && (
-                      <span className="text-gray-400 text-sm">Complete your profile to see matched skills</span>
+                      <span className="text-gray-400 text-sm">No overlap with current job postings</span>
                     )}
                   </div>
                 </div>
                 <div>
-                  <h3 className="text-sm font-medium text-gray-600 mb-3">Recommended to Learn</h3>
+                  <h3 className="text-sm font-medium text-gray-600 mb-1">Recommended to Learn</h3>
+                  <p className="text-xs text-gray-400 mb-2">High-demand skills missing from your profile</p>
                   <div className="space-y-2">
                     {(tfidf.skill_analysis.recommended_skills_to_learn || []).slice(0, 6).map((item, i) => (
                       <div key={i} className="flex items-center justify-between">
                         <span className="text-sm text-gray-800">{item.skill}</span>
                         <span className="text-xs text-gray-500 bg-gray-100 px-2 py-0.5 rounded">
-                          {item.demand_count} jobs require this
+                          {item.demand_count} job{item.demand_count !== 1 ? 's' : ''} require this
                         </span>
                       </div>
                     ))}
@@ -190,7 +218,10 @@ const AICareer = () => {
           {/* Recommended Mentors */}
           {tfidf.recommended_mentors?.length > 0 && (
             <div>
-              <h2 className="text-lg font-semibold text-gray-900 mb-4">Recommended Alumni Mentors</h2>
+              <div className="flex items-baseline gap-2 mb-4">
+                <h2 className="text-lg font-semibold text-gray-900">Recommended Alumni Mentors</h2>
+                <span className="text-xs text-gray-400">% = skill overlap with your profile</span>
+              </div>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 {tfidf.recommended_mentors.map((mentor, i) => (
                   <div key={i} className="bg-white rounded-xl shadow-sm border p-5 hover:shadow-md transition-shadow">
@@ -262,25 +293,36 @@ const AICareer = () => {
           {/* Job Recommendations */}
           {tfidf.recommended_jobs?.length > 0 && (
             <div>
-              <h2 className="text-lg font-semibold text-gray-900 mb-4">Job Recommendations</h2>
+              <div className="flex items-baseline gap-2 mb-4">
+                <h2 className="text-lg font-semibold text-gray-900">Job Recommendations</h2>
+                <span className="text-xs text-gray-400">% = matching required skills you have</span>
+              </div>
               <div className="space-y-3">
-                {tfidf.recommended_jobs.slice(0, 5).map((job, i) => (
-                  <div key={i} className="bg-white rounded-xl shadow-sm border p-4 flex items-center justify-between">
-                    <div>
-                      <h3 className="font-semibold text-gray-900">{job.title}</h3>
-                      <p className="text-sm text-gray-500">{job.company} - {job.location}</p>
-                      <div className="flex gap-1 mt-1">
-                        {(job.skills_required || []).slice(0, 3).map((s, j) => (
-                          <span key={j} className="text-xs bg-gray-100 text-gray-600 px-2 py-0.5 rounded">{s}</span>
-                        ))}
+                {tfidf.recommended_jobs.slice(0, 5).map((job, i) => {
+                  const reqCount = (job.skills_required || []).length;
+                  return (
+                    <div key={i} className="bg-white rounded-xl shadow-sm border p-4 flex items-center justify-between">
+                      <div>
+                        <h3 className="font-semibold text-gray-900">{job.title}</h3>
+                        <p className="text-sm text-gray-500">{job.company} - {job.location}</p>
+                        <div className="flex gap-1 mt-1">
+                          {(job.skills_required || []).slice(0, 4).map((s, j) => (
+                            <span key={j} className="text-xs bg-gray-100 text-gray-600 px-2 py-0.5 rounded">{s}</span>
+                          ))}
+                          {reqCount > 4 && (
+                            <span className="text-xs text-gray-400">+{reqCount - 4} more</span>
+                          )}
+                        </div>
+                      </div>
+                      <div className="text-right shrink-0 ml-4">
+                        <span className={`text-lg font-bold ${
+                          job.match_score >= 70 ? 'text-green-600' : job.match_score >= 40 ? 'text-[#E77E69]' : 'text-gray-500'
+                        }`}>{job.match_score}%</span>
+                        <p className="text-xs text-gray-500">skills match</p>
                       </div>
                     </div>
-                    <div className="text-right">
-                      <span className="text-lg font-bold text-[#E77E69]">{job.match_score}%</span>
-                      <p className="text-xs text-gray-500">match</p>
-                    </div>
-                  </div>
-                ))}
+                  );
+                })}
               </div>
             </div>
           )}

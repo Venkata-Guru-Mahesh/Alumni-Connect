@@ -129,8 +129,10 @@ export const AuthProvider = ({ children }) => {
         // Extract error code for special handling
         errorCode = errorData.error_code || null;
         
-        // Check for specific error fields
-        if (errorData.detail) {
+        // Check for specific error fields — backend format: { success: false, error: { message } }
+        if (errorData.error?.message) {
+          errorMessage = errorData.error.message;
+        } else if (errorData.detail) {
           errorMessage = Array.isArray(errorData.detail) ? errorData.detail[0] : errorData.detail;
         } else if (errorData.email) {
           errorMessage = Array.isArray(errorData.email) ? errorData.email[0] : errorData.email;
@@ -138,7 +140,7 @@ export const AuthProvider = ({ children }) => {
           errorMessage = Array.isArray(errorData.password) ? errorData.password[0] : errorData.password;
         } else if (errorData.message) {
           errorMessage = errorData.message;
-        } else if (errorData.error) {
+        } else if (typeof errorData.error === 'string') {
           errorMessage = errorData.error;
         }
       } else if (error.code === 'ERR_NETWORK') {

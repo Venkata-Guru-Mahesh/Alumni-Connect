@@ -114,6 +114,29 @@ const FileUpload = ({
     }
   };
 
+  const handleViewDocument = async () => {
+    try {
+      // Fetch the PDF through our backend proxy (bypasses Cloudinary ACL/referrer restrictions).
+      // We can't use window.open with a custom Authorization header, so we fetch as blob
+      // and create a temporary object URL that the browser can open directly.
+      const resp = await axiosInstance.get('/upload/document-proxy/', {
+        params: { url: preview },
+        responseType: 'blob',
+      });
+      const blob = new Blob([resp.data], { type: resp.headers?.['content-type'] || 'application/pdf' });
+      const objectUrl = URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.href = objectUrl;
+      link.target = '_blank';
+      link.rel = 'noopener noreferrer';
+      link.click();
+      setTimeout(() => URL.revokeObjectURL(objectUrl), 10000);
+    } catch {
+      // Fallback: try direct URL
+      window.open(preview, '_blank', 'noopener,noreferrer');
+    }
+  };
+
   const handleRemove = () => {
     setPreview(null);
     setUploadError('');
@@ -193,17 +216,17 @@ const FileUpload = ({
         {preview && showPreview && !uploading && (
           <div className="border border-gray-200 rounded-lg p-4 bg-white">
             <div className="flex items-start gap-3">
-              {/* Image Preview */}
-              {typeof preview === 'string' && (preview.startsWith('data:image') || preview.startsWith('http')) ? (
+              {/* Image Preview vs Document Preview */}
+              {typeof preview === 'string' && !preview.includes('/raw/upload/') && (preview.startsWith('data:image') || preview.match(/\.(jpg|jpeg|png|gif|webp)(\?|$)/i) || preview.startsWith('http')) && !preview.match(/\.(pdf|doc|docx)(\?|$)/i) ? (
                 <img
                   src={preview}
                   alt="Preview"
                   className="w-16 h-16 rounded object-cover flex-shrink-0"
                 />
               ) : (
-                /* File Info */
-                <div className="w-16 h-16 rounded bg-gray-100 flex items-center justify-center flex-shrink-0">
-                  <FiFile className="w-8 h-8 text-gray-600" />
+                /* Document / File Preview */
+                <div className="w-16 h-16 rounded bg-red-50 border border-red-200 flex items-center justify-center flex-shrink-0">
+                  <FiFile className="w-8 h-8 text-red-500" />
                 </div>
               )}
 
@@ -212,12 +235,26 @@ const FileUpload = ({
                 <div className="flex items-start justify-between gap-2">
                   <div className="flex-1 min-w-0">
                     <p className="text-sm font-medium text-gray-900 truncate">
-                      {typeof preview === 'string' ? 'Image uploaded' : preview?.name || 'File uploaded'}
+                      {typeof preview === 'string'
+                        ? preview.includes('/raw/upload/') || preview.match(/\.(pdf|doc|docx)(\?|$)/i)
+                          ? preview.split('/').pop().split('?')[0] || 'Document uploaded'
+                          : 'Image uploaded'
+                        : preview?.name || 'File uploaded'}
                     </p>
                     {typeof preview === 'object' && preview?.size && (
                       <p className="text-xs text-gray-500">
                         {formatFileSize(preview.size)}
                       </p>
+                    )}
+                    {/* View link for documents */}
+                    {typeof preview === 'string' && (preview.includes('/raw/upload/') || preview.match(/\.(pdf|doc|docx)(\?|$)/i)) && (
+                      <button
+                        type="button"
+                        onClick={handleViewDocument}
+                        className="text-xs text-primary-600 hover:underline mt-1 inline-block"
+                      >
+                        View / Download
+                      </button>
                     )}
                   </div>
 

@@ -1,7 +1,7 @@
 ﻿import { useState, useEffect } from 'react';
 import adminApi from '../../api/admin.api';
 import { UserTable, UserEditModal } from '../../components/admin';
-import { Loader, ErrorAlert, ConfirmModal, Pagination } from '../../components/shared';
+import { Loader, ErrorAlert, ConfirmModal } from '../../components/shared';
 import { FiUsers, FiUserCheck, FiUserX, FiShield } from 'react-icons/fi';
 
 const StatCard = ({ icon: Icon, label, value, colorClass, bgClass, borderClass }) => (
@@ -24,10 +24,6 @@ const ManageUsers = () => {
   const [deleteUser, setDeleteUser] = useState(null);
   const [toggleUser, setToggleUser] = useState(null);
   const [processing, setProcessing] = useState(false);
-  const [currentPage, setCurrentPage] = useState(1);
-
-  const itemsPerPage = 15;
-
   useEffect(() => {
     fetchUsers();
   }, []);
@@ -85,11 +81,6 @@ const ManageUsers = () => {
       setProcessing(false);
     }
   };
-
-  const paginatedUsers = users.slice(
-    (currentPage - 1) * itemsPerPage,
-    currentPage * itemsPerPage
-  );
 
   const activeCount = users.filter((u) => u.active !== false).length;
   const disabledCount = users.filter((u) => u.active === false).length;
@@ -156,22 +147,13 @@ const ManageUsers = () => {
           </div>
         ) : (
           <UserTable
-            users={paginatedUsers}
+            users={users}
             onEdit={(user) => setEditingUser(user)}
             onDelete={(user) => setDeleteUser(user)}
             onToggleStatus={(user) => setToggleUser(user)}
           />
         )}
       </div>
-
-      {/* Pagination */}
-      {!loading && users.length > itemsPerPage && (
-        <Pagination
-          currentPage={currentPage}
-          totalPages={Math.ceil(users.length / itemsPerPage)}
-          onPageChange={setCurrentPage}
-        />
-      )}
 
       {/* Edit User Modal */}
       <UserEditModal

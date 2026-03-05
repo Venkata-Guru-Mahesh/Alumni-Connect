@@ -39,19 +39,33 @@ class ImageUploadView(APIView):
         folder = request.data.get('folder', 'alumni-connect/profiles')
         public_id = request.data.get('public_id', None)
         
-        # Validate file type - allow both images and videos
+        # Validate file type - allow images, videos, and documents
+        document_types = {
+            'application/pdf',
+            'application/msword',
+            'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
+        }
         allowed_types = [
             'image/jpeg', 'image/jpg', 'image/png', 'image/gif', 'image/webp',
-            'video/mp4', 'video/webm', 'video/ogg', 'video/quicktime'
+            'video/mp4', 'video/webm', 'video/ogg', 'video/quicktime',
+            *document_types,
         ]
         if file.content_type not in allowed_types:
-            return error_response('Invalid file type. Only images and videos are allowed.', status.HTTP_400_BAD_REQUEST)
+            return error_response(
+                'Invalid file type. Only images, videos, and documents (PDF, Word) are allowed.',
+                status.HTTP_400_BAD_REQUEST
+            )
         
-        # Validate file size (max 50MB for videos, 5MB for images)
+        # Validate file size (50MB for videos, 20MB for documents, 5MB for images)
         is_video = file.content_type.startswith('video/')
-        max_size = (50 * 1024 * 1024) if is_video else (5 * 1024 * 1024)
+        is_document = file.content_type in document_types
+        if is_video:
+            max_size, size_limit = 50 * 1024 * 1024, '50MB'
+        elif is_document:
+            max_size, size_limit = 20 * 1024 * 1024, '20MB'
+        else:
+            max_size, size_limit = 5 * 1024 * 1024, '5MB'
         if file.size > max_size:
-            size_limit = '50MB' if is_video else '5MB'
             return error_response(f'File size must be less than {size_limit}', status.HTTP_400_BAD_REQUEST)
         
         # Upload to Cloudinary
@@ -67,6 +81,73 @@ class ImageUploadView(APIView):
             })
         else:
             return error_response(result.get('error', 'Failed to upload image'), status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+
+class DocumentProxyView(APIView):
+    """
+    Proxy a Cloudinary document through the backend.
+    Fetches the file server-side (bypassing browser ACL / referrer restrictions)
+    and streams it directly to the authenticated user.
+    """
+    permission_classes = [IsAuthenticated]
+
+    def get(self, request):
+        import os, re, time
+        import requests as http_requests
+        from django.http import HttpResponse
+
+        url = request.GET.get('url', '').strip()
+        if not url:
+            return error_response('url parameter is required', status.HTTP_400_BAD_REQUEST)
+
+        cloud_name = os.getenv('CLOUDINARY_CLOUD_NAME', '')
+        if not cloud_name or f'cloudinary.com/{cloud_name}/' not in url:
+            return error_response('Invalid document URL', status.HTTP_400_BAD_REQUEST)
+
+        # Parse resource_type, optional version, and public_id from the stored URL
+        m = re.search(r'cloudinary\.com/[^/]+/(raw|image|video)/upload/(?:v(\d+)/)?(.+)$', url)
+        if not m:
+            return error_response('Cannot parse Cloudinary URL', status.HTTP_400_BAD_REQUEST)
+
+        resource_type, version_str, public_id = m.group(1), m.group(2), m.group(3)
+
+        # Use private_download_url which routes through api.cloudinary.com (not CDN).
+        # This bypasses account-level ACL restrictions that block CDN delivery.
+        import cloudinary.utils as cld_utils
+        filename_part = public_id.split('/')[-1]
+        if '.' in filename_part:
+            fmt = filename_part.rsplit('.', 1)[1].lower()
+            pid_no_ext = public_id.rsplit('.', 1)[0]
+        else:
+            fmt = ''
+            pid_no_ext = public_id
+
+        try:
+            download_url = cld_utils.private_download_url(
+                pid_no_ext, fmt,
+                resource_type=resource_type,
+                expires_at=int(time.time()) + 300,
+            )
+        except Exception:
+            download_url = url  # fall back to original
+
+        # Fetch from Cloudinary server-side (bypasses browser ACL restrictions)
+        try:
+            resp = http_requests.get(download_url, timeout=30)
+        except Exception as exc:
+            return error_response(f'Failed to fetch document: {exc}', status.HTTP_502_BAD_GATEWAY)
+
+        if not resp.ok:
+            return error_response(
+                f'Document not accessible (Cloudinary {resp.status_code})',
+                status.HTTP_502_BAD_GATEWAY,
+            )
+
+        filename = public_id.split('/')[-1].split('?')[0]
+        content_type = resp.headers.get('Content-Type', 'application/pdf')
+        http_response = HttpResponse(resp.content, content_type=content_type)
+        http_response['Content-Disposition'] = f'inline; filename="{filename}"'
+        return http_response
 
 
 # ============== AUTH VIEWS ==============
@@ -749,6 +830,7 @@ class AlumniProfileView(APIView):
                 'availableForMentoring': profile.available_for_mentoring,
                 'availableForReferrals': profile.available_for_referrals,
                 'verificationStatus': profile.verification_status,
+                'resume': profile.resume or '',
             }
             
             return success_response(data=data)
@@ -869,6 +951,10 @@ class AlumniProfileView(APIView):
             if 'achievements' in request.data:
                 profile.achievements = request.data['achievements']
             
+            # Update resume URL
+            if 'resume' in request.data:
+                profile.resume = request.data['resume'] or None
+            
             # Save both models
             user.save()
             profile.save()
@@ -911,6 +997,7 @@ class AlumniProfileView(APIView):
                 'availableForMentoring': profile.available_for_mentoring,
                 'availableForReferrals': profile.available_for_referrals,
                 'verificationStatus': profile.verification_status,
+                'resume': profile.resume or '',
             }
             
             return success_response(data=data, message='Profile updated successfully')
@@ -1206,10 +1293,19 @@ class JobListView(APIView):
         if request.user.role != 'alumni':
             return error_response('Only alumni can post jobs', status_code=status.HTTP_403_FORBIDDEN)
         
-        # Resolve MongoEngine User from Django ORM user
+        # Resolve MongoEngine User from Django ORM user (create mirror if missing for seeded users)
         mongo_user = User.objects(email=request.user.email).first()
         if not mongo_user:
-            return error_response('Alumni profile not found in database', status_code=status.HTTP_404_NOT_FOUND)
+            import secrets
+            mongo_user = User(
+                email=request.user.email,
+                first_name=request.user.first_name or 'Alumni',
+                last_name=request.user.last_name or 'User',
+                role='alumni',
+                is_verified=True,
+            )
+            mongo_user.set_password(secrets.token_hex(32))
+            mongo_user.save()
         
         data = request.data
         
@@ -1862,10 +1958,12 @@ class AdminUserDetailView(APIView):
         if not user:
             return error_response('User not found', status_code=status.HTTP_404_NOT_FOUND)
         data = request.data
-        if data.get('first_name'):
-            user.first_name = data['first_name']
-        if data.get('last_name'):
-            user.last_name = data['last_name']
+        first_name = data.get('firstName') or data.get('first_name')
+        last_name = data.get('lastName') or data.get('last_name')
+        if first_name:
+            user.first_name = first_name
+        if last_name:
+            user.last_name = last_name
         if data.get('role'):
             user.role = data['role']
         if 'is_active' in data:
@@ -1877,10 +1975,10 @@ class AdminUserDetailView(APIView):
         try:
             from apps.accounts.models import User as DjangoUser
             django_user = DjangoUser.objects.get(email=user.email)
-            if data.get('first_name'):
-                django_user.first_name = data['first_name']
-            if data.get('last_name'):
-                django_user.last_name = data['last_name']
+            if first_name:
+                django_user.first_name = first_name
+            if last_name:
+                django_user.last_name = last_name
             django_user.save()
         except Exception:
             pass
@@ -1927,6 +2025,31 @@ class AdminUserToggleStatusView(APIView):
             data={'active': user.is_active},
             message=f"User {'enabled' if user.is_active else 'disabled'} successfully"
         )
+
+
+class AdminSettingsView(APIView):
+    """Get and update platform-wide admin settings."""
+    permission_classes = [IsAuthenticated, IsAdmin]
+
+    # In-memory defaults (persisted per-process; a proper implementation would use a DB model)
+    _settings = {
+        'allowRegistration': True,
+        'requireEmailVerification': True,
+        'alumniVerificationRequired': True,
+        'maxUploadSize': 10,
+        'maintenanceMode': False,
+    }
+
+    def get(self, request):
+        return success_response(data=dict(self._settings))
+
+    def put(self, request):
+        allowed = {'allowRegistration', 'requireEmailVerification', 'alumniVerificationRequired',
+                   'maxUploadSize', 'maintenanceMode'}
+        for key, value in request.data.items():
+            if key in allowed:
+                AdminSettingsView._settings[key] = value
+        return success_response(data=dict(self._settings), message='Settings saved successfully')
 
 
 class AdminPendingAlumniView(APIView):

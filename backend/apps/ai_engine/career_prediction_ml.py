@@ -1,103 +1,170 @@
 """
-ML-Powered Career & Placement Prediction using trained models.
-Includes job placement prediction and salary prediction.
+ML-Powered Career & Placement Prediction.
+Uses a transparent, formula-based scoring approach calibrated for realistic
+placement probabilities and salary estimates derived from student profile data.
 """
-import os
-import joblib
 import numpy as np
-import pandas as pd
 from django.conf import settings
 from apps.accounts.models import StudentProfile
 
 
 class MLCareerPredictor:
     """
-    Machine Learning based career prediction using trained XGBoost/LightGBM models.
+    Career prediction engine using weighted feature scoring.
+    Produces realistic, per-student varied placement probabilities and
+    salary estimates based on actual profile data.
     """
-    
+
     def __init__(self):
-        """Load trained models and preprocessing objects."""
-        model_dir = os.path.join(
-            settings.BASE_DIR, 
-            'apps', 
-            'ai_engine', 
-            'models'
-        )
-        
-        # Load models
-        self.placement_model = joblib.load(
-            os.path.join(model_dir, 'placement_prediction_model.pkl')
-        )
-        self.salary_model = joblib.load(
-            os.path.join(model_dir, 'salary_prediction_model.pkl')
-        )
-        self.scaler = joblib.load(
-            os.path.join(model_dir, 'feature_scaler.pkl')
-        )
-        self.dept_encoder = joblib.load(
-            os.path.join(model_dir, 'department_encoder.pkl')
-        )
-        self.feature_columns = joblib.load(
-            os.path.join(model_dir, 'feature_columns.pkl')
-        )
-        
-        print("✅ Career prediction models loaded successfully!")
-    
+        """No model files needed — pure formula-based prediction."""
+        pass
+
     def prepare_student_features(self, student):
         """
-        Prepare features from student profile for model prediction.
-        
-        Expected features (15):
-        - cgpa
-        - num_skills
-        - num_certifications
-        - num_internships
-        - has_linkedin
-        - has_github
-        - has_portfolio
-        - avg_skill_proficiency
-        - total_internship_months
-        - department_encoded
-        - experience_score
-        - profile_completeness
-        - skills_diversity
-        - is_final_year
-        - is_premium_dept
+        Extract and compute features from student profile.
         """
-        # Base features from student profile
-        cgpa = getattr(student, 'cgpa', None) or 7.5  # Default CGPA
+        cgpa = float(getattr(student, 'cgpa', None) or 7.0)
         num_skills = len(student.skills) if student.skills else 0
-        num_certifications = getattr(student, 'certifications_count', None) or 0
-        num_internships = getattr(student, 'internships_count', None) or 0
-        has_linkedin = 1 if getattr(student, 'linkedin_url', None) else 0
-        has_github = 1 if getattr(student, 'github_url', None) else 0
-        has_portfolio = 1 if getattr(student, 'portfolio_url', None) else 0
-        
-        # Calculate average skill proficiency (default 75 if not available)
-        avg_skill_proficiency = 75  # Can be enhanced with actual proficiency data
-        
-        # Total internship months (estimate from count if duration not available)
-        total_internship_months = num_internships * 3  # Assume 3 months average
-        
-        # Encode department
-        department = getattr(student.user, 'department', None) or 'CSE'
-        try:
-            department_encoded = self.dept_encoder.transform([department])[0]
-        except:
-            department_encoded = 0  # Default to first department if not found
-        
-        # Engineered features
-        experience_score = (
-            num_internships * 2 + 
-            num_certifications + 
-            total_internship_months * 0.5
+        num_certifications = len(student.certifications) if student.certifications else 0
+        num_internships = len(student.internships) if student.internships else 0
+
+        # Check both social_profiles JSONField and legacy URL fields
+        social = student.social_profiles or {}
+        has_linkedin = 1 if (social.get('linkedin') or student.linkedin_url) else 0
+        has_github = 1 if (social.get('github') or student.github_url) else 0
+        has_portfolio = 1 if (social.get('portfolio') or student.portfolio_url) else 0
+
+        # Compute average skill proficiency from real proficiency levels
+        proficiency_map = {'beginner': 25, 'intermediate': 50, 'advanced': 75, 'expert': 100}
+        proficiency_values = [
+            proficiency_map.get(s['proficiency'].lower(), 50)
+            if isinstance(s, dict) and s.get('proficiency') else 50
+            for s in (student.skills or [])
+        ]
+        avg_skill_proficiency = (
+            sum(proficiency_values) / len(proficiency_values)
+            if proficiency_values else 50
         )
-        
-        profile_completeness = (
-            (has_linkedin + has_github + has_portfolio) / 3 * 100
-        )
-        
+
+        department = getattr(student.user, 'department', None) or ''
+        premium_depts = ['CSE', 'IT', 'ECE', 'CSM', 'CIC', 'CSO', 'AID', 'AIML']
+        is_premium_dept = 1 if department in premium_depts else 0
+
+        current_year = getattr(student, 'current_year', None) or 1
+        is_final_year = 1 if current_year >= 4 else 0
+
+        total_internship_months = num_internships * 3
+        experience_score = num_internships * 2 + num_certifications + total_internship_months * 0.5
+        profile_completeness = (has_linkedin + has_github + has_portfolio) / 3 * 100
         skills_diversity = num_skills * avg_skill_proficiency / 100
+
+        return {
+            'cgpa': float(cgpa),
+            'num_skills': int(num_skills),
+            'num_certifications': int(num_certifications),
+            'num_internships': int(num_internships),
+            'has_linkedin': int(has_linkedin),
+            'has_github': int(has_github),
+            'has_portfolio': int(has_portfolio),
+            'avg_skill_proficiency': float(avg_skill_proficiency),
+            'total_internship_months': float(total_internship_months),
+            'experience_score': float(experience_score),
+            'profile_completeness': float(profile_completeness),
+            'skills_diversity': float(skills_diversity),
+            'is_final_year': int(is_final_year),
+            'is_premium_dept': int(is_premium_dept),
+        }
+
+    def _compute_placement_score(self, f):
+        """
+        Weighted formula producing a realistic placement probability.
+
+        Max breakdown (100 pts total before capping):
+          CGPA          25 pts
+          Skills qty    15 pts
+          Proficiency   10 pts
+          Internships   16 pts
+          Certifications 4 pts
+          LinkedIn       6 pts
+          GitHub         6 pts
+          Portfolio      3 pts
+          Premium dept   5 pts
+          Final year     5 pts
+        ─────────────────────
+        Total          95 pts  → capped at 92% max to preserve realism
+        """
+        # CGPA: 25 pts
+        cgpa = f['cgpa']
+        if cgpa >= 9.0:
+            cgpa_pts = 25
+        elif cgpa >= 8.5:
+            cgpa_pts = 22
+        elif cgpa >= 8.0:
+            cgpa_pts = 18
+        elif cgpa >= 7.5:
+            cgpa_pts = 14
+        elif cgpa >= 7.0:
+            cgpa_pts = 10
+        elif cgpa >= 6.5:
+            cgpa_pts = 6
+        elif cgpa >= 6.0:
+            cgpa_pts = 3
+        else:
+            cgpa_pts = 0
+
+        # Skills: 15 pts for quantity
+        skills_pts = min(f['num_skills'] / 10 * 15, 15)
+        # Proficiency: 10 pts
+        prof_pts = f['avg_skill_proficiency'] / 100 * 10
+
+        # Internships: 16 pts max (2 internships = full marks)
+        internship_pts = min(f['num_internships'] * 8, 16)
+        # Certifications: 4 pts max
+        cert_pts = min(f['num_certifications'] * 2, 4)
+
+        # Online presence: 6+6+3 = 15 pts
+        presence_pts = f['has_linkedin'] * 6 + f['has_github'] * 6 + f['has_portfolio'] * 3
+
+        # Department + year
+        dept_pts = f['is_premium_dept'] * 5
+        year_pts = f['is_final_year'] * 5
+
+        raw = cgpa_pts + skills_pts + prof_pts + internship_pts + cert_pts + presence_pts + dept_pts + year_pts
+
+        # Base 8% offset so even weak profiles show something
+        probability = 8 + raw
+        return round(min(max(probability, 10), 92), 1)
+
+    def _compute_salary(self, f, placement_prob):
+        """
+        Estimate salary package (INR) based on student features.
+        Returns a realistic package for Indian placement context.
+        """
+        # Starting base: 3.5 LPA
+        salary = 350_000
+
+        # CGPA bonus: up to 2L
+        salary += max(0, (f['cgpa'] - 6.0) * 80_000)
+
+        # Skills: 25k per skill (max +3.75L for 15 skills)
+        salary += min(f['num_skills'] * 25_000, 375_000)
+
+        # Proficiency bonus: up to 1.5L
+        salary += f['avg_skill_proficiency'] / 100 * 150_000
+
+        # Internship experience: 1.5L per internship (max 3L)
+        salary += min(f['num_internships'] * 150_000, 300_000)
+
+        # Certifications: 30k each (max 1.5L)
+        salary += min(f['num_certifications'] * 30_000, 150_000)
+
+        # Online presence signals employability
+        salary += (f['has_linkedin'] + f['has_github'] + f['has_portfolio']) * 30_000
+
+        # Premium department premium
+        salary += f['is_premium_dept'] * 200_000
+
+        return round(salary, -3)  # round to nearest thousand
         
         # Determine if final year (adjust based on your logic)
         current_year = getattr(student, 'current_year', None) or 4
@@ -130,91 +197,64 @@ class MLCareerPredictor:
     
     def predict_placement(self, student):
         """
-        Predict if student will get placed and with what probability.
-        
-        Returns:
-            dict: {
-                'will_be_placed': bool,
-                'placement_probability': float (0-100),
-                'confidence_level': str,
-                'recommendation': str
-            }
+        Predict placement probability using weighted feature scoring.
         """
-        # Prepare features
         features_dict = self.prepare_student_features(student)
-        
-        # Create DataFrame with correct feature order
-        features_df = pd.DataFrame([features_dict])[self.feature_columns]
-        
-        # Predict
-        placement_prob = float(self.placement_model.predict_proba(features_df)[0][1])
-        will_be_placed = bool(self.placement_model.predict(features_df)[0])
-        
-        # Determine confidence level
-        if placement_prob >= 0.8 or placement_prob <= 0.2:
+        placement_prob = self._compute_placement_score(features_dict)
+
+        will_be_placed = placement_prob >= 60
+
+        if placement_prob >= 80:
             confidence_level = "High"
-        elif placement_prob >= 0.6 or placement_prob <= 0.4:
+        elif placement_prob >= 60:
             confidence_level = "Medium"
         else:
             confidence_level = "Low"
-        
-        # Generate recommendation
-        if placement_prob >= 0.7:
+
+        if placement_prob >= 75:
             recommendation = "Strong profile! Focus on interview preparation and company research."
-        elif placement_prob >= 0.5:
-            recommendation = "Good chances. Improve your technical skills and add more projects."
+        elif placement_prob >= 55:
+            recommendation = "Good chances. Strengthen technical skills and add more projects."
+        elif placement_prob >= 35:
+            recommendation = "Build your profile — gain internship experience and earn certifications."
         else:
-            recommendation = "Build your profile. Add skills, certifications, and internships."
-        
+            recommendation = "Start with the basics: add skills, create LinkedIn & GitHub, and aim to improve your CGPA."
+
         return {
             'will_be_placed': will_be_placed,
-            'placement_probability': round(placement_prob * 100, 2),
+            'placement_probability': placement_prob,
             'confidence_level': confidence_level,
             'recommendation': recommendation,
-            'features': features_dict  # Include for debugging
+            'features': features_dict,
         }
-    
+
     def predict_salary(self, student):
         """
-        Predict expected salary package for student.
-        Only predicts if placement probability is > 50%.
-        
-        Returns:
-            dict: {
-                'predicted_salary': float (INR),
-                'salary_range_min': float (INR),
-                'salary_range_max': float (INR),
-                'confidence_level': str
-            }
+        Estimate salary package based on student profile.
         """
-        # First check placement probability
         placement_pred = self.predict_placement(student)
-        
+
         if not placement_pred['will_be_placed']:
             return {
                 'predicted_salary': None,
                 'salary_range_min': None,
                 'salary_range_max': None,
                 'message': 'Salary prediction available only for likely placements',
-                'placement_probability': placement_pred['placement_probability']
+                'placement_probability': placement_pred['placement_probability'],
             }
-        
-        # Prepare features
-        features_dict = self.prepare_student_features(student)
-        features_df = pd.DataFrame([features_dict])[self.feature_columns]
-        
-        # Predict salary
-        predicted_salary = float(self.salary_model.predict(features_df)[0])
-        
-        # Calculate range (±15% for uncertainty)
-        salary_range_min = predicted_salary * 0.85
-        salary_range_max = predicted_salary * 1.15
-        
+
+        predicted_salary = self._compute_salary(
+            placement_pred['features'],
+            placement_pred['placement_probability']
+        )
+        confidence = placement_pred['confidence_level']
+        uncertainty = 0.12 if confidence == 'High' else 0.18
+
         return {
             'predicted_salary': round(predicted_salary, 2),
-            'salary_range_min': round(salary_range_min, 2),
-            'salary_range_max': round(salary_range_max, 2),
-            'confidence_level': 'High' if placement_pred['placement_probability'] > 80 else 'Medium'
+            'salary_range_min': round(predicted_salary * (1 - uncertainty), 2),
+            'salary_range_max': round(predicted_salary * (1 + uncertainty), 2),
+            'confidence_level': confidence,
         }
     
     def get_career_analysis(self, student_id):

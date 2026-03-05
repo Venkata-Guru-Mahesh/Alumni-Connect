@@ -21,6 +21,7 @@ urlpatterns = [
     
     # File Upload
     path('upload/image/', views.ImageUploadView.as_view(), name='image-upload'),
+    path('upload/document-proxy/', views.DocumentProxyView.as_view(), name='document-proxy'),
     
     # Utilities
     path('utils/roll-number/', views.RollNumberUtilsView.as_view(), name='roll-number-utils'),
@@ -105,6 +106,7 @@ urlpatterns = [
     
     # Admin
     path('admin/recent-users/', views.AdminRecentUsersView.as_view(), name='admin-recent-users'),
+    path('admin/settings/', views.AdminSettingsView.as_view(), name='admin-settings'),
     path('admin/users/', views.AdminUsersListView.as_view(), name='admin-users-list'),
     path('admin/users/<str:user_id>/', views.AdminUserDetailView.as_view(), name='admin-user-detail'),
     path('admin/users/<str:user_id>/toggle-status/', views.AdminUserToggleStatusView.as_view(), name='admin-user-toggle-status'),

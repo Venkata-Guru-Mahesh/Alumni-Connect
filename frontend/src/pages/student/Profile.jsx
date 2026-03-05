@@ -242,14 +242,26 @@ const Profile = () => {
             <div className="card">
               <h3 className="text-lg font-semibold text-gray-900 mb-4">Skills</h3>
               <div className="flex flex-wrap gap-2">
-                {profile.skills.map((skill, index) => (
-                  <div key={index} className="px-3 py-1 bg-primary-50 text-primary-700 rounded-full text-sm font-medium">
-                    {typeof skill === 'object' ? skill.name : skill}
-                    {typeof skill === 'object' && skill.proficiency && (
-                      <span className="ml-1 text-xs text-primary-600">({skill.proficiency})</span>
-                    )}
-                  </div>
-                ))}
+                {profile.skills.map((skill, index) => {
+                  const name = typeof skill === 'object' ? skill.name : skill;
+                  const proficiency = typeof skill === 'object' ? skill.proficiency : null;
+                  const proficiencyColors = {
+                    expert: 'bg-purple-100 text-purple-700',
+                    advanced: 'bg-blue-100 text-blue-700',
+                    intermediate: 'bg-yellow-100 text-yellow-700',
+                    beginner: 'bg-gray-100 text-gray-600',
+                  };
+                  return (
+                    <div key={index} className="flex items-center gap-1.5 px-3 py-1.5 bg-primary-50 text-primary-700 rounded-full text-sm font-medium">
+                      {name}
+                      {proficiency && (
+                        <span className={`text-xs px-1.5 py-0.5 rounded-full font-medium ${proficiencyColors[proficiency] || 'bg-gray-100 text-gray-600'}`}>
+                          {proficiency}
+                        </span>
+                      )}
+                    </div>
+                  );
+                })}
               </div>
             </div>
           )}

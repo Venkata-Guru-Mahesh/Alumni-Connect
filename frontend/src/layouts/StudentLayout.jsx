@@ -31,7 +31,7 @@ const StudentLayout = () => {
       scope: SCOPES.VIEW_JOBS,
     },
     {
-      label: 'Saved Jobs',
+      label: 'Saved Items',
       path: '/student/saved-jobs',
       icon: 'bookmark',
       scope: SCOPES.VIEW_JOBS,

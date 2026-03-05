@@ -1,5 +1,6 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { FiEdit2, FiTrash2, FiLock, FiUnlock, FiSearch, FiChevronDown } from 'react-icons/fi';
+import { Pagination } from '../shared';
 
 const ROLE_CONFIG = {
   student:   { label: 'Student',    dot: 'bg-blue-500',    badge: 'bg-blue-100 text-blue-700 border-blue-200' },
@@ -43,6 +44,10 @@ const UserAvatar = ({ user }) => {
 const UserTable = ({ users, onEdit, onDelete, onToggleStatus }) => {
   const [searchTerm, setSearchTerm] = useState('');
   const [roleFilter, setRoleFilter] = useState('');
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 15;
+
+  useEffect(() => { setCurrentPage(1); }, [searchTerm, roleFilter]);
 
   const filteredUsers = users.filter((user) => {
     const matchesSearch =
@@ -116,7 +121,7 @@ const UserTable = ({ users, onEdit, onDelete, onToggleStatus }) => {
             </tr>
           </thead>
           <tbody className="divide-y divide-gray-50">
-            {filteredUsers.map((user) => {
+            {filteredUsers.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage).map((user) => {
               const roleCfg = ROLE_CONFIG[user.role] || { label: user.role, dot: 'bg-gray-400', badge: 'bg-gray-100 text-gray-700 border-gray-200' };
               const isActive = user.active !== false;
               const displayName = user.name || user.full_name || 'Unknown User';
@@ -196,6 +201,18 @@ const UserTable = ({ users, onEdit, onDelete, onToggleStatus }) => {
           </tbody>
         </table>
       </div>
+
+      {filteredUsers.length > itemsPerPage && (
+        <div className="px-4 py-3 border-t border-gray-100">
+          <Pagination
+            currentPage={currentPage}
+            totalPages={Math.ceil(filteredUsers.length / itemsPerPage)}
+            onPageChange={setCurrentPage}
+            totalItems={filteredUsers.length}
+            itemsPerPage={itemsPerPage}
+          />
+        </div>
+      )}
 
       {filteredUsers.length === 0 && (
         <div className="text-center py-16 text-gray-400">
