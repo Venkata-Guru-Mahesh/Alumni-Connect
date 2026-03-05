@@ -38,3 +38,17 @@ coverage/
 # Cache
 .cache/
 .eslintcache
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+*.egg
+.venv/
+venv/
+backend/venv/
+backend/db.sqlite3
