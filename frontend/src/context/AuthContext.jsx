@@ -146,7 +146,7 @@ export const AuthProvider = ({ children }) => {
       } else if (error.code === 'ERR_NETWORK') {
         errorMessage = 'Unable to connect to the server. Please check your internet connection and try again.';
       } else if (error.code === 'ECONNABORTED') {
-        errorMessage = 'The request timed out. Please try again.';
+        errorMessage = 'The server took too long to respond. If this is your first request, wait a few seconds and try again.';
       }
       
       return {

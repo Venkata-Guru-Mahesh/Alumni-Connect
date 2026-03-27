@@ -35,7 +35,7 @@
    ```
    DEBUG=False
    ALLOWED_HOSTS=.onrender.com,your-domain.com
-   MONGODB_URI=mongodb+srv://username:password@cluster.mongodb.net/alumni_connect_db
+   MONGODB_URI=<set-your-mongodb-atlas-uri-in-render-dashboard>
    SECRET_KEY=your-secret-key-here
    CORS_ALLOWED_ORIGINS=https://your-frontend-amplify-domain
    ```
