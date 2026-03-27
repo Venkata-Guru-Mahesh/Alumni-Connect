@@ -422,7 +422,7 @@ const Login = () => {
           <div style={{ textAlign: 'left', color: 'white' }}>
             <div style={{ marginBottom: '32px' }}>
               <img 
-                src="https://www.vvitu.ac.in/src/assets/images/VVIT_logo.png" 
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXUjEM0r0I5UGvyH_3xy596muEJhbvBMVasg&s" 
                 alt="VVITU Logo" 
                 style={{ width: '600px', height: '350px', opacity: 0.85, filter: 'drop-shadow(0 20px 25px rgba(0, 0, 0,0.5))' }}
               />

@@ -1,0 +1,6283 @@
+[
+{
+  "model": "accounts.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$J6uLejv6l5L15UFAsSl927$YUh5sND0Y9v+DLF8oUL/KCLhuU0RF5m9BynBtBO1cm4=",
+    "is_superuser": false,
+    "email": "admin@vvit.net",
+    "first_name": "System",
+    "last_name": "Admin",
+    "phone": "9876543210",
+    "avatar": "https://ui-avatars.com/api/?name=System+Admin&background=E77E69&color=fff&size=200",
+    "role": "admin",
+    "department": "cse",
+    "assigned_counsellor": null,
+    "reports_to_hod": null,
+    "is_active": true,
+    "is_staff": false,
+    "is_verified": true,
+    "date_joined": "2026-02-28T23:59:59.353Z",
+    "last_login": null,
+    "created_at": "2026-02-28T23:59:59.353Z",
+    "updated_at": "2026-02-28T23:59:59.821Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$Tua1OQKt4K6HsZ3wKk59Lx$zoaVbdXkUPgxqQpJ/W4A16pTZMhXUHszWqd5csRcbzg=",
+    "is_superuser": false,
+    "email": "principal@vvit.net",
+    "first_name": "Dr. Principal",
+    "last_name": "Kumar",
+    "phone": "9876543211",
+    "avatar": "https://ui-avatars.com/api/?name=Dr.+Principal+Kumar&background=4A90D9&color=fff&size=200",
+    "role": "principal",
+    "department": "administration",
+    "assigned_counsellor": null,
+    "reports_to_hod": null,
+    "is_active": true,
+    "is_staff": false,
+    "is_verified": true,
+    "date_joined": "2026-02-28T23:59:59.828Z",
+    "last_login": null,
+    "created_at": "2026-02-28T23:59:59.828Z",
+    "updated_at": "2026-03-01T00:00:00.341Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$SXVgeFh3tMC4xQquhsTKs4$lL11DrfTl2xS6FjbA3YP65M0FaGvmU7HM/bvxWMUuyI=",
+    "is_superuser": false,
+    "email": "hod.csm@vvit.net",
+    "first_name": "Srinivasa",
+    "last_name": "Rao",
+    "phone": "9876543212",
+    "avatar": "https://ui-avatars.com/api/?name=Dr.+Rajesh+Sharma&background=2ECC71&color=fff&size=200",
+    "role": "hod",
+    "department": "CSM",
+    "assigned_counsellor": null,
+    "reports_to_hod": null,
+    "is_active": true,
+    "is_staff": false,
+    "is_verified": true,
+    "date_joined": "2026-03-01T00:00:00.349Z",
+    "last_login": null,
+    "created_at": "2026-03-01T00:00:00.349Z",
+    "updated_at": "2026-03-02T04:11:37.384Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$uxSuNb9kxxqRjJYamBxe5E$hwrulYcD7nf1Kg7ySIdQbDHMmV7+PDoBNT2h2l0hJGI=",
+    "is_superuser": false,
+    "email": "counsellor.csm@vvit.net",
+    "first_name": "Prof. Priya",
+    "last_name": "Reddy",
+    "phone": "9876543213",
+    "avatar": "https://ui-avatars.com/api/?name=Prof.+Priya+Reddy&background=9B59B6&color=fff&size=200",
+    "role": "counsellor",
+    "department": "csm",
+    "assigned_counsellor": null,
+    "reports_to_hod": [
+      "hod.csm@vvit.net"
+    ],
+    "is_active": true,
+    "is_staff": false,
+    "is_verified": true,
+    "date_joined": "2026-03-01T00:00:00.868Z",
+    "last_login": null,
+    "created_at": "2026-03-01T00:00:00.868Z",
+    "updated_at": "2026-03-01T00:00:01.342Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$csZbeQQBERMGDngGylt4E3$b++GeKu2rwNDyD52mWhhg2VnVa3J8krnbwXEwJo33uw=",
+    "is_superuser": false,
+    "email": "rahul.kumar@vvit.net",
+    "first_name": "Rahul",
+    "last_name": "Kumar",
+    "phone": "9001234501",
+    "avatar": "https://randomuser.me/api/portraits/men/75.jpg",
+    "role": "student",
+    "department": "csm",
+    "assigned_counsellor": [
+      "counsellor.csm@vvit.net"
+    ],
+    "reports_to_hod": null,
+    "is_active": true,
+    "is_staff": false,
+    "is_verified": true,
+    "date_joined": "2026-03-01T00:00:01.349Z",
+    "last_login": null,
+    "created_at": "2026-03-01T00:00:01.350Z",
+    "updated_at": "2026-03-01T00:00:01.834Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$fK8CUFawZLccj1W8Q8jHfO$+FapU8/6Dk1mcswWMNE3aYc3qa9mdIdojPm+IYFiKdQ=",
+    "is_superuser": false,
+    "email": "sneha.sharma@vvit.net",
+    "first_name": "Sneha",
+    "last_name": "Sharma",
+    "phone": "9001234502",
+    "avatar": "https://randomuser.me/api/portraits/women/80.jpg",
+    "role": "student",
+    "department": "csm",
+    "assigned_counsellor": [
+      "counsellor.csm@vvit.net"
+    ],
+    "reports_to_hod": null,
+    "is_active": true,
+    "is_staff": false,
+    "is_verified": true,
+    "date_joined": "2026-03-01T00:00:01.850Z",
+    "last_login": null,
+    "created_at": "2026-03-01T00:00:01.850Z",
+    "updated_at": "2026-03-01T00:00:02.332Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$HPDtNl3UqSkzuBObamjrdf$RTybeUYCaLZbhqo8Zk6DYzQMfbD8BEsYkaAHwVXYRBE=",
+    "is_superuser": false,
+    "email": "amit.patel@vvit.net",
+    "first_name": "Amit",
+    "last_name": "Patel",
+    "phone": "9001234503",
+    "avatar": "https://randomuser.me/api/portraits/men/70.jpg",
+    "role": "student",
+    "department": "csm",
+    "assigned_counsellor": [
+      "counsellor.csm@vvit.net"
+    ],
+    "reports_to_hod": null,
+    "is_active": true,
+    "is_staff": false,
+    "is_verified": true,
+    "date_joined": "2026-03-01T00:00:02.346Z",
+    "last_login": null,
+    "created_at": "2026-03-01T00:00:02.346Z",
+    "updated_at": "2026-03-01T00:00:02.832Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$a65R2M9t1TkfiZFp8ACwmB$e9QKpRh+9BJcxPi+mKLYn14k7B5vyuSi+W6XG+a5BH4=",
+    "is_superuser": false,
+    "email": "priya.nair@vvit.net",
+    "first_name": "Priya",
+    "last_name": "Nair",
+    "phone": "9001234504",
+    "avatar": "https://randomuser.me/api/portraits/women/72.jpg",
+    "role": "student",
+    "department": "ece",
+    "assigned_counsellor": [
+      "counsellor.ece@vvit.net"
+    ],
+    "reports_to_hod": null,
+    "is_active": true,
+    "is_staff": false,
+    "is_verified": true,
+    "date_joined": "2026-03-01T00:00:02.847Z",
+    "last_login": null,
+    "created_at": "2026-03-01T00:00:02.847Z",
+    "updated_at": "2026-03-01T00:00:03.344Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$7d19rDLUumoHIrELM11xX7$tVBhx3UKCzaml1XrHjfGZTiUlE+XUcThufjHgcqzgvk=",
+    "is_superuser": false,
+    "email": "karthik.reddy@vvit.net",
+    "first_name": "Karthik",
+    "last_name": "Reddy",
+    "phone": "9001234505",
+    "avatar": "https://randomuser.me/api/portraits/men/60.jpg",
+    "role": "student",
+    "department": "ece",
+    "assigned_counsellor": [
+      "counsellor.ece@vvit.net"
+    ],
+    "reports_to_hod": null,
+    "is_active": true,
+    "is_staff": false,
+    "is_verified": true,
+    "date_joined": "2026-03-01T00:00:03.366Z",
+    "last_login": null,
+    "created_at": "2026-03-01T00:00:03.366Z",
+    "updated_at": "2026-03-01T00:00:03.891Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$sWcMoBWq1TausR8LQv5DcE$D/7/o8npSjdWyd/wMkvaqmVS8Mt8ZRvf4tfNukNskw0=",
+    "is_superuser": false,
+    "email": "divya.singh@vvit.net",
+    "first_name": "Divya",
+    "last_name": "Singh",
+    "phone": "9001234506",
+    "avatar": "https://randomuser.me/api/portraits/women/65.jpg",
+    "role": "student",
+    "department": "eee",
+    "assigned_counsellor": [
+      "counsellor.eee@vvit.net"
+    ],
+    "reports_to_hod": null,
+    "is_active": true,
+    "is_staff": false,
+    "is_verified": true,
+    "date_joined": "2026-03-01T00:00:03.907Z",
+    "last_login": null,
+    "created_at": "2026-03-01T00:00:03.907Z",
+    "updated_at": "2026-03-01T00:00:04.468Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$2PuOuxu1xWjO0xYGHTUKYq$bCdmp7rz8sEgRgzM523IzQCU8p8xaF8CmsyBeD0xR08=",
+    "is_superuser": false,
+    "email": "arjun.rao@vvit.net",
+    "first_name": "Arjun",
+    "last_name": "Rao",
+    "phone": "9001234507",
+    "avatar": "https://randomuser.me/api/portraits/men/41.jpg",
+    "role": "student",
+    "department": "eee",
+    "assigned_counsellor": [
+      "counsellor.eee@vvit.net"
+    ],
+    "reports_to_hod": null,
+    "is_active": true,
+    "is_staff": false,
+    "is_verified": true,
+    "date_joined": "2026-03-01T00:00:04.479Z",
+    "last_login": null,
+    "created_at": "2026-03-01T00:00:04.479Z",
+    "updated_at": "2026-03-01T00:00:04.992Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$MqbSSs21erqyi5jFoDqOzo$pHrBzKTFKUuPZG55NajKfHvpKd/yIZ6eXcoO1DUw3ts=",
+    "is_superuser": false,
+    "email": "ananya.gupta@vvit.net",
+    "first_name": "Ananya",
+    "last_name": "Gupta",
+    "phone": "9001234508",
+    "avatar": "https://randomuser.me/api/portraits/women/56.jpg",
+    "role": "student",
+    "department": "aiml",
+    "assigned_counsellor": [
+      "counsellor.aiml@vvit.net"
+    ],
+    "reports_to_hod": null,
+    "is_active": true,
+    "is_staff": false,
+    "is_verified": true,
+    "date_joined": "2026-03-01T00:00:05.004Z",
+    "last_login": null,
+    "created_at": "2026-03-01T00:00:05.005Z",
+    "updated_at": "2026-03-01T06:33:06.172Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$hXcrIbx7aSA5LrldopxLOH$col3kbHNz3tmTgHcHlwtHFiPw3oy4m1O2krk1qDVXr0=",
+    "is_superuser": false,
+    "email": "aditya.verma@vvit.net",
+    "first_name": "Aditya",
+    "last_name": "Verma",
+    "phone": "9002345601",
+    "avatar": "https://randomuser.me/api/portraits/men/22.jpg",
+    "role": "alumni",
+    "department": "csm",
+    "assigned_counsellor": [
+      "counsellor.csm@vvit.net"
+    ],
+    "reports_to_hod": null,
+    "is_active": true,
+    "is_staff": false,
+    "is_verified": true,
+    "date_joined": "2026-03-01T00:00:05.522Z",
+    "last_login": null,
+    "created_at": "2026-03-01T00:00:05.522Z",
+    "updated_at": "2026-03-05T01:30:43.137Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$kIy0EguWW1ZTI9wGHwGiDu$EfLBVMq2gPWvU4T2vdVstPwhCMNq5f5Qax7beK0md7E=",
+    "is_superuser": false,
+    "email": "pooja.menon@vvit.net",
+    "first_name": "Pooja",
+    "last_name": "Menon",
+    "phone": "9002345602",
+    "avatar": "https://randomuser.me/api/portraits/women/28.jpg",
+    "role": "alumni",
+    "department": "csm",
+    "assigned_counsellor": [
+      "counsellor.csm@vvit.net"
+    ],
+    "reports_to_hod": null,
+    "is_active": true,
+    "is_staff": false,
+    "is_verified": true,
+    "date_joined": "2026-03-01T00:00:06.027Z",
+    "last_login": null,
+    "created_at": "2026-03-01T00:00:06.027Z",
+    "updated_at": "2026-03-01T00:00:06.583Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$BqFLEKUqv7H6FOT5Xfcll4$fz3LbEkPko3ef3+hpEjiW35XawiW/5S/P92a4/alUTA=",
+    "is_superuser": false,
+    "email": "vikram.joshi@vvit.net",
+    "first_name": "Vikram",
+    "last_name": "Joshi",
+    "phone": "9002345603",
+    "avatar": "https://randomuser.me/api/portraits/men/55.jpg",
+    "role": "alumni",
+    "department": "csm",
+    "assigned_counsellor": [
+      "counsellor.csm@vvit.net"
+    ],
+    "reports_to_hod": null,
+    "is_active": true,
+    "is_staff": false,
+    "is_verified": true,
+    "date_joined": "2026-03-01T00:00:06.589Z",
+    "last_login": null,
+    "created_at": "2026-03-01T00:00:06.589Z",
+    "updated_at": "2026-03-01T00:00:07.230Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$fhicJ0GoqfUrRLkvXB7d1v$vf/n+NuIS7imkffbkN9FaQGoK+FUaFa+9t4Mrkr4R0o=",
+    "is_superuser": false,
+    "email": "neha.kapoor@vvit.net",
+    "first_name": "Neha",
+    "last_name": "Kapoor",
+    "phone": "9002345604",
+    "avatar": "https://randomuser.me/api/portraits/women/33.jpg",
+    "role": "alumni",
+    "department": "ece",
+    "assigned_counsellor": [
+      "counsellor.ece@vvit.net"
+    ],
+    "reports_to_hod": null,
+    "is_active": true,
+    "is_staff": false,
+    "is_verified": true,
+    "date_joined": "2026-03-01T00:00:07.236Z",
+    "last_login": null,
+    "created_at": "2026-03-01T00:00:07.236Z",
+    "updated_at": "2026-03-01T00:00:07.723Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$VrcmhNDVBVSpwZFapmMu2G$KDcbDU5PVXhdcBrsHw8ojJCJ8qcJvqnPSCb+9dks2XM=",
+    "is_superuser": false,
+    "email": "rohit.das@vvit.net",
+    "first_name": "Rohit",
+    "last_name": "Das",
+    "phone": "9002345605",
+    "avatar": "https://randomuser.me/api/portraits/men/32.jpg",
+    "role": "alumni",
+    "department": "ece",
+    "assigned_counsellor": [
+      "counsellor.ece@vvit.net"
+    ],
+    "reports_to_hod": null,
+    "is_active": true,
+    "is_staff": false,
+    "is_verified": true,
+    "date_joined": "2026-03-01T00:00:07.733Z",
+    "last_login": null,
+    "created_at": "2026-03-01T00:00:07.733Z",
+    "updated_at": "2026-03-01T00:00:08.253Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$MkFSnv4j4NoFIpkdaxCxw6$YJ1F4RjPbpKlu3gtCwRBRYwwxaPC09OlEznCPwG0GwU=",
+    "is_superuser": false,
+    "email": "meera.iyer@vvit.net",
+    "first_name": "Meera",
+    "last_name": "Iyer",
+    "phone": "9002345606",
+    "avatar": "https://randomuser.me/api/portraits/women/44.jpg",
+    "role": "alumni",
+    "department": "eee",
+    "assigned_counsellor": [
+      "counsellor.eee@vvit.net"
+    ],
+    "reports_to_hod": null,
+    "is_active": true,
+    "is_staff": false,
+    "is_verified": true,
+    "date_joined": "2026-03-01T00:00:08.258Z",
+    "last_login": null,
+    "created_at": "2026-03-01T00:00:08.259Z",
+    "updated_at": "2026-03-01T00:00:08.766Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$3Dz5PJixXFxmXXJV6ZhQsT$dnkFToTGxocfxTZ1AEQXv80tcrJnYpSQgITZAZ4ehWk=",
+    "is_superuser": false,
+    "email": "22bq1a4225@vvit.net",
+    "first_name": "Manoj Krishna",
+    "last_name": "Chandragiri",
+    "phone": "+918142632475",
+    "avatar": null,
+    "role": "student",
+    "department": "CSM",
+    "assigned_counsellor": [
+      "counsellor.csm@vvit.net"
+    ],
+    "reports_to_hod": null,
+    "is_active": true,
+    "is_staff": false,
+    "is_verified": true,
+    "date_joined": "2026-03-01T06:51:58.876Z",
+    "last_login": null,
+    "created_at": "2026-03-01T06:51:59.660Z",
+    "updated_at": "2026-03-05T12:38:18.774Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$EaFBtdO5pU0w729Wu1Pui3$hhkj11RRlrQQt6qnAx6BYNeeHTxDTO1YHRUigFjb97Y=",
+    "is_superuser": false,
+    "email": "fohoy67092@netoiu.com",
+    "first_name": "Ravi",
+    "last_name": "Teja",
+    "phone": "9988998899",
+    "avatar": null,
+    "role": "alumni",
+    "department": "CSE",
+    "assigned_counsellor": [
+      "counsellor.cse@vvit.net"
+    ],
+    "reports_to_hod": null,
+    "is_active": true,
+    "is_staff": false,
+    "is_verified": true,
+    "date_joined": "2026-03-01T07:00:01.232Z",
+    "last_login": null,
+    "created_at": "2026-03-01T07:00:02.250Z",
+    "updated_at": "2026-03-01T18:12:03.994Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$5HHwBOepVEz4dP89OVg2NT$WnPYxIBooARKM2tCD8E2xMiWMDQ6VHlAX3VVn7uecI0=",
+    "is_superuser": false,
+    "email": "counsellor.cse@vvit.net",
+    "first_name": "Priya",
+    "last_name": "Sharma",
+    "phone": null,
+    "avatar": null,
+    "role": "counsellor",
+    "department": "CSE",
+    "assigned_counsellor": null,
+    "reports_to_hod": [
+      "hod.cse@vvit.net"
+    ],
+    "is_active": true,
+    "is_staff": false,
+    "is_verified": true,
+    "date_joined": "2026-03-02T02:49:56.716Z",
+    "last_login": null,
+    "created_at": "2026-03-02T02:49:56.716Z",
+    "updated_at": "2026-03-02T02:49:57.470Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$gyfGkgXwhsG7nPANTpxzuI$2mk6MdqENdXkSxd3WsVgN5vOx7YtzJdDY02ooa8zSIU=",
+    "is_superuser": false,
+    "email": "counsellor.aid@vvit.net",
+    "first_name": "Sravani",
+    "last_name": "Naidu",
+    "phone": null,
+    "avatar": null,
+    "role": "counsellor",
+    "department": "AID",
+    "assigned_counsellor": null,
+    "reports_to_hod": [
+      "hod.aid@vvit.net"
+    ],
+    "is_active": true,
+    "is_staff": false,
+    "is_verified": true,
+    "date_joined": "2026-03-02T02:49:58.822Z",
+    "last_login": null,
+    "created_at": "2026-03-02T02:49:58.823Z",
+    "updated_at": "2026-03-02T02:49:59.574Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$1niaLqFa0JWL3ak7xPHgXc$duEbL6b1O1VX6p0fWrA8P9o8vI2RwVMegVfsxZON3nE=",
+    "is_superuser": false,
+    "email": "counsellor.aiml@vvit.net",
+    "first_name": "Divya",
+    "last_name": "Prasad",
+    "phone": null,
+    "avatar": null,
+    "role": "counsellor",
+    "department": "AIML",
+    "assigned_counsellor": null,
+    "reports_to_hod": [
+      "hod.aiml@vvit.net"
+    ],
+    "is_active": true,
+    "is_staff": false,
+    "is_verified": true,
+    "date_joined": "2026-03-02T02:49:59.936Z",
+    "last_login": null,
+    "created_at": "2026-03-02T02:49:59.936Z",
+    "updated_at": "2026-03-02T02:50:00.754Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$s8LTylWKwxosEIrAEsu07u$T6Xn4VtdHytVVoZJj0jvyc771ZzWBJGf7F25c2ecEt0=",
+    "is_superuser": false,
+    "email": "counsellor.cso@vvit.net",
+    "first_name": "Mounika",
+    "last_name": "Rao",
+    "phone": null,
+    "avatar": null,
+    "role": "counsellor",
+    "department": "CSO",
+    "assigned_counsellor": null,
+    "reports_to_hod": [
+      "hod.cso@vvit.net"
+    ],
+    "is_active": true,
+    "is_staff": false,
+    "is_verified": true,
+    "date_joined": "2026-03-02T02:50:01.129Z",
+    "last_login": null,
+    "created_at": "2026-03-02T02:50:01.129Z",
+    "updated_at": "2026-03-02T02:50:01.999Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$2eFgxzLVeU3D5fVAzRlbRM$IP1AY3/dSKm+w5suZEHX0sc/murE1uAst7QocUJisys=",
+    "is_superuser": false,
+    "email": "counsellor.cic@vvit.net",
+    "first_name": "Haritha",
+    "last_name": "Kumar",
+    "phone": null,
+    "avatar": null,
+    "role": "counsellor",
+    "department": "CIC",
+    "assigned_counsellor": null,
+    "reports_to_hod": [
+      "hod.cic@vvit.net"
+    ],
+    "is_active": true,
+    "is_staff": false,
+    "is_verified": true,
+    "date_joined": "2026-03-02T02:50:02.401Z",
+    "last_login": null,
+    "created_at": "2026-03-02T02:50:02.401Z",
+    "updated_at": "2026-03-02T02:50:03.203Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$cZEsVleT9dQCZ7fiM9KfA6$EdIzuCxbH0AFOWk9CdxThKvpPDlHqXr0ChHVRKIo848=",
+    "is_superuser": false,
+    "email": "counsellor.ece@vvit.net",
+    "first_name": "Kiran",
+    "last_name": "Varma",
+    "phone": null,
+    "avatar": null,
+    "role": "counsellor",
+    "department": "ECE",
+    "assigned_counsellor": null,
+    "reports_to_hod": [
+      "hod.ece@vvit.net"
+    ],
+    "is_active": true,
+    "is_staff": false,
+    "is_verified": true,
+    "date_joined": "2026-03-02T02:50:03.518Z",
+    "last_login": null,
+    "created_at": "2026-03-02T02:50:03.518Z",
+    "updated_at": "2026-03-02T02:50:04.331Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$zizVnxVOAixuPX2cmEI6E8$ETuai94CEE5eHCx12XUK3pHxW+qBwKk60QxDiMD7MII=",
+    "is_superuser": false,
+    "email": "counsellor.eee@vvit.net",
+    "first_name": "Swathi",
+    "last_name": "Chowdary",
+    "phone": null,
+    "avatar": null,
+    "role": "counsellor",
+    "department": "EEE",
+    "assigned_counsellor": null,
+    "reports_to_hod": [
+      "hod.eee@vvit.net"
+    ],
+    "is_active": true,
+    "is_staff": false,
+    "is_verified": true,
+    "date_joined": "2026-03-02T02:50:04.715Z",
+    "last_login": null,
+    "created_at": "2026-03-02T02:50:04.715Z",
+    "updated_at": "2026-03-02T02:50:05.438Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$50KKl5GOxPokbBDW1VleKy$urhSER9/DTIpGoBmGd5bIgTP184naEMBB+/EeUsy6gw=",
+    "is_superuser": false,
+    "email": "counsellor.it@vvit.net",
+    "first_name": "Bhavana",
+    "last_name": "Krishna",
+    "phone": null,
+    "avatar": null,
+    "role": "counsellor",
+    "department": "IT",
+    "assigned_counsellor": null,
+    "reports_to_hod": [
+      "hod.it@vvit.net"
+    ],
+    "is_active": true,
+    "is_staff": false,
+    "is_verified": true,
+    "date_joined": "2026-03-02T02:50:05.794Z",
+    "last_login": null,
+    "created_at": "2026-03-02T02:50:05.794Z",
+    "updated_at": "2026-03-02T02:50:06.566Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$BPbvhdJTk8uOem33DmZUZi$7n8j/btGyohM+AwLnO5uBkowvqhr7acqUpZoC6uT8cA=",
+    "is_superuser": false,
+    "email": "counsellor.civ@vvit.net",
+    "first_name": "Lakshmi",
+    "last_name": "Raju",
+    "phone": null,
+    "avatar": null,
+    "role": "counsellor",
+    "department": "CIV",
+    "assigned_counsellor": null,
+    "reports_to_hod": [
+      "hod.civ@vvit.net"
+    ],
+    "is_active": true,
+    "is_staff": false,
+    "is_verified": true,
+    "date_joined": "2026-03-02T02:50:06.972Z",
+    "last_login": null,
+    "created_at": "2026-03-02T02:50:06.972Z",
+    "updated_at": "2026-03-02T02:50:07.777Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$WJ2kQbyXgmoQr1J8eIxHlF$27svT1dA6NI9lkSm7o3TmEZ+XN9SVAYc2g2uCVH53nw=",
+    "is_superuser": false,
+    "email": "counsellor.mec@vvit.net",
+    "first_name": "Anitha",
+    "last_name": "Babu",
+    "phone": null,
+    "avatar": null,
+    "role": "counsellor",
+    "department": "MEC",
+    "assigned_counsellor": null,
+    "reports_to_hod": [
+      "hod.mec@vvit.net"
+    ],
+    "is_active": true,
+    "is_staff": false,
+    "is_verified": true,
+    "date_joined": "2026-03-02T02:50:08.451Z",
+    "last_login": null,
+    "created_at": "2026-03-02T02:50:08.452Z",
+    "updated_at": "2026-03-02T02:50:09.290Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$gLy7DRrAQhHoyPLhxQBQvl$TRsgMtWMgJ+/fGgC+Sz0svs+QZ9Dk7Ep+fqMppR5vhg=",
+    "is_superuser": false,
+    "email": "student.cse.01@vvit.net",
+    "first_name": "Pavan",
+    "last_name": "Kumar",
+    "phone": null,
+    "avatar": null,
+    "role": "student",
+    "department": "CSE",
+    "assigned_counsellor": [
+      "counsellor.cse@vvit.net"
+    ],
+    "reports_to_hod": null,
+    "is_active": true,
+    "is_staff": false,
+    "is_verified": true,
+    "date_joined": "2026-03-02T02:50:09.667Z",
+    "last_login": null,
+    "created_at": "2026-03-02T02:50:09.667Z",
+    "updated_at": "2026-03-02T02:50:10.374Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$TNfq5rlGUUz7UGrEXxd3Kt$8aSXWbZFnNuIxTecUdhf2rI1FgxLiiAENTNiHpXpPZ4=",
+    "is_superuser": false,
+    "email": "student.cse.02@vvit.net",
+    "first_name": "Haritha",
+    "last_name": "Sharma",
+    "phone": null,
+    "avatar": null,
+    "role": "student",
+    "department": "CSE",
+    "assigned_counsellor": [
+      "counsellor.cse@vvit.net"
+    ],
+    "reports_to_hod": null,
+    "is_active": true,
+    "is_staff": false,
+    "is_verified": true,
+    "date_joined": "2026-03-02T02:50:11.124Z",
+    "last_login": null,
+    "created_at": "2026-03-02T02:50:11.124Z",
+    "updated_at": "2026-03-02T02:50:12.101Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$DqPI40MsYxMTxixCooXFV5$JXeg/Bzh4ljpfsmOwlou33G2RdmrjZ5IZ0yRmsgU2Xo=",
+    "is_superuser": false,
+    "email": "student.cse.03@vvit.net",
+    "first_name": "Mounika",
+    "last_name": "Reddy",
+    "phone": null,
+    "avatar": null,
+    "role": "student",
+    "department": "CSE",
+    "assigned_counsellor": [
+      "counsellor.cse@vvit.net"
+    ],
+    "reports_to_hod": null,
+    "is_active": true,
+    "is_staff": false,
+    "is_verified": true,
+    "date_joined": "2026-03-02T02:50:12.606Z",
+    "last_login": null,
+    "created_at": "2026-03-02T02:50:12.606Z",
+    "updated_at": "2026-03-02T02:50:13.427Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$nJLL4HY5wlZfDmBXBgM2Jg$UyilwoQ4zIQm2XKWL9cJfqAmMTc7nfR2tv4k7L5y1Q0=",
+    "is_superuser": false,
+    "email": "alumni.cse.01@vvit.net",
+    "first_name": "Akhil",
+    "last_name": "Naidu",
+    "phone": null,
+    "avatar": null,
+    "role": "alumni",
+    "department": "CSE",
+    "assigned_counsellor": [
+      "counsellor.cse@vvit.net"
+    ],
+    "reports_to_hod": null,
+    "is_active": true,
+    "is_staff": false,
+    "is_verified": true,
+    "date_joined": "2026-03-02T02:50:14.179Z",
+    "last_login": null,
+    "created_at": "2026-03-02T02:50:14.179Z",
+    "updated_at": "2026-03-02T02:50:15.059Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$0J9qCawrFonsLen9uLTFDh$nU5ByTblAWQDQl8yWAGOsn5JMKFkNB86XefmUZwzRXY=",
+    "is_superuser": false,
+    "email": "alumni.cse.02@vvit.net",
+    "first_name": "Vijay",
+    "last_name": "Krishna",
+    "phone": null,
+    "avatar": null,
+    "role": "alumni",
+    "department": "CSE",
+    "assigned_counsellor": [
+      "counsellor.cse@vvit.net"
+    ],
+    "reports_to_hod": null,
+    "is_active": true,
+    "is_staff": false,
+    "is_verified": true,
+    "date_joined": "2026-03-02T02:50:15.842Z",
+    "last_login": null,
+    "created_at": "2026-03-02T02:50:15.842Z",
+    "updated_at": "2026-03-02T02:50:16.593Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$IPQVPJ5hZYuCuaWAwi3UQD$nvwi6/Bw7j8alYqHxWF71E6D8sUcIIAnsKbdxxUYHsI=",
+    "is_superuser": false,
+    "email": "student.csm.01@vvit.net",
+    "first_name": "Srikanth",
+    "last_name": "Chowdary",
+    "phone": null,
+    "avatar": null,
+    "role": "student",
+    "department": "CSM",
+    "assigned_counsellor": [
+      "counsellor.csm@vvit.net"
+    ],
+    "reports_to_hod": null,
+    "is_active": true,
+    "is_staff": false,
+    "is_verified": true,
+    "date_joined": "2026-03-02T02:50:17.167Z",
+    "last_login": null,
+    "created_at": "2026-03-02T02:50:17.168Z",
+    "updated_at": "2026-03-02T02:50:17.940Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$3LsTHpDvnoxQgeWNsd7x9R$P2Rg2+aJ0IyUwN8TKJBVGaS5pEtIJ34PzLjSyBzkSMY=",
+    "is_superuser": false,
+    "email": "student.csm.02@vvit.net",
+    "first_name": "Swathi",
+    "last_name": "Babu",
+    "phone": null,
+    "avatar": null,
+    "role": "student",
+    "department": "CSM",
+    "assigned_counsellor": [
+      "counsellor.csm@vvit.net"
+    ],
+    "reports_to_hod": null,
+    "is_active": true,
+    "is_staff": false,
+    "is_verified": true,
+    "date_joined": "2026-03-02T02:50:18.482Z",
+    "last_login": null,
+    "created_at": "2026-03-02T02:50:18.482Z",
+    "updated_at": "2026-03-02T02:50:19.265Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$1IHSHf0vVj5Xl7Aud7cBZz$/juRJRC/IMhZrw2cfGl/n1STJhqVSgsaThmYnxWH5mI=",
+    "is_superuser": false,
+    "email": "student.csm.03@vvit.net",
+    "first_name": "Sindhu",
+    "last_name": "Raju",
+    "phone": null,
+    "avatar": null,
+    "role": "student",
+    "department": "CSM",
+    "assigned_counsellor": [
+      "counsellor.csm@vvit.net"
+    ],
+    "reports_to_hod": null,
+    "is_active": true,
+    "is_staff": false,
+    "is_verified": true,
+    "date_joined": "2026-03-02T02:50:19.797Z",
+    "last_login": null,
+    "created_at": "2026-03-02T02:50:19.797Z",
+    "updated_at": "2026-03-02T02:50:20.581Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$1UrhNMAhUv1JIFsE2ycp3S$RdAO5zNXp4CRrr9loLuXgwgn+pIgOsSdxZLoCmvYexI=",
+    "is_superuser": false,
+    "email": "alumni.csm.01@vvit.net",
+    "first_name": "Lakshmi",
+    "last_name": "Prasad",
+    "phone": null,
+    "avatar": null,
+    "role": "alumni",
+    "department": "CSM",
+    "assigned_counsellor": [
+      "counsellor.csm@vvit.net"
+    ],
+    "reports_to_hod": null,
+    "is_active": true,
+    "is_staff": false,
+    "is_verified": true,
+    "date_joined": "2026-03-02T02:50:21.162Z",
+    "last_login": null,
+    "created_at": "2026-03-02T02:50:21.163Z",
+    "updated_at": "2026-03-02T02:50:21.932Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$OmQCR7j7aWfhzM1vtYGUyC$4SoboPMYN8cZQpjDkkArBarTSzCWaalNa4kwWECQWls=",
+    "is_superuser": false,
+    "email": "alumni.csm.02@vvit.net",
+    "first_name": "Sravya",
+    "last_name": "Reddy",
+    "phone": null,
+    "avatar": null,
+    "role": "alumni",
+    "department": "CSM",
+    "assigned_counsellor": [
+      "counsellor.csm@vvit.net"
+    ],
+    "reports_to_hod": null,
+    "is_active": true,
+    "is_staff": false,
+    "is_verified": true,
+    "date_joined": "2026-03-02T02:50:22.561Z",
+    "last_login": null,
+    "created_at": "2026-03-02T02:50:22.561Z",
+    "updated_at": "2026-03-02T02:50:23.339Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$JoRjI7zbfGzAXwBbhbMQdc$kY48/GwamXhQnkcl2xuCa7tA7JxbRWBeu4U//aNFhRM=",
+    "is_superuser": false,
+    "email": "student.aid.01@vvit.net",
+    "first_name": "Suresh",
+    "last_name": "Rao",
+    "phone": null,
+    "avatar": null,
+    "role": "student",
+    "department": "AID",
+    "assigned_counsellor": [
+      "counsellor.aid@vvit.net"
+    ],
+    "reports_to_hod": null,
+    "is_active": true,
+    "is_staff": false,
+    "is_verified": true,
+    "date_joined": "2026-03-02T02:50:23.887Z",
+    "last_login": null,
+    "created_at": "2026-03-02T02:50:23.887Z",
+    "updated_at": "2026-03-02T02:50:24.721Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$rapY6qjX1ha01hwGSO6BbL$q5VNsxJd/lIDdYjPt9ci3XwLIRffSEcUjty5rNrmdas=",
+    "is_superuser": false,
+    "email": "student.aid.02@vvit.net",
+    "first_name": "Priya",
+    "last_name": "Naidu",
+    "phone": null,
+    "avatar": null,
+    "role": "student",
+    "department": "AID",
+    "assigned_counsellor": [
+      "counsellor.aid@vvit.net"
+    ],
+    "reports_to_hod": null,
+    "is_active": true,
+    "is_staff": false,
+    "is_verified": true,
+    "date_joined": "2026-03-02T02:50:25.269Z",
+    "last_login": null,
+    "created_at": "2026-03-02T02:50:25.269Z",
+    "updated_at": "2026-03-02T02:50:26.121Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$hl4ypdvwaOmcYwZhknnpzI$LUelm9BXq8wRNA7igtT7iwmkt01gBvEtIwz/lvppeiQ=",
+    "is_superuser": false,
+    "email": "student.aid.03@vvit.net",
+    "first_name": "Kavya",
+    "last_name": "Prasad",
+    "phone": null,
+    "avatar": null,
+    "role": "student",
+    "department": "AID",
+    "assigned_counsellor": [
+      "counsellor.aid@vvit.net"
+    ],
+    "reports_to_hod": null,
+    "is_active": true,
+    "is_staff": false,
+    "is_verified": true,
+    "date_joined": "2026-03-02T02:50:26.769Z",
+    "last_login": null,
+    "created_at": "2026-03-02T02:50:26.769Z",
+    "updated_at": "2026-03-02T02:50:27.622Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$notDQebm1Q4LsqwEsyUCHh$OinJmx3zTbiIpYI4pehyEEJvLST57Xs8A5TkZ6tq2DM=",
+    "is_superuser": false,
+    "email": "alumni.aid.01@vvit.net",
+    "first_name": "Swetha",
+    "last_name": "Kumar",
+    "phone": null,
+    "avatar": null,
+    "role": "alumni",
+    "department": "AID",
+    "assigned_counsellor": [
+      "counsellor.aid@vvit.net"
+    ],
+    "reports_to_hod": null,
+    "is_active": true,
+    "is_staff": false,
+    "is_verified": true,
+    "date_joined": "2026-03-02T02:50:28.208Z",
+    "last_login": null,
+    "created_at": "2026-03-02T02:50:28.208Z",
+    "updated_at": "2026-03-02T02:50:29.104Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$u16P3WBQxbglyeqypgSGFz$lInX+ovUAKJd5E9oxy63nL4x6sSrlTrkJBL1pPKsA6c=",
+    "is_superuser": false,
+    "email": "alumni.aid.02@vvit.net",
+    "first_name": "Mahesh",
+    "last_name": "Chandra",
+    "phone": null,
+    "avatar": null,
+    "role": "alumni",
+    "department": "AID",
+    "assigned_counsellor": [
+      "counsellor.aid@vvit.net"
+    ],
+    "reports_to_hod": null,
+    "is_active": true,
+    "is_staff": false,
+    "is_verified": true,
+    "date_joined": "2026-03-02T02:50:29.671Z",
+    "last_login": null,
+    "created_at": "2026-03-02T02:50:29.671Z",
+    "updated_at": "2026-03-02T02:50:30.642Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$JZ2w5kU18GJ4YXEia1oITS$f0cmDTXbypAE5cuOGsqQXlinDMoGcuxmlQvVi/Ptx7g=",
+    "is_superuser": false,
+    "email": "student.aiml.01@vvit.net",
+    "first_name": "Divya",
+    "last_name": "Reddy",
+    "phone": null,
+    "avatar": null,
+    "role": "student",
+    "department": "AIML",
+    "assigned_counsellor": [
+      "counsellor.aiml@vvit.net"
+    ],
+    "reports_to_hod": null,
+    "is_active": true,
+    "is_staff": false,
+    "is_verified": true,
+    "date_joined": "2026-03-02T02:50:31.134Z",
+    "last_login": null,
+    "created_at": "2026-03-02T02:50:31.134Z",
+    "updated_at": "2026-03-02T02:50:31.862Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$GZbffeWwkH2i1SWyU5I2dg$Xvt4I7yLFeZM57qS4Z4D90PYnWW3+P3Od166a2UaZhM=",
+    "is_superuser": false,
+    "email": "student.aiml.02@vvit.net",
+    "first_name": "Venkata Sai",
+    "last_name": "Krishna",
+    "phone": null,
+    "avatar": null,
+    "role": "student",
+    "department": "AIML",
+    "assigned_counsellor": [
+      "counsellor.aiml@vvit.net"
+    ],
+    "reports_to_hod": null,
+    "is_active": true,
+    "is_staff": false,
+    "is_verified": true,
+    "date_joined": "2026-03-02T02:50:32.536Z",
+    "last_login": null,
+    "created_at": "2026-03-02T02:50:32.536Z",
+    "updated_at": "2026-03-02T02:50:33.324Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$p5nPEcKo8b7Azy9zLfEtE5$zD7AAype0xDQnn1KGz+gRv2IbEfdmSp6SgrQ6v7ICGk=",
+    "is_superuser": false,
+    "email": "student.aiml.03@vvit.net",
+    "first_name": "Tarun",
+    "last_name": "Murthy",
+    "phone": null,
+    "avatar": null,
+    "role": "student",
+    "department": "AIML",
+    "assigned_counsellor": [
+      "counsellor.aiml@vvit.net"
+    ],
+    "reports_to_hod": null,
+    "is_active": true,
+    "is_staff": false,
+    "is_verified": true,
+    "date_joined": "2026-03-02T02:50:33.843Z",
+    "last_login": null,
+    "created_at": "2026-03-02T02:50:33.844Z",
+    "updated_at": "2026-03-02T02:50:34.675Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$Ix6GPIImzM5IOu4KTE9zhs$qY3eKVuq1CGDGT8rNkJq6mqnt+WSzHloZaHGJ/hd8Fw=",
+    "is_superuser": false,
+    "email": "alumni.aiml.01@vvit.net",
+    "first_name": "Naveen",
+    "last_name": "Rao",
+    "phone": null,
+    "avatar": null,
+    "role": "alumni",
+    "department": "AIML",
+    "assigned_counsellor": [
+      "counsellor.aiml@vvit.net"
+    ],
+    "reports_to_hod": null,
+    "is_active": true,
+    "is_staff": false,
+    "is_verified": true,
+    "date_joined": "2026-03-02T02:50:35.263Z",
+    "last_login": null,
+    "created_at": "2026-03-02T02:50:35.263Z",
+    "updated_at": "2026-03-02T02:50:36.042Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$kprbDYhRM8ndoAU0gHmpp3$VddXgpVUIYbEUPZ1y4Jqq9PyHoludJK6XXf5/nUYjxk=",
+    "is_superuser": false,
+    "email": "alumni.aiml.02@vvit.net",
+    "first_name": "Ravi",
+    "last_name": "Shankar",
+    "phone": null,
+    "avatar": null,
+    "role": "alumni",
+    "department": "AIML",
+    "assigned_counsellor": [
+      "counsellor.aiml@vvit.net"
+    ],
+    "reports_to_hod": null,
+    "is_active": true,
+    "is_staff": false,
+    "is_verified": true,
+    "date_joined": "2026-03-02T02:50:36.698Z",
+    "last_login": null,
+    "created_at": "2026-03-02T02:50:36.698Z",
+    "updated_at": "2026-03-02T02:50:37.544Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$Mu7Qnxwf2Gfz4gHcUBVsSU$5CK1/MXwjD9GWtZEccaoOE6k6gucaitgPzeci0I+6uM=",
+    "is_superuser": false,
+    "email": "student.cso.01@vvit.net",
+    "first_name": "Rajesh",
+    "last_name": "Kumar",
+    "phone": null,
+    "avatar": null,
+    "role": "student",
+    "department": "CSO",
+    "assigned_counsellor": [
+      "counsellor.cso@vvit.net"
+    ],
+    "reports_to_hod": null,
+    "is_active": true,
+    "is_staff": false,
+    "is_verified": true,
+    "date_joined": "2026-03-02T02:50:38.115Z",
+    "last_login": null,
+    "created_at": "2026-03-02T02:50:38.116Z",
+    "updated_at": "2026-03-02T02:50:38.965Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$1nd78j8sI11TQIUaWwetvI$vsl39ALfajoGGSrQ7XGN/WPceIil/nWdv6pJulg/sOA=",
+    "is_superuser": false,
+    "email": "student.cso.02@vvit.net",
+    "first_name": "Nikhil",
+    "last_name": "Sekhar",
+    "phone": null,
+    "avatar": null,
+    "role": "student",
+    "department": "CSO",
+    "assigned_counsellor": [
+      "counsellor.cso@vvit.net"
+    ],
+    "reports_to_hod": null,
+    "is_active": true,
+    "is_staff": false,
+    "is_verified": true,
+    "date_joined": "2026-03-02T02:50:39.565Z",
+    "last_login": null,
+    "created_at": "2026-03-02T02:50:39.565Z",
+    "updated_at": "2026-03-02T02:50:40.363Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$dJXcZpRmADC2fJrY01XaH1$H9LXXGeRqiilly+1Z0u90Yr8KmoyCyqDpfSOsJtEyBM=",
+    "is_superuser": false,
+    "email": "student.cso.03@vvit.net",
+    "first_name": "Anil",
+    "last_name": "Varma",
+    "phone": null,
+    "avatar": null,
+    "role": "student",
+    "department": "CSO",
+    "assigned_counsellor": [
+      "counsellor.cso@vvit.net"
+    ],
+    "reports_to_hod": null,
+    "is_active": true,
+    "is_staff": false,
+    "is_verified": true,
+    "date_joined": "2026-03-02T02:50:40.961Z",
+    "last_login": null,
+    "created_at": "2026-03-02T02:50:40.961Z",
+    "updated_at": "2026-03-02T02:50:41.783Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$PiqJhbRXHQjTcXLuy4aVzP$ZpGuSZT888ZximUnh1zJSleBvBcWUF51MB7btKjkp7U=",
+    "is_superuser": false,
+    "email": "alumni.cso.01@vvit.net",
+    "first_name": "Chandana",
+    "last_name": "Varma",
+    "phone": null,
+    "avatar": null,
+    "role": "alumni",
+    "department": "CSO",
+    "assigned_counsellor": [
+      "counsellor.cso@vvit.net"
+    ],
+    "reports_to_hod": null,
+    "is_active": true,
+    "is_staff": false,
+    "is_verified": true,
+    "date_joined": "2026-03-02T02:50:42.323Z",
+    "last_login": null,
+    "created_at": "2026-03-02T02:50:42.323Z",
+    "updated_at": "2026-03-02T02:50:43.134Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$2I1IwBL0ltVfWumFjBZXO2$+CxeZXw2nIUkOvd0mI7F4Lgf+rhWGUYRloIQN9GUpPs=",
+    "is_superuser": false,
+    "email": "student.cic.01@vvit.net",
+    "first_name": "Pavan",
+    "last_name": "Kumar",
+    "phone": null,
+    "avatar": null,
+    "role": "student",
+    "department": "CIC",
+    "assigned_counsellor": [
+      "counsellor.cic@vvit.net"
+    ],
+    "reports_to_hod": null,
+    "is_active": true,
+    "is_staff": false,
+    "is_verified": true,
+    "date_joined": "2026-03-02T02:50:43.787Z",
+    "last_login": null,
+    "created_at": "2026-03-02T02:50:43.787Z",
+    "updated_at": "2026-03-02T02:50:44.656Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$FbRACpA1XWPscK9y9MH7Fu$qjcn/+4GDcHT+r0+MT6ez3v+ztHsSIQYjb8b37FI4Nk=",
+    "is_superuser": false,
+    "email": "student.cic.02@vvit.net",
+    "first_name": "Haritha",
+    "last_name": "Sharma",
+    "phone": null,
+    "avatar": null,
+    "role": "student",
+    "department": "CIC",
+    "assigned_counsellor": [
+      "counsellor.cic@vvit.net"
+    ],
+    "reports_to_hod": null,
+    "is_active": true,
+    "is_staff": false,
+    "is_verified": true,
+    "date_joined": "2026-03-02T02:50:45.293Z",
+    "last_login": null,
+    "created_at": "2026-03-02T02:50:45.293Z",
+    "updated_at": "2026-03-02T02:50:46.173Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$95H2bCItUhk7IhhY5kmihp$jMLYNGg545e9FwlgdIRss1dY+tHksQkeF/lLUl6puT4=",
+    "is_superuser": false,
+    "email": "student.cic.03@vvit.net",
+    "first_name": "Mounika",
+    "last_name": "Reddy",
+    "phone": null,
+    "avatar": null,
+    "role": "student",
+    "department": "CIC",
+    "assigned_counsellor": [
+      "counsellor.cic@vvit.net"
+    ],
+    "reports_to_hod": null,
+    "is_active": true,
+    "is_staff": false,
+    "is_verified": true,
+    "date_joined": "2026-03-02T02:50:46.770Z",
+    "last_login": null,
+    "created_at": "2026-03-02T02:50:46.771Z",
+    "updated_at": "2026-03-02T02:50:47.717Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$kDo8G85F0mVBh3eFN0T9sT$T+CTpxQ5A4HzKBQk1xfwbAe0UQJBlcX52ohd1+vVLXE=",
+    "is_superuser": false,
+    "email": "alumni.cic.01@vvit.net",
+    "first_name": "Vijay",
+    "last_name": "Krishna",
+    "phone": null,
+    "avatar": null,
+    "role": "alumni",
+    "department": "CIC",
+    "assigned_counsellor": [
+      "counsellor.cic@vvit.net"
+    ],
+    "reports_to_hod": null,
+    "is_active": true,
+    "is_staff": false,
+    "is_verified": true,
+    "date_joined": "2026-03-02T02:50:48.307Z",
+    "last_login": null,
+    "created_at": "2026-03-02T02:50:48.307Z",
+    "updated_at": "2026-03-02T02:50:49.127Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$TAhHqLTXoXwrjw0rOVnOhg$vHqLHS27BCYM1lnNyHKZzFz/IbM3MtN6nzAQ9EPvc0U=",
+    "is_superuser": false,
+    "email": "alumni.cic.02@vvit.net",
+    "first_name": "Lakshmi",
+    "last_name": "Prasad",
+    "phone": null,
+    "avatar": null,
+    "role": "alumni",
+    "department": "CIC",
+    "assigned_counsellor": [
+      "counsellor.cic@vvit.net"
+    ],
+    "reports_to_hod": null,
+    "is_active": true,
+    "is_staff": false,
+    "is_verified": true,
+    "date_joined": "2026-03-02T02:50:49.699Z",
+    "last_login": null,
+    "created_at": "2026-03-02T02:50:49.700Z",
+    "updated_at": "2026-03-02T02:50:50.598Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$026XBpHoCgWZTVOUHCNiUq$GnqrwLq2n8j9N4z/F51tbO9QGq4mVfXK4hQBIz62LvA=",
+    "is_superuser": false,
+    "email": "student.ece.01@vvit.net",
+    "first_name": "Srikanth",
+    "last_name": "Chowdary",
+    "phone": null,
+    "avatar": null,
+    "role": "student",
+    "department": "ECE",
+    "assigned_counsellor": [
+      "counsellor.ece@vvit.net"
+    ],
+    "reports_to_hod": null,
+    "is_active": true,
+    "is_staff": false,
+    "is_verified": true,
+    "date_joined": "2026-03-02T02:50:51.175Z",
+    "last_login": null,
+    "created_at": "2026-03-02T02:50:51.175Z",
+    "updated_at": "2026-03-02T02:50:52.037Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$pelyQaaPUldWBZSGrF82YW$rC8/I+ejle+7XvmxxRnmhHm1qAXriquoN96VzMCUOI8=",
+    "is_superuser": false,
+    "email": "student.ece.02@vvit.net",
+    "first_name": "Swathi",
+    "last_name": "Babu",
+    "phone": null,
+    "avatar": null,
+    "role": "student",
+    "department": "ECE",
+    "assigned_counsellor": [
+      "counsellor.ece@vvit.net"
+    ],
+    "reports_to_hod": null,
+    "is_active": true,
+    "is_staff": false,
+    "is_verified": true,
+    "date_joined": "2026-03-02T02:50:52.579Z",
+    "last_login": null,
+    "created_at": "2026-03-02T02:50:52.579Z",
+    "updated_at": "2026-03-02T02:50:53.531Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$qdZUOyt0qxxjVlvw8BvxUW$yd8ZN+HbtwrGZXOCC479grjSGh+mRn6UZphoAn57aWY=",
+    "is_superuser": false,
+    "email": "student.ece.03@vvit.net",
+    "first_name": "Sindhu",
+    "last_name": "Raju",
+    "phone": null,
+    "avatar": null,
+    "role": "student",
+    "department": "ECE",
+    "assigned_counsellor": [
+      "counsellor.ece@vvit.net"
+    ],
+    "reports_to_hod": null,
+    "is_active": true,
+    "is_staff": false,
+    "is_verified": true,
+    "date_joined": "2026-03-02T02:50:54.282Z",
+    "last_login": null,
+    "created_at": "2026-03-02T02:50:54.282Z",
+    "updated_at": "2026-03-02T02:50:55.180Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$1v1upyHEfXonC6SDyvJGRn$3WWeJ7fB5AJi40rF0QE0tkwiD60iRr30EdNHb1ecrXQ=",
+    "is_superuser": false,
+    "email": "alumni.ece.01@vvit.net",
+    "first_name": "Sravya",
+    "last_name": "Reddy",
+    "phone": null,
+    "avatar": null,
+    "role": "alumni",
+    "department": "ECE",
+    "assigned_counsellor": [
+      "counsellor.ece@vvit.net"
+    ],
+    "reports_to_hod": null,
+    "is_active": true,
+    "is_staff": false,
+    "is_verified": true,
+    "date_joined": "2026-03-02T02:50:55.920Z",
+    "last_login": null,
+    "created_at": "2026-03-02T02:50:55.921Z",
+    "updated_at": "2026-03-02T02:50:56.812Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$KNwtJh9GD5K0doOSLgvcyE$vHbYb7JTqrD2QO0DnUobWMlh5+rSiqBNXwAIXTQ6iQE=",
+    "is_superuser": false,
+    "email": "alumni.ece.02@vvit.net",
+    "first_name": "Swetha",
+    "last_name": "Kumar",
+    "phone": null,
+    "avatar": null,
+    "role": "alumni",
+    "department": "ECE",
+    "assigned_counsellor": [
+      "counsellor.ece@vvit.net"
+    ],
+    "reports_to_hod": null,
+    "is_active": true,
+    "is_staff": false,
+    "is_verified": true,
+    "date_joined": "2026-03-02T02:50:57.467Z",
+    "last_login": null,
+    "created_at": "2026-03-02T02:50:57.467Z",
+    "updated_at": "2026-03-02T02:50:58.446Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$D3CQk1LHg8RwwqNvnCxHIq$xDSHJEZT4epyR0l75+tXrnZGj/6cUpkqSZRLSJltKuw=",
+    "is_superuser": false,
+    "email": "student.eee.01@vvit.net",
+    "first_name": "Suresh",
+    "last_name": "Rao",
+    "phone": null,
+    "avatar": null,
+    "role": "student",
+    "department": "EEE",
+    "assigned_counsellor": [
+      "counsellor.eee@vvit.net"
+    ],
+    "reports_to_hod": null,
+    "is_active": true,
+    "is_staff": false,
+    "is_verified": true,
+    "date_joined": "2026-03-02T02:50:59.039Z",
+    "last_login": null,
+    "created_at": "2026-03-02T02:50:59.040Z",
+    "updated_at": "2026-03-02T02:50:59.976Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$V0wrA30RZ2ZsSKn0TVRJAJ$At/bCDby44Dd2yz+cWOprtKoRuD/LI8PHNsPQs4CHQk=",
+    "is_superuser": false,
+    "email": "student.eee.02@vvit.net",
+    "first_name": "Priya",
+    "last_name": "Naidu",
+    "phone": null,
+    "avatar": null,
+    "role": "student",
+    "department": "EEE",
+    "assigned_counsellor": [
+      "counsellor.eee@vvit.net"
+    ],
+    "reports_to_hod": null,
+    "is_active": true,
+    "is_staff": false,
+    "is_verified": true,
+    "date_joined": "2026-03-02T02:51:00.551Z",
+    "last_login": null,
+    "created_at": "2026-03-02T02:51:00.551Z",
+    "updated_at": "2026-03-02T02:51:01.490Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$YbreUFlKdmavhbcoLpFK48$G7QfhTmteTYe84/f6k70pomxiIksEM0eIIqLC9xg+CQ=",
+    "is_superuser": false,
+    "email": "student.eee.03@vvit.net",
+    "first_name": "Kavya",
+    "last_name": "Prasad",
+    "phone": null,
+    "avatar": null,
+    "role": "student",
+    "department": "EEE",
+    "assigned_counsellor": [
+      "counsellor.eee@vvit.net"
+    ],
+    "reports_to_hod": null,
+    "is_active": true,
+    "is_staff": false,
+    "is_verified": true,
+    "date_joined": "2026-03-02T02:51:01.994Z",
+    "last_login": null,
+    "created_at": "2026-03-02T02:51:01.994Z",
+    "updated_at": "2026-03-02T02:51:02.844Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$hTufZTXsamkHCSSB4DLbGR$HMp2dF0ke2RwHk7ZbLBFF5JqeOZACCwzJTtUHR3R0iY=",
+    "is_superuser": false,
+    "email": "alumni.eee.01@vvit.net",
+    "first_name": "Mahesh",
+    "last_name": "Chandra",
+    "phone": null,
+    "avatar": null,
+    "role": "alumni",
+    "department": "EEE",
+    "assigned_counsellor": [
+      "counsellor.eee@vvit.net"
+    ],
+    "reports_to_hod": null,
+    "is_active": true,
+    "is_staff": false,
+    "is_verified": true,
+    "date_joined": "2026-03-02T02:51:03.390Z",
+    "last_login": null,
+    "created_at": "2026-03-02T02:51:03.390Z",
+    "updated_at": "2026-03-02T02:51:04.145Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$YvJJ0hdAKljly9Ac1mJhVP$s/Afdta/v8R0C2JXab8HDs92GDGiy5TiWZwxk4qxE/E=",
+    "is_superuser": false,
+    "email": "alumni.eee.02@vvit.net",
+    "first_name": "Naveen",
+    "last_name": "Rao",
+    "phone": null,
+    "avatar": null,
+    "role": "alumni",
+    "department": "EEE",
+    "assigned_counsellor": [
+      "counsellor.eee@vvit.net"
+    ],
+    "reports_to_hod": null,
+    "is_active": true,
+    "is_staff": false,
+    "is_verified": true,
+    "date_joined": "2026-03-02T02:51:04.732Z",
+    "last_login": null,
+    "created_at": "2026-03-02T02:51:04.732Z",
+    "updated_at": "2026-03-02T02:51:05.531Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$oX8GVUCaXdSGvzlgX3Z62l$cixvK+K61/5baXOfRHjqMgA4+vv2YsphnLLUurvM6F4=",
+    "is_superuser": false,
+    "email": "student.it.01@vvit.net",
+    "first_name": "Divya",
+    "last_name": "Reddy",
+    "phone": null,
+    "avatar": null,
+    "role": "student",
+    "department": "IT",
+    "assigned_counsellor": [
+      "counsellor.it@vvit.net"
+    ],
+    "reports_to_hod": null,
+    "is_active": true,
+    "is_staff": false,
+    "is_verified": true,
+    "date_joined": "2026-03-02T02:51:06.229Z",
+    "last_login": null,
+    "created_at": "2026-03-02T02:51:06.229Z",
+    "updated_at": "2026-03-02T02:51:07.039Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$04tbyaXZ5XRKRwzv3fQ1iF$2Y2HexAASRbJXQJYUxBZMLqrE2D8zgoYSmp5mSQ+Cr0=",
+    "is_superuser": false,
+    "email": "student.it.02@vvit.net",
+    "first_name": "Venkata Sai",
+    "last_name": "Krishna",
+    "phone": null,
+    "avatar": null,
+    "role": "student",
+    "department": "IT",
+    "assigned_counsellor": [
+      "counsellor.it@vvit.net"
+    ],
+    "reports_to_hod": null,
+    "is_active": true,
+    "is_staff": false,
+    "is_verified": true,
+    "date_joined": "2026-03-02T02:51:07.546Z",
+    "last_login": null,
+    "created_at": "2026-03-02T02:51:07.546Z",
+    "updated_at": "2026-03-02T02:51:08.264Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$c0fI3WT5qJFbwJvuanu5Mk$WHX5gk7UnwFsjvSRo3eu3PGQRHZ4MoB8LkNsGrOXa8U=",
+    "is_superuser": false,
+    "email": "student.it.03@vvit.net",
+    "first_name": "Tarun",
+    "last_name": "Murthy",
+    "phone": null,
+    "avatar": null,
+    "role": "student",
+    "department": "IT",
+    "assigned_counsellor": [
+      "counsellor.it@vvit.net"
+    ],
+    "reports_to_hod": null,
+    "is_active": true,
+    "is_staff": false,
+    "is_verified": true,
+    "date_joined": "2026-03-02T02:51:08.771Z",
+    "last_login": null,
+    "created_at": "2026-03-02T02:51:08.771Z",
+    "updated_at": "2026-03-02T02:51:09.475Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$fa6I5RR5aRwlayjjm3Mqyu$AzzuKW7znKb8x1cgKxtg0OuiF3Qt4EAgASHkeXRvoSc=",
+    "is_superuser": false,
+    "email": "alumni.it.01@vvit.net",
+    "first_name": "Ravi",
+    "last_name": "Shankar",
+    "phone": null,
+    "avatar": null,
+    "role": "alumni",
+    "department": "IT",
+    "assigned_counsellor": [
+      "counsellor.it@vvit.net"
+    ],
+    "reports_to_hod": null,
+    "is_active": true,
+    "is_staff": false,
+    "is_verified": true,
+    "date_joined": "2026-03-02T02:51:09.983Z",
+    "last_login": null,
+    "created_at": "2026-03-02T02:51:09.983Z",
+    "updated_at": "2026-03-02T02:51:10.676Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$netRFq587HI26lkUnFs6oB$BmYv0JNzIH+2PW5WzUCe3W6UZ+J+kNg9oCqCKnvTbps=",
+    "is_superuser": false,
+    "email": "alumni.it.02@vvit.net",
+    "first_name": "Chandana",
+    "last_name": "Varma",
+    "phone": null,
+    "avatar": null,
+    "role": "alumni",
+    "department": "IT",
+    "assigned_counsellor": [
+      "counsellor.it@vvit.net"
+    ],
+    "reports_to_hod": null,
+    "is_active": true,
+    "is_staff": false,
+    "is_verified": true,
+    "date_joined": "2026-03-02T02:51:11.228Z",
+    "last_login": null,
+    "created_at": "2026-03-02T02:51:11.229Z",
+    "updated_at": "2026-03-02T02:51:11.948Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$XHMduDcbk1TfxXXVzNZw8a$s/AMdxwoSd9xYjo7LSGtQhQx6SnlQcOmSAI9lUvzBa8=",
+    "is_superuser": false,
+    "email": "student.civ.01@vvit.net",
+    "first_name": "Rajesh",
+    "last_name": "Kumar",
+    "phone": null,
+    "avatar": null,
+    "role": "student",
+    "department": "CIV",
+    "assigned_counsellor": [
+      "counsellor.civ@vvit.net"
+    ],
+    "reports_to_hod": null,
+    "is_active": true,
+    "is_staff": false,
+    "is_verified": true,
+    "date_joined": "2026-03-02T02:51:12.555Z",
+    "last_login": null,
+    "created_at": "2026-03-02T02:51:12.555Z",
+    "updated_at": "2026-03-02T02:51:13.245Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$ydUNhr34tAfaWefQq7mU44$9C/3d2X77tW0HhzBiKUvPyVVMy3qulnxXczzXqmRwOs=",
+    "is_superuser": false,
+    "email": "student.civ.02@vvit.net",
+    "first_name": "Nikhil",
+    "last_name": "Sekhar",
+    "phone": null,
+    "avatar": null,
+    "role": "student",
+    "department": "CIV",
+    "assigned_counsellor": [
+      "counsellor.civ@vvit.net"
+    ],
+    "reports_to_hod": null,
+    "is_active": true,
+    "is_staff": false,
+    "is_verified": true,
+    "date_joined": "2026-03-02T02:51:13.837Z",
+    "last_login": null,
+    "created_at": "2026-03-02T02:51:13.837Z",
+    "updated_at": "2026-03-02T02:51:14.545Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$HhYn4NWes1LVEvUvWvIcR1$sr+cYiAfD9kRpQTc62Rn/UrwVtw/r56rVnKlzGllZzE=",
+    "is_superuser": false,
+    "email": "student.civ.03@vvit.net",
+    "first_name": "Anil",
+    "last_name": "Varma",
+    "phone": null,
+    "avatar": null,
+    "role": "student",
+    "department": "CIV",
+    "assigned_counsellor": [
+      "counsellor.civ@vvit.net"
+    ],
+    "reports_to_hod": null,
+    "is_active": true,
+    "is_staff": false,
+    "is_verified": true,
+    "date_joined": "2026-03-02T02:51:15.099Z",
+    "last_login": null,
+    "created_at": "2026-03-02T02:51:15.099Z",
+    "updated_at": "2026-03-02T02:51:15.776Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$5Iv8fjkZ6nPRuimAmvhx9V$fUaBQbBDzT1klinNWVu1yWcyHrXdnj+w/uTNdaftMYU=",
+    "is_superuser": false,
+    "email": "alumni.civ.01@vvit.net",
+    "first_name": "Akhil",
+    "last_name": "Naidu",
+    "phone": null,
+    "avatar": null,
+    "role": "alumni",
+    "department": "CIV",
+    "assigned_counsellor": [
+      "counsellor.civ@vvit.net"
+    ],
+    "reports_to_hod": null,
+    "is_active": true,
+    "is_staff": false,
+    "is_verified": true,
+    "date_joined": "2026-03-02T02:51:20.012Z",
+    "last_login": null,
+    "created_at": "2026-03-02T02:51:20.012Z",
+    "updated_at": "2026-03-02T02:51:20.843Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "fields": {
+    "password": "",
+    "is_superuser": false,
+    "email": "alumni.civ.02@vvit.net",
+    "first_name": "Vijay",
+    "last_name": "Krishna",
+    "phone": null,
+    "avatar": null,
+    "role": "alumni",
+    "department": "CIV",
+    "assigned_counsellor": [
+      "counsellor.civ@vvit.net"
+    ],
+    "reports_to_hod": null,
+    "is_active": true,
+    "is_staff": false,
+    "is_verified": true,
+    "date_joined": "2026-03-02T02:51:21.416Z",
+    "last_login": null,
+    "created_at": "2026-03-02T02:51:21.416Z",
+    "updated_at": "2026-03-02T02:51:21.416Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$EFDqZ8T8XY2Mcwp4cODWq4$LxoNCLmwYr8m4JWlhz1/2A00GvPAHMgvbAC1p7UgMBQ=",
+    "is_superuser": false,
+    "email": "student.mec.01@vvit.net",
+    "first_name": "Sindhu",
+    "last_name": "Raju",
+    "phone": null,
+    "avatar": null,
+    "role": "student",
+    "department": "MEC",
+    "assigned_counsellor": [
+      "counsellor.mec@vvit.net"
+    ],
+    "reports_to_hod": null,
+    "is_active": true,
+    "is_staff": false,
+    "is_verified": true,
+    "date_joined": "2026-03-02T02:53:33.412Z",
+    "last_login": null,
+    "created_at": "2026-03-02T02:53:33.412Z",
+    "updated_at": "2026-03-02T02:53:34.327Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$vD67PbVSej1KVZu8Camqv9$aLXwDScogLfbMdjUFPXfy3md+cxlifeSnaihUOcT0o0=",
+    "is_superuser": false,
+    "email": "student.mec.02@vvit.net",
+    "first_name": "Venkata Sai",
+    "last_name": "Krishna",
+    "phone": null,
+    "avatar": null,
+    "role": "student",
+    "department": "MEC",
+    "assigned_counsellor": [
+      "counsellor.mec@vvit.net"
+    ],
+    "reports_to_hod": null,
+    "is_active": true,
+    "is_staff": false,
+    "is_verified": true,
+    "date_joined": "2026-03-02T02:53:34.964Z",
+    "last_login": null,
+    "created_at": "2026-03-02T02:53:34.965Z",
+    "updated_at": "2026-03-02T02:53:35.857Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$fd3fkw6uG2ynDUJIxnbrST$7jI0FPMBoZx/U3B8t5CNqdGCilFi0+yfJXBZ0155MSA=",
+    "is_superuser": false,
+    "email": "student.mec.03@vvit.net",
+    "first_name": "Nikhil",
+    "last_name": "Sekhar",
+    "phone": null,
+    "avatar": null,
+    "role": "student",
+    "department": "MEC",
+    "assigned_counsellor": [
+      "counsellor.mec@vvit.net"
+    ],
+    "reports_to_hod": null,
+    "is_active": true,
+    "is_staff": false,
+    "is_verified": true,
+    "date_joined": "2026-03-02T02:53:36.370Z",
+    "last_login": null,
+    "created_at": "2026-03-02T02:53:36.371Z",
+    "updated_at": "2026-03-02T02:53:37.244Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$Qh3HHFMfcMCNU6mdbWJF07$pTH9A/QFXwV0kc/UdyzV+lKNW2afVO2vSapJkWkm9Sg=",
+    "is_superuser": false,
+    "email": "alumni.mec.01@vvit.net",
+    "first_name": "Chandana",
+    "last_name": "Varma",
+    "phone": null,
+    "avatar": null,
+    "role": "alumni",
+    "department": "MEC",
+    "assigned_counsellor": [
+      "counsellor.mec@vvit.net"
+    ],
+    "reports_to_hod": null,
+    "is_active": true,
+    "is_staff": false,
+    "is_verified": true,
+    "date_joined": "2026-03-02T02:53:37.919Z",
+    "last_login": null,
+    "created_at": "2026-03-02T02:53:37.919Z",
+    "updated_at": "2026-03-02T02:53:39.213Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$Dav4pnTbgcTGz2YcvLNJU0$hB1GlW9vg0YN/4gUC5TDAcp/QTMldy4KZ7YqBLH2cKw=",
+    "is_superuser": false,
+    "email": "alumni.mec.02@vvit.net",
+    "first_name": "Vijay",
+    "last_name": "Krishna",
+    "phone": null,
+    "avatar": null,
+    "role": "alumni",
+    "department": "MEC",
+    "assigned_counsellor": [
+      "counsellor.mec@vvit.net"
+    ],
+    "reports_to_hod": null,
+    "is_active": true,
+    "is_staff": false,
+    "is_verified": true,
+    "date_joined": "2026-03-02T02:53:39.967Z",
+    "last_login": null,
+    "created_at": "2026-03-02T02:53:39.968Z",
+    "updated_at": "2026-03-02T02:53:41.066Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$2yEzKdaOLs6mt5AWxJV0jE$tSGZw/+NJufe+zfXBb2vSIDa6J0lmK3R7QeO2xl+Xzg=",
+    "is_superuser": false,
+    "email": "hod.cse@vvit.net",
+    "first_name": "Venkata Ramana",
+    "last_name": "Murthy",
+    "phone": "9848012345",
+    "avatar": null,
+    "role": "hod",
+    "department": "CSE",
+    "assigned_counsellor": null,
+    "reports_to_hod": null,
+    "is_active": true,
+    "is_staff": false,
+    "is_verified": true,
+    "date_joined": "2026-03-02T04:10:37.987Z",
+    "last_login": null,
+    "created_at": "2026-03-02T04:10:37.987Z",
+    "updated_at": "2026-03-02T04:10:38.701Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$6iTSbTPvrNp5DlrjnerS6g$qq2+pYlSCirttclusWfXmla2tQbE5svc3+TFYWMxdPU=",
+    "is_superuser": false,
+    "email": "hod.aid@vvit.net",
+    "first_name": "Padmavathi",
+    "last_name": "Devi",
+    "phone": "9848034567",
+    "avatar": null,
+    "role": "hod",
+    "department": "AID",
+    "assigned_counsellor": null,
+    "reports_to_hod": null,
+    "is_active": true,
+    "is_staff": false,
+    "is_verified": true,
+    "date_joined": "2026-03-02T04:10:39.779Z",
+    "last_login": null,
+    "created_at": "2026-03-02T04:10:39.779Z",
+    "updated_at": "2026-03-02T04:10:40.492Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$G4l1sYtaId3aMsh0B3mn7O$Bn7gV78iHa1yUbWJjG/LezoWfaK1WVfQC+hxOcsCu7M=",
+    "is_superuser": false,
+    "email": "hod.aiml@vvit.net",
+    "first_name": "Gopinath",
+    "last_name": "Reddy",
+    "phone": "9848045678",
+    "avatar": null,
+    "role": "hod",
+    "department": "AIML",
+    "assigned_counsellor": null,
+    "reports_to_hod": null,
+    "is_active": true,
+    "is_staff": false,
+    "is_verified": true,
+    "date_joined": "2026-03-02T04:10:40.834Z",
+    "last_login": null,
+    "created_at": "2026-03-02T04:10:40.834Z",
+    "updated_at": "2026-03-02T04:10:41.636Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$psfWVVacfBT3j17OsA7nQH$IWjrVauF/ANEn5DewPCOfQJ78CkKroifSF9FmifZLh4=",
+    "is_superuser": false,
+    "email": "hod.cso@vvit.net",
+    "first_name": "Lakshmi Narayana",
+    "last_name": "Prasad",
+    "phone": "9848056789",
+    "avatar": null,
+    "role": "hod",
+    "department": "CSO",
+    "assigned_counsellor": null,
+    "reports_to_hod": null,
+    "is_active": true,
+    "is_staff": false,
+    "is_verified": true,
+    "date_joined": "2026-03-02T04:10:41.956Z",
+    "last_login": null,
+    "created_at": "2026-03-02T04:10:41.956Z",
+    "updated_at": "2026-03-02T04:10:42.711Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$YQpYZL4Htj2EMF3LVBOCpq$NHZ2qARsN8ndRPbMmTdAInHlKRlIlXDYnF0pkC3BxVo=",
+    "is_superuser": false,
+    "email": "hod.cic@vvit.net",
+    "first_name": "Chandrakala",
+    "last_name": "Sharma",
+    "phone": "9848067890",
+    "avatar": null,
+    "role": "hod",
+    "department": "CIC",
+    "assigned_counsellor": null,
+    "reports_to_hod": null,
+    "is_active": true,
+    "is_staff": false,
+    "is_verified": true,
+    "date_joined": "2026-03-02T04:10:43.045Z",
+    "last_login": null,
+    "created_at": "2026-03-02T04:10:43.045Z",
+    "updated_at": "2026-03-02T04:10:43.768Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$LGz5VRHQ2kr0AWC1egGP5Q$B5OsyiOImumR3O/YhfiXdZFZkmKxcttVfgBjzfutc6A=",
+    "is_superuser": false,
+    "email": "hod.ece@vvit.net",
+    "first_name": "Subrahmanyam",
+    "last_name": "Naidu",
+    "phone": "9848078901",
+    "avatar": null,
+    "role": "hod",
+    "department": "ECE",
+    "assigned_counsellor": null,
+    "reports_to_hod": null,
+    "is_active": true,
+    "is_staff": false,
+    "is_verified": true,
+    "date_joined": "2026-03-02T04:10:44.113Z",
+    "last_login": null,
+    "created_at": "2026-03-02T04:10:44.113Z",
+    "updated_at": "2026-03-02T04:10:44.831Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$WYs42Y0WSiiiEsdwHSnLgZ$ZCPpvXd9CHdaVQZUTiZM90ond3GTiSB1KcSYgrv+aLc=",
+    "is_superuser": false,
+    "email": "hod.eee@vvit.net",
+    "first_name": "Satyanarayana",
+    "last_name": "Babu",
+    "phone": "9848089012",
+    "avatar": null,
+    "role": "hod",
+    "department": "EEE",
+    "assigned_counsellor": null,
+    "reports_to_hod": null,
+    "is_active": true,
+    "is_staff": false,
+    "is_verified": true,
+    "date_joined": "2026-03-02T04:10:45.161Z",
+    "last_login": null,
+    "created_at": "2026-03-02T04:10:45.161Z",
+    "updated_at": "2026-03-02T04:10:45.884Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$y4pcDsM1evo6yivC9TDWCE$jxs5yeSjA7iZ0UCWbSK66I5PCCc1CMCQxAXsXfe2Pqk=",
+    "is_superuser": false,
+    "email": "hod.it@vvit.net",
+    "first_name": "Venkateswara",
+    "last_name": "Raju",
+    "phone": "9848090123",
+    "avatar": null,
+    "role": "hod",
+    "department": "IT",
+    "assigned_counsellor": null,
+    "reports_to_hod": null,
+    "is_active": true,
+    "is_staff": false,
+    "is_verified": true,
+    "date_joined": "2026-03-02T04:10:46.237Z",
+    "last_login": null,
+    "created_at": "2026-03-02T04:10:46.237Z",
+    "updated_at": "2026-03-02T04:10:46.951Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$9JW8AsiC5ETrunCCSVJPbu$iCAchkBjM/Zv53AoDuprvzyMWIKhuOqWDBhBUHLO740=",
+    "is_superuser": false,
+    "email": "hod.civ@vvit.net",
+    "first_name": "Raghavendra",
+    "last_name": "Varma",
+    "phone": "9848001234",
+    "avatar": null,
+    "role": "hod",
+    "department": "CIV",
+    "assigned_counsellor": null,
+    "reports_to_hod": null,
+    "is_active": true,
+    "is_staff": false,
+    "is_verified": true,
+    "date_joined": "2026-03-02T04:10:47.284Z",
+    "last_login": null,
+    "created_at": "2026-03-02T04:10:47.284Z",
+    "updated_at": "2026-03-02T04:10:48.002Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$dWpFnPSu4UJPCZjByOu4Nn$YDUCvlz/3oMWUr1HRd05SteTDy1IfmoxzmD/InoRO38=",
+    "is_superuser": false,
+    "email": "hod.mec@vvit.net",
+    "first_name": "Surya Narayana",
+    "last_name": "Rao",
+    "phone": "9848011234",
+    "avatar": null,
+    "role": "hod",
+    "department": "MEC",
+    "assigned_counsellor": null,
+    "reports_to_hod": null,
+    "is_active": true,
+    "is_staff": false,
+    "is_verified": true,
+    "date_joined": "2026-03-02T04:10:48.326Z",
+    "last_login": null,
+    "created_at": "2026-03-02T04:10:48.326Z",
+    "updated_at": "2026-03-02T04:10:49.037Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$SBaNG7xVY1u2sVeML7kjoU$XW+fBZNoKFkdTkzQvChIRT+cVAAnunHcafH5vk6GRWM=",
+    "is_superuser": false,
+    "email": "22bq1a42h3@vvit.csm",
+    "first_name": "Mahesh",
+    "last_name": "S",
+    "phone": "9898988988",
+    "avatar": null,
+    "role": "student",
+    "department": "CSM",
+    "assigned_counsellor": null,
+    "reports_to_hod": null,
+    "is_active": false,
+    "is_staff": false,
+    "is_verified": false,
+    "date_joined": "2026-03-02T06:05:40.738Z",
+    "last_login": null,
+    "created_at": "2026-03-02T06:05:42.599Z",
+    "updated_at": "2026-03-02T06:05:44.642Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$pf45rgIjYAAvYE3R62N7wk$zlvpiPMu989tE7MtRtXCNg2Of//P/vd0XoShdy7QqX4=",
+    "is_superuser": false,
+    "email": "22bq1a42g7@vvit.net",
+    "first_name": "Nikhil",
+    "last_name": "Satya",
+    "phone": "9898989898",
+    "avatar": "https://res.cloudinary.com/dbnkhibzi/image/upload/v1772432443/alumni-connect/profiles/ubrcnnb2inow75h21lhu.jpg",
+    "role": "student",
+    "department": "CSM",
+    "assigned_counsellor": null,
+    "reports_to_hod": null,
+    "is_active": true,
+    "is_staff": false,
+    "is_verified": true,
+    "date_joined": "2026-03-02T06:15:23.308Z",
+    "last_login": null,
+    "created_at": "2026-03-02T06:15:24.592Z",
+    "updated_at": "2026-03-02T06:23:45.693Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "accounts.studentprofile",
+  "pk": 28,
+  "fields": {
+    "user": [
+      "rahul.kumar@vvit.net"
+    ],
+    "roll_number": "22BQ1A4201",
+    "batch_year": 2022,
+    "graduation_year": 2026,
+    "current_year": 4,
+    "current_semester": 8,
+    "cgpa": "8.70",
+    "location": "Guntur, Andhra Pradesh",
+    "profile_picture": "https://randomuser.me/api/portraits/men/75.jpg",
+    "resume": null,
+    "bio": "Full-stack developer passionate about building scalable web apps. Active contributor to college coding club.",
+    "skills": [
+      {
+        "name": "React",
+        "proficiency": "advanced"
+      },
+      {
+        "name": "Python",
+        "proficiency": "advanced"
+      },
+      {
+        "name": "Django",
+        "proficiency": "intermediate"
+      },
+      {
+        "name": "JavaScript",
+        "proficiency": "advanced"
+      },
+      {
+        "name": "PostgreSQL",
+        "proficiency": "intermediate"
+      }
+    ],
+    "interests": [
+      "Web Development",
+      "AI/ML",
+      "Cloud Computing"
+    ],
+    "social_profiles": {
+      "linkedin": "https://linkedin.com/in/rahul-kumar-vvit",
+      "github": "https://github.com/rahulkumar",
+      "leetcode": "https://leetcode.com/rahulkumar",
+      "portfolio": "https://rahulkumar.dev"
+    },
+    "certifications": [
+      {
+        "name": "AWS Certified Solutions Architect",
+        "issuer": "Amazon",
+        "date": "2024-05-20",
+        "link": ""
+      },
+      {
+        "name": "Meta Front-End Developer",
+        "issuer": "Coursera",
+        "date": "2024-01-10",
+        "link": ""
+      }
+    ],
+    "internships": [
+      {
+        "company": "Zoho Corporation",
+        "role": "Software Intern",
+        "startDate": "2024-05-01",
+        "endDate": "2024-07-31",
+        "description": "Worked on Zoho CRM frontend using React and TypeScript."
+      }
+    ],
+    "placements": [],
+    "linkedin_url": null,
+    "github_url": null,
+    "portfolio_url": null,
+    "resume_url": null,
+    "created_at": "2026-03-01T00:00:01.843Z",
+    "updated_at": "2026-03-01T00:00:01.843Z"
+  }
+},
+{
+  "model": "accounts.studentprofile",
+  "pk": 29,
+  "fields": {
+    "user": [
+      "sneha.sharma@vvit.net"
+    ],
+    "roll_number": "22BQ1A4212",
+    "batch_year": 2022,
+    "graduation_year": 2026,
+    "current_year": 4,
+    "current_semester": 8,
+    "cgpa": "9.10",
+    "location": "Vijayawada, Andhra Pradesh",
+    "profile_picture": "https://randomuser.me/api/portraits/women/80.jpg",
+    "resume": null,
+    "bio": "Data science enthusiast and ML researcher. Published a paper on NLP at IEEE conference.",
+    "skills": [
+      {
+        "name": "Python",
+        "proficiency": "advanced"
+      },
+      {
+        "name": "TensorFlow",
+        "proficiency": "advanced"
+      },
+      {
+        "name": "Machine Learning",
+        "proficiency": "advanced"
+      },
+      {
+        "name": "NLP",
+        "proficiency": "intermediate"
+      },
+      {
+        "name": "SQL",
+        "proficiency": "intermediate"
+      }
+    ],
+    "interests": [
+      "Data Science",
+      "NLP",
+      "Research"
+    ],
+    "social_profiles": {
+      "linkedin": "https://linkedin.com/in/sneha-sharma-vvit",
+      "github": "https://github.com/snehasharma",
+      "leetcode": "https://leetcode.com/snehasharma"
+    },
+    "certifications": [
+      {
+        "name": "Deep Learning Specialization",
+        "issuer": "Coursera (Andrew Ng)",
+        "date": "2024-03-15",
+        "link": ""
+      },
+      {
+        "name": "Google Data Analytics",
+        "issuer": "Google",
+        "date": "2023-11-20",
+        "link": ""
+      }
+    ],
+    "internships": [
+      {
+        "company": "Infosys",
+        "role": "Data Science Intern",
+        "startDate": "2024-06-01",
+        "endDate": "2024-08-31",
+        "description": "Built ML models for customer churn prediction using scikit-learn."
+      }
+    ],
+    "placements": [],
+    "linkedin_url": null,
+    "github_url": null,
+    "portfolio_url": null,
+    "resume_url": null,
+    "created_at": "2026-03-01T00:00:02.340Z",
+    "updated_at": "2026-03-01T00:00:02.340Z"
+  }
+},
+{
+  "model": "accounts.studentprofile",
+  "pk": 30,
+  "fields": {
+    "user": [
+      "amit.patel@vvit.net"
+    ],
+    "roll_number": "22BQ1A4228",
+    "batch_year": 2022,
+    "graduation_year": 2026,
+    "current_year": 4,
+    "current_semester": 8,
+    "cgpa": "8.30",
+    "location": "Guntur, Andhra Pradesh",
+    "profile_picture": "https://randomuser.me/api/portraits/men/70.jpg",
+    "resume": null,
+    "bio": "Backend developer with a keen interest in microservices and DevOps. Active open-source contributor.",
+    "skills": [
+      {
+        "name": "Java",
+        "proficiency": "advanced"
+      },
+      {
+        "name": "Spring Boot",
+        "proficiency": "intermediate"
+      },
+      {
+        "name": "Docker",
+        "proficiency": "intermediate"
+      },
+      {
+        "name": "Kubernetes",
+        "proficiency": "beginner"
+      },
+      {
+        "name": "MongoDB",
+        "proficiency": "intermediate"
+      }
+    ],
+    "interests": [
+      "Backend Development",
+      "DevOps",
+      "Open Source"
+    ],
+    "social_profiles": {
+      "linkedin": "https://linkedin.com/in/amit-patel-vvit",
+      "github": "https://github.com/amitpatel",
+      "codechef": "https://codechef.com/users/amitpatel"
+    },
+    "certifications": [
+      {
+        "name": "Docker Certified Associate",
+        "issuer": "Docker",
+        "date": "2024-02-10",
+        "link": ""
+      }
+    ],
+    "internships": [],
+    "placements": [],
+    "linkedin_url": null,
+    "github_url": null,
+    "portfolio_url": null,
+    "resume_url": null,
+    "created_at": "2026-03-01T00:00:02.839Z",
+    "updated_at": "2026-03-01T00:00:02.839Z"
+  }
+},
+{
+  "model": "accounts.studentprofile",
+  "pk": 31,
+  "fields": {
+    "user": [
+      "priya.nair@vvit.net"
+    ],
+    "roll_number": "23BQ1A0401",
+    "batch_year": 2023,
+    "graduation_year": 2027,
+    "current_year": 3,
+    "current_semester": 6,
+    "cgpa": "8.90",
+    "location": "Guntur, Andhra Pradesh",
+    "profile_picture": "https://randomuser.me/api/portraits/women/72.jpg",
+    "resume": null,
+    "bio": "Electronics enthusiast with a focus on IoT and embedded systems. Built a smart agriculture monitoring system.",
+    "skills": [
+      {
+        "name": "Embedded C",
+        "proficiency": "advanced"
+      },
+      {
+        "name": "Arduino",
+        "proficiency": "advanced"
+      },
+      {
+        "name": "Python",
+        "proficiency": "intermediate"
+      },
+      {
+        "name": "VHDL",
+        "proficiency": "intermediate"
+      },
+      {
+        "name": "IoT",
+        "proficiency": "intermediate"
+      }
+    ],
+    "interests": [
+      "IoT",
+      "Embedded Systems",
+      "Smart Agriculture"
+    ],
+    "social_profiles": {
+      "linkedin": "https://linkedin.com/in/priya-nair-vvit",
+      "github": "https://github.com/priyanair"
+    },
+    "certifications": [
+      {
+        "name": "Introduction to IoT",
+        "issuer": "Cisco",
+        "date": "2024-01-15",
+        "link": ""
+      }
+    ],
+    "internships": [],
+    "placements": [],
+    "linkedin_url": null,
+    "github_url": null,
+    "portfolio_url": null,
+    "resume_url": null,
+    "created_at": "2026-03-01T00:00:03.357Z",
+    "updated_at": "2026-03-01T00:00:03.357Z"
+  }
+},
+{
+  "model": "accounts.studentprofile",
+  "pk": 32,
+  "fields": {
+    "user": [
+      "karthik.reddy@vvit.net"
+    ],
+    "roll_number": "23BQ1A0415",
+    "batch_year": 2023,
+    "graduation_year": 2027,
+    "current_year": 3,
+    "current_semester": 6,
+    "cgpa": "8.50",
+    "location": "Hyderabad, Telangana",
+    "profile_picture": "https://randomuser.me/api/portraits/men/60.jpg",
+    "resume": null,
+    "bio": "VLSI design student with experience in Cadence and Synopsys tools. Aspiring chip designer.",
+    "skills": [
+      {
+        "name": "Verilog",
+        "proficiency": "advanced"
+      },
+      {
+        "name": "VLSI Design",
+        "proficiency": "intermediate"
+      },
+      {
+        "name": "Cadence",
+        "proficiency": "intermediate"
+      },
+      {
+        "name": "Python",
+        "proficiency": "intermediate"
+      },
+      {
+        "name": "MATLAB",
+        "proficiency": "intermediate"
+      }
+    ],
+    "interests": [
+      "VLSI Design",
+      "Semiconductor",
+      "Signal Processing"
+    ],
+    "social_profiles": {
+      "linkedin": "https://linkedin.com/in/karthik-reddy-vvit",
+      "github": "https://github.com/karthikreddy"
+    },
+    "certifications": [],
+    "internships": [],
+    "placements": [],
+    "linkedin_url": null,
+    "github_url": null,
+    "portfolio_url": null,
+    "resume_url": null,
+    "created_at": "2026-03-01T00:00:03.899Z",
+    "updated_at": "2026-03-01T00:00:03.899Z"
+  }
+},
+{
+  "model": "accounts.studentprofile",
+  "pk": 33,
+  "fields": {
+    "user": [
+      "divya.singh@vvit.net"
+    ],
+    "roll_number": "24BQ1A0201",
+    "batch_year": 2024,
+    "graduation_year": 2028,
+    "current_year": 2,
+    "current_semester": 4,
+    "cgpa": "8.10",
+    "location": "Guntur, Andhra Pradesh",
+    "profile_picture": "https://randomuser.me/api/portraits/women/65.jpg",
+    "resume": null,
+    "bio": "Aspiring power systems engineer. Interested in renewable energy and smart grid technologies.",
+    "skills": [
+      {
+        "name": "MATLAB",
+        "proficiency": "intermediate"
+      },
+      {
+        "name": "Power Systems",
+        "proficiency": "beginner"
+      },
+      {
+        "name": "Python",
+        "proficiency": "beginner"
+      },
+      {
+        "name": "AutoCAD",
+        "proficiency": "intermediate"
+      }
+    ],
+    "interests": [
+      "Renewable Energy",
+      "Smart Grid",
+      "Power Electronics"
+    ],
+    "social_profiles": {
+      "linkedin": "https://linkedin.com/in/divya-singh-vvit"
+    },
+    "certifications": [],
+    "internships": [],
+    "placements": [],
+    "linkedin_url": null,
+    "github_url": null,
+    "portfolio_url": null,
+    "resume_url": null,
+    "created_at": "2026-03-01T00:00:04.473Z",
+    "updated_at": "2026-03-01T00:00:04.473Z"
+  }
+},
+{
+  "model": "accounts.studentprofile",
+  "pk": 34,
+  "fields": {
+    "user": [
+      "arjun.rao@vvit.net"
+    ],
+    "roll_number": "24BQ1A0218",
+    "batch_year": 2024,
+    "graduation_year": 2028,
+    "current_year": 2,
+    "current_semester": 4,
+    "cgpa": "7.80",
+    "location": "Guntur, Andhra Pradesh",
+    "profile_picture": "https://randomuser.me/api/portraits/men/41.jpg",
+    "resume": null,
+    "bio": "Interested in control systems and automation. Building a line-following robot for Robocon competition.",
+    "skills": [
+      {
+        "name": "C Programming",
+        "proficiency": "intermediate"
+      },
+      {
+        "name": "Arduino",
+        "proficiency": "intermediate"
+      },
+      {
+        "name": "Control Systems",
+        "proficiency": "beginner"
+      },
+      {
+        "name": "MATLAB",
+        "proficiency": "beginner"
+      }
+    ],
+    "interests": [
+      "Robotics",
+      "Automation",
+      "Control Systems"
+    ],
+    "social_profiles": {
+      "linkedin": "https://linkedin.com/in/arjun-rao-vvit",
+      "github": "https://github.com/arjunrao"
+    },
+    "certifications": [],
+    "internships": [],
+    "placements": [],
+    "linkedin_url": null,
+    "github_url": null,
+    "portfolio_url": null,
+    "resume_url": null,
+    "created_at": "2026-03-01T00:00:04.999Z",
+    "updated_at": "2026-03-01T00:00:04.999Z"
+  }
+},
+{
+  "model": "accounts.studentprofile",
+  "pk": 35,
+  "fields": {
+    "user": [
+      "ananya.gupta@vvit.net"
+    ],
+    "roll_number": "24BQ5A6101",
+    "batch_year": 2024,
+    "graduation_year": 2028,
+    "current_year": 2,
+    "current_semester": 4,
+    "cgpa": "8.60",
+    "location": "Guntur, Andhra Pradesh",
+    "profile_picture": "https://randomuser.me/api/portraits/women/56.jpg",
+    "resume": null,
+    "bio": "AI/ML student exploring computer vision and generative models. Google Developer Student Clubs lead.",
+    "skills": [
+      {
+        "name": "Python",
+        "proficiency": "advanced"
+      },
+      {
+        "name": "PyTorch",
+        "proficiency": "intermediate"
+      },
+      {
+        "name": "Computer Vision",
+        "proficiency": "intermediate"
+      },
+      {
+        "name": "TensorFlow",
+        "proficiency": "beginner"
+      },
+      {
+        "name": "OpenCV",
+        "proficiency": "intermediate"
+      },
+      {
+        "name": "React.js",
+        "proficiency": "advanced"
+      },
+      {
+        "name": "Node.js",
+        "proficiency": "advanced"
+      },
+      {
+        "name": "Java",
+        "proficiency": "advanced"
+      },
+      {
+        "name": "Javascript",
+        "proficiency": "expert"
+      }
+    ],
+    "interests": [
+      "Computer Vision",
+      "Generative AI",
+      "Deep Learning"
+    ],
+    "social_profiles": {
+      "linkedin": "https://linkedin.com/in/ananya-gupta-vvit",
+      "github": "https://github.com/ananyagupta",
+      "twitter": "",
+      "instagram": "",
+      "facebook": "",
+      "portfolio": "",
+      "leetcode": "https://leetcode.com/ananyagupta",
+      "codechef": ""
+    },
+    "certifications": [
+      {
+        "name": "TensorFlow Developer Certificate",
+        "issuer": "Google",
+        "date": "2024-08-01",
+        "link": ""
+      }
+    ],
+    "internships": [],
+    "placements": [],
+    "linkedin_url": "https://linkedin.com/in/ananya-gupta-vvit",
+    "github_url": "https://github.com/ananyagupta",
+    "portfolio_url": "",
+    "resume_url": null,
+    "created_at": "2026-03-01T00:00:05.517Z",
+    "updated_at": "2026-03-01T06:33:06.190Z"
+  }
+},
+{
+  "model": "accounts.studentprofile",
+  "pk": 36,
+  "fields": {
+    "user": [
+      "22bq1a4225@vvit.net"
+    ],
+    "roll_number": "22BQ1A4225",
+    "batch_year": 2022,
+    "graduation_year": 2026,
+    "current_year": 4,
+    "current_semester": 2,
+    "cgpa": "8.51",
+    "location": "Hyderabad, Telangana",
+    "profile_picture": null,
+    "resume": null,
+    "bio": "",
+    "skills": [
+      {
+        "name": "Java",
+        "proficiency": "expert"
+      },
+      {
+        "name": "Python",
+        "proficiency": "expert"
+      },
+      {
+        "name": "Javascript",
+        "proficiency": "expert"
+      },
+      {
+        "name": "React",
+        "proficiency": "expert"
+      },
+      {
+        "name": "Node.js",
+        "proficiency": "advanced"
+      },
+      {
+        "name": "Express.js",
+        "proficiency": "advanced"
+      },
+      {
+        "name": "Django",
+        "proficiency": "intermediate"
+      },
+      {
+        "name": "Html",
+        "proficiency": "expert"
+      },
+      {
+        "name": "CSS",
+        "proficiency": "advanced"
+      },
+      {
+        "name": "DSA",
+        "proficiency": "advanced"
+      },
+      {
+        "name": "AWS",
+        "proficiency": "expert"
+      },
+      {
+        "name": "Git ",
+        "proficiency": "expert"
+      },
+      {
+        "name": "Github",
+        "proficiency": "expert"
+      },
+      {
+        "name": "SQL",
+        "proficiency": "expert"
+      },
+      {
+        "name": "MongoDB",
+        "proficiency": "advanced"
+      },
+      {
+        "name": "Typescript",
+        "proficiency": "intermediate"
+      },
+      {
+        "name": "Serverless",
+        "proficiency": "intermediate"
+      }
+    ],
+    "interests": [],
+    "social_profiles": {
+      "linkedin": "https://linkedin.com/in/manoj-krishna",
+      "github": "https://github.com",
+      "twitter": "",
+      "instagram": "",
+      "facebook": "",
+      "portfolio": "https://manojkrishna.tech",
+      "leetcode": "",
+      "codechef": ""
+    },
+    "certifications": [],
+    "internships": [],
+    "placements": [],
+    "linkedin_url": "https://linkedin.com/in/manoj-krishna",
+    "github_url": "https://github.com",
+    "portfolio_url": "https://manojkrishna.tech",
+    "resume_url": null,
+    "created_at": "2026-03-01T06:52:00.471Z",
+    "updated_at": "2026-03-05T12:38:18.810Z"
+  }
+},
+{
+  "model": "accounts.studentprofile",
+  "pk": 37,
+  "fields": {
+    "user": [
+      "student.cse.01@vvit.net"
+    ],
+    "roll_number": "22BQ1A0501",
+    "batch_year": 2022,
+    "graduation_year": 2026,
+    "current_year": 3,
+    "current_semester": 5,
+    "cgpa": "6.90",
+    "location": null,
+    "profile_picture": null,
+    "resume": null,
+    "bio": null,
+    "skills": [
+      "SQL",
+      "MongoDB",
+      "Python"
+    ],
+    "interests": [],
+    "social_profiles": {},
+    "certifications": [],
+    "internships": [],
+    "placements": [],
+    "linkedin_url": null,
+    "github_url": null,
+    "portfolio_url": null,
+    "resume_url": null,
+    "created_at": "2026-03-02T02:50:10.384Z",
+    "updated_at": "2026-03-02T02:50:10.384Z"
+  }
+},
+{
+  "model": "accounts.studentprofile",
+  "pk": 38,
+  "fields": {
+    "user": [
+      "student.cse.02@vvit.net"
+    ],
+    "roll_number": "22BQ1A0502",
+    "batch_year": 2022,
+    "graduation_year": 2026,
+    "current_year": 3,
+    "current_semester": 5,
+    "cgpa": "6.75",
+    "location": null,
+    "profile_picture": null,
+    "resume": null,
+    "bio": null,
+    "skills": [
+      "JavaScript",
+      "MongoDB",
+      "Java"
+    ],
+    "interests": [],
+    "social_profiles": {},
+    "certifications": [],
+    "internships": [],
+    "placements": [],
+    "linkedin_url": null,
+    "github_url": null,
+    "portfolio_url": null,
+    "resume_url": null,
+    "created_at": "2026-03-02T02:50:12.111Z",
+    "updated_at": "2026-03-02T02:50:12.111Z"
+  }
+},
+{
+  "model": "accounts.studentprofile",
+  "pk": 39,
+  "fields": {
+    "user": [
+      "student.cse.03@vvit.net"
+    ],
+    "roll_number": "22BQ1A0503",
+    "batch_year": 2022,
+    "graduation_year": 2026,
+    "current_year": 3,
+    "current_semester": 5,
+    "cgpa": "6.86",
+    "location": null,
+    "profile_picture": null,
+    "resume": null,
+    "bio": null,
+    "skills": [
+      "React",
+      "JavaScript",
+      "MongoDB"
+    ],
+    "interests": [],
+    "social_profiles": {},
+    "certifications": [],
+    "internships": [],
+    "placements": [],
+    "linkedin_url": null,
+    "github_url": null,
+    "portfolio_url": null,
+    "resume_url": null,
+    "created_at": "2026-03-02T02:50:13.437Z",
+    "updated_at": "2026-03-02T02:50:13.437Z"
+  }
+},
+{
+  "model": "accounts.studentprofile",
+  "pk": 40,
+  "fields": {
+    "user": [
+      "student.csm.02@vvit.net"
+    ],
+    "roll_number": "22BQ1A4202",
+    "batch_year": 2022,
+    "graduation_year": 2026,
+    "current_year": 3,
+    "current_semester": 5,
+    "cgpa": "7.94",
+    "location": null,
+    "profile_picture": null,
+    "resume": null,
+    "bio": null,
+    "skills": [
+      "NLP",
+      "TensorFlow",
+      "Deep Learning"
+    ],
+    "interests": [],
+    "social_profiles": {},
+    "certifications": [],
+    "internships": [],
+    "placements": [],
+    "linkedin_url": null,
+    "github_url": null,
+    "portfolio_url": null,
+    "resume_url": null,
+    "created_at": "2026-03-02T02:50:19.271Z",
+    "updated_at": "2026-03-02T02:50:19.271Z"
+  }
+},
+{
+  "model": "accounts.studentprofile",
+  "pk": 41,
+  "fields": {
+    "user": [
+      "student.csm.03@vvit.net"
+    ],
+    "roll_number": "22BQ1A4203",
+    "batch_year": 2022,
+    "graduation_year": 2026,
+    "current_year": 3,
+    "current_semester": 5,
+    "cgpa": "7.62",
+    "location": null,
+    "profile_picture": null,
+    "resume": null,
+    "bio": null,
+    "skills": [
+      "Deep Learning",
+      "Machine Learning",
+      "Python"
+    ],
+    "interests": [],
+    "social_profiles": {},
+    "certifications": [],
+    "internships": [],
+    "placements": [],
+    "linkedin_url": null,
+    "github_url": null,
+    "portfolio_url": null,
+    "resume_url": null,
+    "created_at": "2026-03-02T02:50:20.587Z",
+    "updated_at": "2026-03-02T02:50:20.587Z"
+  }
+},
+{
+  "model": "accounts.studentprofile",
+  "pk": 42,
+  "fields": {
+    "user": [
+      "student.aid.01@vvit.net"
+    ],
+    "roll_number": "22BQ1A5401",
+    "batch_year": 2022,
+    "graduation_year": 2026,
+    "current_year": 3,
+    "current_semester": 5,
+    "cgpa": "9.32",
+    "location": null,
+    "profile_picture": null,
+    "resume": null,
+    "bio": null,
+    "skills": [
+      "Tableau",
+      "SQL",
+      "R"
+    ],
+    "interests": [],
+    "social_profiles": {},
+    "certifications": [],
+    "internships": [],
+    "placements": [],
+    "linkedin_url": null,
+    "github_url": null,
+    "portfolio_url": null,
+    "resume_url": null,
+    "created_at": "2026-03-02T02:50:24.728Z",
+    "updated_at": "2026-03-02T02:50:24.728Z"
+  }
+},
+{
+  "model": "accounts.studentprofile",
+  "pk": 43,
+  "fields": {
+    "user": [
+      "student.aid.02@vvit.net"
+    ],
+    "roll_number": "22BQ1A5402",
+    "batch_year": 2022,
+    "graduation_year": 2026,
+    "current_year": 3,
+    "current_semester": 5,
+    "cgpa": "8.47",
+    "location": null,
+    "profile_picture": null,
+    "resume": null,
+    "bio": null,
+    "skills": [
+      "R",
+      "Python",
+      "Machine Learning"
+    ],
+    "interests": [],
+    "social_profiles": {},
+    "certifications": [],
+    "internships": [],
+    "placements": [],
+    "linkedin_url": null,
+    "github_url": null,
+    "portfolio_url": null,
+    "resume_url": null,
+    "created_at": "2026-03-02T02:50:26.134Z",
+    "updated_at": "2026-03-02T02:50:26.134Z"
+  }
+},
+{
+  "model": "accounts.studentprofile",
+  "pk": 44,
+  "fields": {
+    "user": [
+      "student.aid.03@vvit.net"
+    ],
+    "roll_number": "22BQ1A5403",
+    "batch_year": 2022,
+    "graduation_year": 2026,
+    "current_year": 3,
+    "current_semester": 5,
+    "cgpa": "9.33",
+    "location": null,
+    "profile_picture": null,
+    "resume": null,
+    "bio": null,
+    "skills": [
+      "Machine Learning",
+      "SQL",
+      "Tableau"
+    ],
+    "interests": [],
+    "social_profiles": {},
+    "certifications": [],
+    "internships": [],
+    "placements": [],
+    "linkedin_url": null,
+    "github_url": null,
+    "portfolio_url": null,
+    "resume_url": null,
+    "created_at": "2026-03-02T02:50:27.630Z",
+    "updated_at": "2026-03-02T02:50:27.630Z"
+  }
+},
+{
+  "model": "accounts.studentprofile",
+  "pk": 45,
+  "fields": {
+    "user": [
+      "student.aiml.01@vvit.net"
+    ],
+    "roll_number": "22BQ1A6101",
+    "batch_year": 2022,
+    "graduation_year": 2026,
+    "current_year": 3,
+    "current_semester": 5,
+    "cgpa": "7.05",
+    "location": null,
+    "profile_picture": null,
+    "resume": null,
+    "bio": null,
+    "skills": [
+      "Python",
+      "PyTorch",
+      "AI"
+    ],
+    "interests": [],
+    "social_profiles": {},
+    "certifications": [],
+    "internships": [],
+    "placements": [],
+    "linkedin_url": null,
+    "github_url": null,
+    "portfolio_url": null,
+    "resume_url": null,
+    "created_at": "2026-03-02T02:50:31.870Z",
+    "updated_at": "2026-03-02T02:50:31.870Z"
+  }
+},
+{
+  "model": "accounts.studentprofile",
+  "pk": 46,
+  "fields": {
+    "user": [
+      "student.aiml.02@vvit.net"
+    ],
+    "roll_number": "22BQ1A6102",
+    "batch_year": 2022,
+    "graduation_year": 2026,
+    "current_year": 3,
+    "current_semester": 5,
+    "cgpa": "6.62",
+    "location": null,
+    "profile_picture": null,
+    "resume": null,
+    "bio": null,
+    "skills": [
+      "Computer Vision",
+      "Python",
+      "ML"
+    ],
+    "interests": [],
+    "social_profiles": {},
+    "certifications": [],
+    "internships": [],
+    "placements": [],
+    "linkedin_url": null,
+    "github_url": null,
+    "portfolio_url": null,
+    "resume_url": null,
+    "created_at": "2026-03-02T02:50:33.332Z",
+    "updated_at": "2026-03-02T02:50:33.332Z"
+  }
+},
+{
+  "model": "accounts.studentprofile",
+  "pk": 47,
+  "fields": {
+    "user": [
+      "student.aiml.03@vvit.net"
+    ],
+    "roll_number": "22BQ1A6103",
+    "batch_year": 2022,
+    "graduation_year": 2026,
+    "current_year": 3,
+    "current_semester": 5,
+    "cgpa": "8.70",
+    "location": null,
+    "profile_picture": null,
+    "resume": null,
+    "bio": null,
+    "skills": [
+      "Computer Vision",
+      "ML",
+      "PyTorch"
+    ],
+    "interests": [],
+    "social_profiles": {},
+    "certifications": [],
+    "internships": [],
+    "placements": [],
+    "linkedin_url": null,
+    "github_url": null,
+    "portfolio_url": null,
+    "resume_url": null,
+    "created_at": "2026-03-02T02:50:34.685Z",
+    "updated_at": "2026-03-02T02:50:34.685Z"
+  }
+},
+{
+  "model": "accounts.studentprofile",
+  "pk": 48,
+  "fields": {
+    "user": [
+      "student.cso.01@vvit.net"
+    ],
+    "roll_number": "22BQ1A4901",
+    "batch_year": 2022,
+    "graduation_year": 2026,
+    "current_year": 3,
+    "current_semester": 5,
+    "cgpa": "7.60",
+    "location": null,
+    "profile_picture": null,
+    "resume": null,
+    "bio": null,
+    "skills": [
+      "Python",
+      "MQTT",
+      "IoT"
+    ],
+    "interests": [],
+    "social_profiles": {},
+    "certifications": [],
+    "internships": [],
+    "placements": [],
+    "linkedin_url": null,
+    "github_url": null,
+    "portfolio_url": null,
+    "resume_url": null,
+    "created_at": "2026-03-02T02:50:38.974Z",
+    "updated_at": "2026-03-02T02:50:38.975Z"
+  }
+},
+{
+  "model": "accounts.studentprofile",
+  "pk": 49,
+  "fields": {
+    "user": [
+      "student.cso.02@vvit.net"
+    ],
+    "roll_number": "22BQ1A4902",
+    "batch_year": 2022,
+    "graduation_year": 2026,
+    "current_year": 3,
+    "current_semester": 5,
+    "cgpa": "9.01",
+    "location": null,
+    "profile_picture": null,
+    "resume": null,
+    "bio": null,
+    "skills": [
+      "MQTT",
+      "Raspberry Pi",
+      "Python"
+    ],
+    "interests": [],
+    "social_profiles": {},
+    "certifications": [],
+    "internships": [],
+    "placements": [],
+    "linkedin_url": null,
+    "github_url": null,
+    "portfolio_url": null,
+    "resume_url": null,
+    "created_at": "2026-03-02T02:50:40.374Z",
+    "updated_at": "2026-03-02T02:50:40.374Z"
+  }
+},
+{
+  "model": "accounts.studentprofile",
+  "pk": 50,
+  "fields": {
+    "user": [
+      "student.cso.03@vvit.net"
+    ],
+    "roll_number": "22BQ1A4903",
+    "batch_year": 2022,
+    "graduation_year": 2026,
+    "current_year": 3,
+    "current_semester": 5,
+    "cgpa": "8.28",
+    "location": null,
+    "profile_picture": null,
+    "resume": null,
+    "bio": null,
+    "skills": [
+      "Node.js",
+      "IoT",
+      "Arduino"
+    ],
+    "interests": [],
+    "social_profiles": {},
+    "certifications": [],
+    "internships": [],
+    "placements": [],
+    "linkedin_url": null,
+    "github_url": null,
+    "portfolio_url": null,
+    "resume_url": null,
+    "created_at": "2026-03-02T02:50:41.797Z",
+    "updated_at": "2026-03-02T02:50:41.797Z"
+  }
+},
+{
+  "model": "accounts.studentprofile",
+  "pk": 51,
+  "fields": {
+    "user": [
+      "student.cic.01@vvit.net"
+    ],
+    "roll_number": "22BQ1A4701",
+    "batch_year": 2022,
+    "graduation_year": 2026,
+    "current_year": 3,
+    "current_semester": 5,
+    "cgpa": "8.33",
+    "location": null,
+    "profile_picture": null,
+    "resume": null,
+    "bio": null,
+    "skills": [
+      "Network Security",
+      "Cybersecurity",
+      "Python"
+    ],
+    "interests": [],
+    "social_profiles": {},
+    "certifications": [],
+    "internships": [],
+    "placements": [],
+    "linkedin_url": null,
+    "github_url": null,
+    "portfolio_url": null,
+    "resume_url": null,
+    "created_at": "2026-03-02T02:50:44.664Z",
+    "updated_at": "2026-03-02T02:50:44.664Z"
+  }
+},
+{
+  "model": "accounts.studentprofile",
+  "pk": 52,
+  "fields": {
+    "user": [
+      "student.cic.02@vvit.net"
+    ],
+    "roll_number": "22BQ1A4702",
+    "batch_year": 2022,
+    "graduation_year": 2026,
+    "current_year": 3,
+    "current_semester": 5,
+    "cgpa": "8.17",
+    "location": null,
+    "profile_picture": null,
+    "resume": null,
+    "bio": null,
+    "skills": [
+      "Network Security",
+      "Solidity",
+      "Python"
+    ],
+    "interests": [],
+    "social_profiles": {},
+    "certifications": [],
+    "internships": [],
+    "placements": [],
+    "linkedin_url": null,
+    "github_url": null,
+    "portfolio_url": null,
+    "resume_url": null,
+    "created_at": "2026-03-02T02:50:46.187Z",
+    "updated_at": "2026-03-02T02:50:46.187Z"
+  }
+},
+{
+  "model": "accounts.studentprofile",
+  "pk": 53,
+  "fields": {
+    "user": [
+      "student.cic.03@vvit.net"
+    ],
+    "roll_number": "22BQ1A4703",
+    "batch_year": 2022,
+    "graduation_year": 2026,
+    "current_year": 3,
+    "current_semester": 5,
+    "cgpa": "8.57",
+    "location": null,
+    "profile_picture": null,
+    "resume": null,
+    "bio": null,
+    "skills": [
+      "Network Security",
+      "Cybersecurity",
+      "Blockchain"
+    ],
+    "interests": [],
+    "social_profiles": {},
+    "certifications": [],
+    "internships": [],
+    "placements": [],
+    "linkedin_url": null,
+    "github_url": null,
+    "portfolio_url": null,
+    "resume_url": null,
+    "created_at": "2026-03-02T02:50:47.724Z",
+    "updated_at": "2026-03-02T02:50:47.724Z"
+  }
+},
+{
+  "model": "accounts.studentprofile",
+  "pk": 54,
+  "fields": {
+    "user": [
+      "student.ece.01@vvit.net"
+    ],
+    "roll_number": "22BQ1A0401",
+    "batch_year": 2022,
+    "graduation_year": 2026,
+    "current_year": 3,
+    "current_semester": 5,
+    "cgpa": "7.09",
+    "location": null,
+    "profile_picture": null,
+    "resume": null,
+    "bio": null,
+    "skills": [
+      "VLSI Design",
+      "MATLAB",
+      "Arduino"
+    ],
+    "interests": [],
+    "social_profiles": {},
+    "certifications": [],
+    "internships": [],
+    "placements": [],
+    "linkedin_url": null,
+    "github_url": null,
+    "portfolio_url": null,
+    "resume_url": null,
+    "created_at": "2026-03-02T02:50:52.046Z",
+    "updated_at": "2026-03-02T02:50:52.046Z"
+  }
+},
+{
+  "model": "accounts.studentprofile",
+  "pk": 55,
+  "fields": {
+    "user": [
+      "student.ece.02@vvit.net"
+    ],
+    "roll_number": "22BQ1A0402",
+    "batch_year": 2022,
+    "graduation_year": 2026,
+    "current_year": 3,
+    "current_semester": 5,
+    "cgpa": "7.11",
+    "location": null,
+    "profile_picture": null,
+    "resume": null,
+    "bio": null,
+    "skills": [
+      "Embedded Systems",
+      "VLSI Design",
+      "Verilog"
+    ],
+    "interests": [],
+    "social_profiles": {},
+    "certifications": [],
+    "internships": [],
+    "placements": [],
+    "linkedin_url": null,
+    "github_url": null,
+    "portfolio_url": null,
+    "resume_url": null,
+    "created_at": "2026-03-02T02:50:53.539Z",
+    "updated_at": "2026-03-02T02:50:53.539Z"
+  }
+},
+{
+  "model": "accounts.studentprofile",
+  "pk": 56,
+  "fields": {
+    "user": [
+      "student.ece.03@vvit.net"
+    ],
+    "roll_number": "22BQ1A0403",
+    "batch_year": 2022,
+    "graduation_year": 2026,
+    "current_year": 3,
+    "current_semester": 5,
+    "cgpa": "7.37",
+    "location": null,
+    "profile_picture": null,
+    "resume": null,
+    "bio": null,
+    "skills": [
+      "Embedded Systems",
+      "VLSI Design",
+      "Arduino"
+    ],
+    "interests": [],
+    "social_profiles": {},
+    "certifications": [],
+    "internships": [],
+    "placements": [],
+    "linkedin_url": null,
+    "github_url": null,
+    "portfolio_url": null,
+    "resume_url": null,
+    "created_at": "2026-03-02T02:50:55.190Z",
+    "updated_at": "2026-03-02T02:50:55.190Z"
+  }
+},
+{
+  "model": "accounts.studentprofile",
+  "pk": 57,
+  "fields": {
+    "user": [
+      "student.eee.01@vvit.net"
+    ],
+    "roll_number": "22BQ1A0201",
+    "batch_year": 2022,
+    "graduation_year": 2026,
+    "current_year": 3,
+    "current_semester": 5,
+    "cgpa": "6.99",
+    "location": null,
+    "profile_picture": null,
+    "resume": null,
+    "bio": null,
+    "skills": [
+      "Power Systems",
+      "MATLAB",
+      "Control Systems"
+    ],
+    "interests": [],
+    "social_profiles": {},
+    "certifications": [],
+    "internships": [],
+    "placements": [],
+    "linkedin_url": null,
+    "github_url": null,
+    "portfolio_url": null,
+    "resume_url": null,
+    "created_at": "2026-03-02T02:50:59.984Z",
+    "updated_at": "2026-03-02T02:50:59.984Z"
+  }
+},
+{
+  "model": "accounts.studentprofile",
+  "pk": 58,
+  "fields": {
+    "user": [
+      "student.eee.02@vvit.net"
+    ],
+    "roll_number": "22BQ1A0202",
+    "batch_year": 2022,
+    "graduation_year": 2026,
+    "current_year": 3,
+    "current_semester": 5,
+    "cgpa": "8.58",
+    "location": null,
+    "profile_picture": null,
+    "resume": null,
+    "bio": null,
+    "skills": [
+      "PLC Programming",
+      "Control Systems",
+      "MATLAB"
+    ],
+    "interests": [],
+    "social_profiles": {},
+    "certifications": [],
+    "internships": [],
+    "placements": [],
+    "linkedin_url": null,
+    "github_url": null,
+    "portfolio_url": null,
+    "resume_url": null,
+    "created_at": "2026-03-02T02:51:01.499Z",
+    "updated_at": "2026-03-02T02:51:01.499Z"
+  }
+},
+{
+  "model": "accounts.studentprofile",
+  "pk": 59,
+  "fields": {
+    "user": [
+      "student.eee.03@vvit.net"
+    ],
+    "roll_number": "22BQ1A0203",
+    "batch_year": 2022,
+    "graduation_year": 2026,
+    "current_year": 3,
+    "current_semester": 5,
+    "cgpa": "7.44",
+    "location": null,
+    "profile_picture": null,
+    "resume": null,
+    "bio": null,
+    "skills": [
+      "Control Systems",
+      "Power Systems",
+      "MATLAB"
+    ],
+    "interests": [],
+    "social_profiles": {},
+    "certifications": [],
+    "internships": [],
+    "placements": [],
+    "linkedin_url": null,
+    "github_url": null,
+    "portfolio_url": null,
+    "resume_url": null,
+    "created_at": "2026-03-02T02:51:02.853Z",
+    "updated_at": "2026-03-02T02:51:02.853Z"
+  }
+},
+{
+  "model": "accounts.studentprofile",
+  "pk": 60,
+  "fields": {
+    "user": [
+      "student.it.01@vvit.net"
+    ],
+    "roll_number": "22BQ1A1201",
+    "batch_year": 2022,
+    "graduation_year": 2026,
+    "current_year": 3,
+    "current_semester": 5,
+    "cgpa": "9.33",
+    "location": null,
+    "profile_picture": null,
+    "resume": null,
+    "bio": null,
+    "skills": [
+      "Cloud Computing",
+      "Java",
+      "Web Development"
+    ],
+    "interests": [],
+    "social_profiles": {},
+    "certifications": [],
+    "internships": [],
+    "placements": [],
+    "linkedin_url": null,
+    "github_url": null,
+    "portfolio_url": null,
+    "resume_url": null,
+    "created_at": "2026-03-02T02:51:07.049Z",
+    "updated_at": "2026-03-02T02:51:07.049Z"
+  }
+},
+{
+  "model": "accounts.studentprofile",
+  "pk": 61,
+  "fields": {
+    "user": [
+      "student.it.02@vvit.net"
+    ],
+    "roll_number": "22BQ1A1202",
+    "batch_year": 2022,
+    "graduation_year": 2026,
+    "current_year": 3,
+    "current_semester": 5,
+    "cgpa": "9.12",
+    "location": null,
+    "profile_picture": null,
+    "resume": null,
+    "bio": null,
+    "skills": [
+      "Python",
+      "Cloud Computing",
+      "DevOps"
+    ],
+    "interests": [],
+    "social_profiles": {},
+    "certifications": [],
+    "internships": [],
+    "placements": [],
+    "linkedin_url": null,
+    "github_url": null,
+    "portfolio_url": null,
+    "resume_url": null,
+    "created_at": "2026-03-02T02:51:08.272Z",
+    "updated_at": "2026-03-02T02:51:08.272Z"
+  }
+},
+{
+  "model": "accounts.studentprofile",
+  "pk": 62,
+  "fields": {
+    "user": [
+      "student.it.03@vvit.net"
+    ],
+    "roll_number": "22BQ1A1203",
+    "batch_year": 2022,
+    "graduation_year": 2026,
+    "current_year": 3,
+    "current_semester": 5,
+    "cgpa": "7.51",
+    "location": null,
+    "profile_picture": null,
+    "resume": null,
+    "bio": null,
+    "skills": [
+      "Java",
+      "DevOps",
+      "Cloud Computing"
+    ],
+    "interests": [],
+    "social_profiles": {},
+    "certifications": [],
+    "internships": [],
+    "placements": [],
+    "linkedin_url": null,
+    "github_url": null,
+    "portfolio_url": null,
+    "resume_url": null,
+    "created_at": "2026-03-02T02:51:09.483Z",
+    "updated_at": "2026-03-02T02:51:09.483Z"
+  }
+},
+{
+  "model": "accounts.studentprofile",
+  "pk": 63,
+  "fields": {
+    "user": [
+      "student.civ.01@vvit.net"
+    ],
+    "roll_number": "22BQ1A0101",
+    "batch_year": 2022,
+    "graduation_year": 2026,
+    "current_year": 3,
+    "current_semester": 5,
+    "cgpa": "8.88",
+    "location": null,
+    "profile_picture": null,
+    "resume": null,
+    "bio": null,
+    "skills": [
+      "BIM",
+      "STAAD Pro",
+      "AutoCAD"
+    ],
+    "interests": [],
+    "social_profiles": {},
+    "certifications": [],
+    "internships": [],
+    "placements": [],
+    "linkedin_url": null,
+    "github_url": null,
+    "portfolio_url": null,
+    "resume_url": null,
+    "created_at": "2026-03-02T02:51:13.253Z",
+    "updated_at": "2026-03-02T02:51:13.253Z"
+  }
+},
+{
+  "model": "accounts.studentprofile",
+  "pk": 64,
+  "fields": {
+    "user": [
+      "student.civ.02@vvit.net"
+    ],
+    "roll_number": "22BQ1A0102",
+    "batch_year": 2022,
+    "graduation_year": 2026,
+    "current_year": 3,
+    "current_semester": 5,
+    "cgpa": "8.68",
+    "location": null,
+    "profile_picture": null,
+    "resume": null,
+    "bio": null,
+    "skills": [
+      "AutoCAD",
+      "Revit",
+      "Surveying"
+    ],
+    "interests": [],
+    "social_profiles": {},
+    "certifications": [],
+    "internships": [],
+    "placements": [],
+    "linkedin_url": null,
+    "github_url": null,
+    "portfolio_url": null,
+    "resume_url": null,
+    "created_at": "2026-03-02T02:51:14.552Z",
+    "updated_at": "2026-03-02T02:51:14.552Z"
+  }
+},
+{
+  "model": "accounts.studentprofile",
+  "pk": 65,
+  "fields": {
+    "user": [
+      "student.civ.03@vvit.net"
+    ],
+    "roll_number": "22BQ1A0103",
+    "batch_year": 2022,
+    "graduation_year": 2026,
+    "current_year": 3,
+    "current_semester": 5,
+    "cgpa": "6.76",
+    "location": null,
+    "profile_picture": null,
+    "resume": null,
+    "bio": null,
+    "skills": [
+      "Surveying",
+      "STAAD Pro",
+      "AutoCAD"
+    ],
+    "interests": [],
+    "social_profiles": {},
+    "certifications": [],
+    "internships": [],
+    "placements": [],
+    "linkedin_url": null,
+    "github_url": null,
+    "portfolio_url": null,
+    "resume_url": null,
+    "created_at": "2026-03-02T02:51:15.785Z",
+    "updated_at": "2026-03-02T02:51:15.785Z"
+  }
+},
+{
+  "model": "accounts.studentprofile",
+  "pk": 66,
+  "fields": {
+    "user": [
+      "student.mec.01@vvit.net"
+    ],
+    "roll_number": "22BQ1A0301",
+    "batch_year": 2022,
+    "graduation_year": 2026,
+    "current_year": 3,
+    "current_semester": 5,
+    "cgpa": "7.87",
+    "location": null,
+    "profile_picture": null,
+    "resume": null,
+    "bio": null,
+    "skills": [
+      "AutoCAD",
+      "CATIA",
+      "ANSYS"
+    ],
+    "interests": [],
+    "social_profiles": {},
+    "certifications": [],
+    "internships": [],
+    "placements": [],
+    "linkedin_url": null,
+    "github_url": null,
+    "portfolio_url": null,
+    "resume_url": null,
+    "created_at": "2026-03-02T02:53:34.345Z",
+    "updated_at": "2026-03-02T02:53:34.345Z"
+  }
+},
+{
+  "model": "accounts.studentprofile",
+  "pk": 67,
+  "fields": {
+    "user": [
+      "student.mec.02@vvit.net"
+    ],
+    "roll_number": "22BQ1A0302",
+    "batch_year": 2022,
+    "graduation_year": 2026,
+    "current_year": 3,
+    "current_semester": 5,
+    "cgpa": "6.68",
+    "location": null,
+    "profile_picture": null,
+    "resume": null,
+    "bio": null,
+    "skills": [
+      "AutoCAD",
+      "SolidWorks",
+      "ANSYS"
+    ],
+    "interests": [],
+    "social_profiles": {},
+    "certifications": [],
+    "internships": [],
+    "placements": [],
+    "linkedin_url": null,
+    "github_url": null,
+    "portfolio_url": null,
+    "resume_url": null,
+    "created_at": "2026-03-02T02:53:35.870Z",
+    "updated_at": "2026-03-02T02:53:35.870Z"
+  }
+},
+{
+  "model": "accounts.studentprofile",
+  "pk": 68,
+  "fields": {
+    "user": [
+      "student.mec.03@vvit.net"
+    ],
+    "roll_number": "22BQ1A0303",
+    "batch_year": 2022,
+    "graduation_year": 2026,
+    "current_year": 3,
+    "current_semester": 5,
+    "cgpa": "6.79",
+    "location": null,
+    "profile_picture": null,
+    "resume": null,
+    "bio": null,
+    "skills": [
+      "ANSYS",
+      "AutoCAD",
+      "SolidWorks"
+    ],
+    "interests": [],
+    "social_profiles": {},
+    "certifications": [],
+    "internships": [],
+    "placements": [],
+    "linkedin_url": null,
+    "github_url": null,
+    "portfolio_url": null,
+    "resume_url": null,
+    "created_at": "2026-03-02T02:53:37.254Z",
+    "updated_at": "2026-03-02T02:53:37.254Z"
+  }
+},
+{
+  "model": "accounts.studentprofile",
+  "pk": 69,
+  "fields": {
+    "user": [
+      "22bq1a42h3@vvit.csm"
+    ],
+    "roll_number": "22BQ1A42H3",
+    "batch_year": 2022,
+    "graduation_year": 2026,
+    "current_year": 1,
+    "current_semester": 1,
+    "cgpa": null,
+    "location": null,
+    "profile_picture": null,
+    "resume": null,
+    "bio": null,
+    "skills": [],
+    "interests": [],
+    "social_profiles": {},
+    "certifications": [],
+    "internships": [],
+    "placements": [],
+    "linkedin_url": null,
+    "github_url": null,
+    "portfolio_url": null,
+    "resume_url": null,
+    "created_at": "2026-03-02T06:05:44.332Z",
+    "updated_at": "2026-03-02T06:05:44.332Z"
+  }
+},
+{
+  "model": "accounts.studentprofile",
+  "pk": 70,
+  "fields": {
+    "user": [
+      "22bq1a42g7@vvit.net"
+    ],
+    "roll_number": "22BQ1A42G7",
+    "batch_year": 2022,
+    "graduation_year": 2026,
+    "current_year": 4,
+    "current_semester": 1,
+    "cgpa": "9.00",
+    "location": "Hyderabad, Telangana",
+    "profile_picture": "https://res.cloudinary.com/dbnkhibzi/image/upload/v1772432443/alumni-connect/profiles/ubrcnnb2inow75h21lhu.jpg",
+    "resume": null,
+    "bio": "",
+    "skills": [
+      {
+        "name": "React",
+        "proficiency": "expert"
+      },
+      {
+        "name": "JavaScript",
+        "proficiency": "expert"
+      },
+      {
+        "name": "HTML",
+        "proficiency": "expert"
+      },
+      {
+        "name": "CSS",
+        "proficiency": "expert"
+      },
+      {
+        "name": "Bootstrap",
+        "proficiency": "expert"
+      },
+      {
+        "name": "SQL",
+        "proficiency": "expert"
+      },
+      {
+        "name": "Typescript",
+        "proficiency": "intermediate"
+      },
+      {
+        "name": "Python",
+        "proficiency": "expert"
+      },
+      {
+        "name": "Java",
+        "proficiency": "expert"
+      },
+      {
+        "name": "MongoDB",
+        "proficiency": "advanced"
+      },
+      {
+        "name": "Git",
+        "proficiency": "expert"
+      },
+      {
+        "name": "Github",
+        "proficiency": "expert"
+      },
+      {
+        "name": "AWS",
+        "proficiency": "advanced"
+      },
+      {
+        "name": "Selenium",
+        "proficiency": "intermediate"
+      }
+    ],
+    "interests": [],
+    "social_profiles": {
+      "linkedin": "https://linkedin.com/in/nikhil-satya",
+      "github": "https://github.com/nikhil-satya",
+      "twitter": "",
+      "instagram": "",
+      "facebook": "",
+      "portfolio": "",
+      "leetcode": "",
+      "codechef": ""
+    },
+    "certifications": [],
+    "internships": [],
+    "placements": [],
+    "linkedin_url": "https://linkedin.com/in/nikhil-satya",
+    "github_url": "https://github.com/nikhil-satya",
+    "portfolio_url": "",
+    "resume_url": null,
+    "created_at": "2026-03-02T06:15:26.332Z",
+    "updated_at": "2026-03-02T06:23:45.707Z"
+  }
+},
+{
+  "model": "accounts.alumniprofile",
+  "pk": 14,
+  "fields": {
+    "user": [
+      "aditya.verma@vvit.net"
+    ],
+    "graduation_year": 2022,
+    "roll_number": "18BQ1A4202",
+    "location": "Bangalore",
+    "profile_picture": "https://randomuser.me/api/portraits/men/22.jpg",
+    "resume": "https://res.cloudinary.com/dbnkhibzi/raw/upload/v1772672603/alumni-connect/profiles/arrmwruz1b3jvejqqcep.pdf",
+    "current_company": "TCS",
+    "current_designation": "Software Engineer",
+    "current_location": null,
+    "industry": "Information Technology",
+    "experience_years": 2,
+    "bio": "Software Engineer at TCS Digital with 2+ years of experience in enterprise Java development. Passionate about mentoring juniors from VVITU.",
+    "skills": [
+      "Java",
+      "Spring Boot",
+      "Microservices",
+      "AWS",
+      "Docker",
+      "SQL"
+    ],
+    "expertise_areas": [
+      "Software Development",
+      "System Design",
+      "Microservices Architecture"
+    ],
+    "social_profiles": {
+      "linkedin": "https://linkedin.com/in/aditya-verma-tcs",
+      "github": "https://github.com/adityaverma",
+      "twitter": "https://twitter.com/adityaverma_dev",
+      "instagram": "",
+      "facebook": "",
+      "portfolio": "https://adityaverma.dev",
+      "leetcode": "",
+      "codechef": ""
+    },
+    "work_experience": [
+      {
+        "company": "TCS Digital",
+        "role": "Software Engineer",
+        "location": "Bangalore",
+        "startDate": "2022-07-01",
+        "endDate": "",
+        "current": true,
+        "description": "Building enterprise microservices with Spring Boot and AWS. Leading a team of 3 junior developers."
+      },
+      {
+        "company": "TCS",
+        "role": "Trainee",
+        "location": "Chennai",
+        "startDate": "2022-01-15",
+        "endDate": "2022-06-30",
+        "current": false,
+        "description": "Completed 6-month training in Java full-stack development."
+      }
+    ],
+    "achievements": [
+      {
+        "title": "TCS Star Performer Award",
+        "description": "Recognized for delivering critical project ahead of deadline",
+        "date": "2023-12-01"
+      }
+    ],
+    "linkedin_url": "https://linkedin.com/in/aditya-verma-tcs",
+    "github_url": "https://github.com/adityaverma",
+    "portfolio_url": "https://adityaverma.dev",
+    "twitter_url": "https://twitter.com/adityaverma_dev",
+    "verification_status": "verified",
+    "verification_document": null,
+    "verified_at": null,
+    "verified_by": null,
+    "available_for_mentoring": true,
+    "available_for_referrals": true,
+    "created_at": "2026-03-01T00:00:06.017Z",
+    "updated_at": "2026-03-05T01:30:43.147Z"
+  }
+},
+{
+  "model": "accounts.alumniprofile",
+  "pk": 15,
+  "fields": {
+    "user": [
+      "pooja.menon@vvit.net"
+    ],
+    "graduation_year": 2022,
+    "roll_number": "18BQ1A4225",
+    "location": "Hyderabad",
+    "profile_picture": "https://randomuser.me/api/portraits/women/28.jpg",
+    "resume": null,
+    "current_company": "Amazon",
+    "current_designation": "SDE-II",
+    "current_location": null,
+    "industry": "Cloud Computing",
+    "experience_years": 3,
+    "bio": "SDE-II at Amazon working on AWS Lambda and serverless technologies. Active in women-in-tech communities.",
+    "skills": [
+      "Python",
+      "AWS",
+      "Serverless",
+      "TypeScript",
+      "Node.js",
+      "DynamoDB"
+    ],
+    "expertise_areas": [
+      "Cloud Architecture",
+      "Serverless Computing",
+      "Backend Development"
+    ],
+    "social_profiles": {
+      "linkedin": "https://linkedin.com/in/pooja-menon-amazon",
+      "github": "https://github.com/poojamenon",
+      "twitter": "https://twitter.com/pooja_tech"
+    },
+    "work_experience": [
+      {
+        "company": "Amazon",
+        "role": "SDE-II",
+        "location": "Hyderabad",
+        "startDate": "2023-08-01",
+        "endDate": "",
+        "current": true,
+        "description": "Leading serverless migration for AWS Lambda service. Reduced latency by 40%."
+      },
+      {
+        "company": "Amazon",
+        "role": "SDE-I",
+        "location": "Hyderabad",
+        "startDate": "2022-06-01",
+        "endDate": "2023-07-31",
+        "current": false,
+        "description": "Developed internal tooling for AWS CloudFormation team using Python and TypeScript."
+      }
+    ],
+    "achievements": [
+      {
+        "title": "Amazon Bar Raiser",
+        "description": "Certified Bar Raiser for interviewing candidates",
+        "date": "2024-01-15"
+      }
+    ],
+    "linkedin_url": null,
+    "github_url": null,
+    "portfolio_url": null,
+    "twitter_url": null,
+    "verification_status": "verified",
+    "verification_document": null,
+    "verified_at": null,
+    "verified_by": null,
+    "available_for_mentoring": true,
+    "available_for_referrals": true,
+    "created_at": "2026-03-01T00:00:06.577Z",
+    "updated_at": "2026-03-01T00:00:06.577Z"
+  }
+},
+{
+  "model": "accounts.alumniprofile",
+  "pk": 16,
+  "fields": {
+    "user": [
+      "vikram.joshi@vvit.net"
+    ],
+    "graduation_year": 2023,
+    "roll_number": "19BQ1A4210",
+    "location": "Bangalore",
+    "profile_picture": "https://randomuser.me/api/portraits/men/55.jpg",
+    "resume": null,
+    "current_company": "Google",
+    "current_designation": "Software Engineer",
+    "current_location": null,
+    "industry": "Information Technology",
+    "experience_years": 1,
+    "bio": "Software Engineer at Google working on Search infrastructure. Competitive programming enthusiast with Codeforces rating 1900+.",
+    "skills": [
+      "C++",
+      "Python",
+      "Go",
+      "Distributed Systems",
+      "gRPC",
+      "BigQuery"
+    ],
+    "expertise_areas": [
+      "Distributed Systems",
+      "Search Infrastructure",
+      "Competitive Programming"
+    ],
+    "social_profiles": {
+      "linkedin": "https://linkedin.com/in/vikram-joshi-google",
+      "github": "https://github.com/vikramjoshi",
+      "leetcode": "https://leetcode.com/vikramjoshi"
+    },
+    "work_experience": [
+      {
+        "company": "Google",
+        "role": "Software Engineer",
+        "location": "Bangalore",
+        "startDate": "2023-07-01",
+        "endDate": "",
+        "current": true,
+        "description": "Working on Google Search ranking infrastructure using C++ and Python."
+      }
+    ],
+    "achievements": [
+      {
+        "title": "ACM ICPC Regionalist",
+        "description": "Reached Asia Regional round of ACM ICPC 2022",
+        "date": "2022-12-01"
+      },
+      {
+        "title": "Google Spot Bonus",
+        "description": "Awarded for shipping critical search quality improvement",
+        "date": "2024-03-01"
+      }
+    ],
+    "linkedin_url": null,
+    "github_url": null,
+    "portfolio_url": null,
+    "twitter_url": null,
+    "verification_status": "verified",
+    "verification_document": null,
+    "verified_at": null,
+    "verified_by": null,
+    "available_for_mentoring": true,
+    "available_for_referrals": true,
+    "created_at": "2026-03-01T00:00:07.222Z",
+    "updated_at": "2026-03-01T00:00:07.222Z"
+  }
+},
+{
+  "model": "accounts.alumniprofile",
+  "pk": 17,
+  "fields": {
+    "user": [
+      "neha.kapoor@vvit.net"
+    ],
+    "graduation_year": 2023,
+    "roll_number": "19BQ1A0501",
+    "location": "Hyderabad",
+    "profile_picture": "https://randomuser.me/api/portraits/women/33.jpg",
+    "resume": null,
+    "current_company": "Microsoft",
+    "current_designation": "Software Development Engineer",
+    "current_location": null,
+    "industry": "Cloud Computing",
+    "experience_years": 1,
+    "bio": "SDE at Microsoft working on Azure IoT platform. Passionate about bridging hardware and software.",
+    "skills": [
+      "C#",
+      ".NET",
+      "Azure",
+      "Python",
+      "IoT",
+      "React"
+    ],
+    "expertise_areas": [
+      "IoT Platforms",
+      "Cloud Services",
+      "Full-Stack Development"
+    ],
+    "social_profiles": {
+      "linkedin": "https://linkedin.com/in/neha-kapoor-msft",
+      "github": "https://github.com/nehakapoor"
+    },
+    "work_experience": [
+      {
+        "company": "Microsoft",
+        "role": "Software Development Engineer",
+        "location": "Hyderabad",
+        "startDate": "2023-07-15",
+        "endDate": "",
+        "current": true,
+        "description": "Building Azure IoT Hub features for enterprise customers. Working with C#, .NET, and React."
+      }
+    ],
+    "achievements": [
+      {
+        "title": "Microsoft Hackathon Winner",
+        "description": "Won internal hackathon for building an IoT anomaly detection system",
+        "date": "2024-02-01"
+      }
+    ],
+    "linkedin_url": null,
+    "github_url": null,
+    "portfolio_url": null,
+    "twitter_url": null,
+    "verification_status": "verified",
+    "verification_document": null,
+    "verified_at": null,
+    "verified_by": null,
+    "available_for_mentoring": true,
+    "available_for_referrals": true,
+    "created_at": "2026-03-01T00:00:07.718Z",
+    "updated_at": "2026-03-01T00:00:07.718Z"
+  }
+},
+{
+  "model": "accounts.alumniprofile",
+  "pk": 18,
+  "fields": {
+    "user": [
+      "rohit.das@vvit.net"
+    ],
+    "graduation_year": 2024,
+    "roll_number": "20BQ1A0408",
+    "location": "Bangalore",
+    "profile_picture": "https://randomuser.me/api/portraits/men/32.jpg",
+    "resume": null,
+    "current_company": "Qualcomm",
+    "current_designation": "Hardware Engineer",
+    "current_location": null,
+    "industry": "Semiconductor",
+    "experience_years": 1,
+    "bio": "Hardware Engineer at Qualcomm designing 5G modem chips. VLSI and RTL design specialist.",
+    "skills": [
+      "Verilog",
+      "SystemVerilog",
+      "UVM",
+      "VLSI",
+      "Python",
+      "FPGA"
+    ],
+    "expertise_areas": [
+      "VLSI Design",
+      "RTL Verification",
+      "5G Modem Design"
+    ],
+    "social_profiles": {
+      "linkedin": "https://linkedin.com/in/rohit-das-qualcomm",
+      "github": "https://github.com/rohitdas"
+    },
+    "work_experience": [
+      {
+        "company": "Qualcomm",
+        "role": "Hardware Engineer",
+        "location": "Bangalore",
+        "startDate": "2024-07-01",
+        "endDate": "",
+        "current": true,
+        "description": "Working on 5G modem RTL design and verification using SystemVerilog/UVM."
+      }
+    ],
+    "achievements": [],
+    "linkedin_url": null,
+    "github_url": null,
+    "portfolio_url": null,
+    "twitter_url": null,
+    "verification_status": "verified",
+    "verification_document": null,
+    "verified_at": null,
+    "verified_by": null,
+    "available_for_mentoring": true,
+    "available_for_referrals": true,
+    "created_at": "2026-03-01T00:00:08.249Z",
+    "updated_at": "2026-03-01T00:00:08.249Z"
+  }
+},
+{
+  "model": "accounts.alumniprofile",
+  "pk": 19,
+  "fields": {
+    "user": [
+      "meera.iyer@vvit.net"
+    ],
+    "graduation_year": 2024,
+    "roll_number": "21BQ5A0419",
+    "location": "Bangalore",
+    "profile_picture": "https://randomuser.me/api/portraits/women/44.jpg",
+    "resume": null,
+    "current_company": "Texas Instruments",
+    "current_designation": "Embedded Systems Engineer",
+    "current_location": null,
+    "industry": "Semiconductor",
+    "experience_years": 1,
+    "bio": "Embedded Systems Engineer at TI working on motor control solutions. Published paper on efficient PID controllers.",
+    "skills": [
+      "Embedded C",
+      "ARM Cortex",
+      "RTOS",
+      "PCB Design",
+      "MATLAB",
+      "Python"
+    ],
+    "expertise_areas": [
+      "Embedded Systems",
+      "Motor Control",
+      "Power Electronics"
+    ],
+    "social_profiles": {
+      "linkedin": "https://linkedin.com/in/meera-iyer-ti",
+      "github": "https://github.com/meeraiyer"
+    },
+    "work_experience": [
+      {
+        "company": "Texas Instruments",
+        "role": "Embedded Systems Engineer",
+        "location": "Bangalore",
+        "startDate": "2024-06-15",
+        "endDate": "",
+        "current": true,
+        "description": "Developing firmware for TI motor control MCUs. Working with C2000 real-time microcontrollers."
+      }
+    ],
+    "achievements": [
+      {
+        "title": "IEEE Paper Published",
+        "description": "Published paper on adaptive PID controllers for BLDC motors at IEEE INDICON 2023",
+        "date": "2023-12-15"
+      }
+    ],
+    "linkedin_url": null,
+    "github_url": null,
+    "portfolio_url": null,
+    "twitter_url": null,
+    "verification_status": "verified",
+    "verification_document": null,
+    "verified_at": null,
+    "verified_by": null,
+    "available_for_mentoring": true,
+    "available_for_referrals": true,
+    "created_at": "2026-03-01T00:00:08.760Z",
+    "updated_at": "2026-03-01T00:00:08.760Z"
+  }
+},
+{
+  "model": "accounts.alumniprofile",
+  "pk": 20,
+  "fields": {
+    "user": [
+      "fohoy67092@netoiu.com"
+    ],
+    "graduation_year": 2024,
+    "roll_number": "20BQ1A0520",
+    "location": "",
+    "profile_picture": null,
+    "resume": null,
+    "current_company": "Atlassian",
+    "current_designation": "Senior Software Engineer",
+    "current_location": null,
+    "industry": "Technology",
+    "experience_years": 3,
+    "bio": "",
+    "skills": [],
+    "expertise_areas": [],
+    "social_profiles": {
+      "linkedin": "https://linkedin.com/in/ravi-teja",
+      "github": "https://github.com/ravi-teja",
+      "twitter": "",
+      "instagram": "",
+      "facebook": "",
+      "portfolio": "",
+      "leetcode": "",
+      "codechef": ""
+    },
+    "work_experience": [
+      {
+        "company": "Atlassian",
+        "position": "Senior Software Engineer",
+        "startDate": "01-03-2023",
+        "endDate": "",
+        "isCurrent": true,
+        "description": "",
+        "location": "Hyderabad"
+      }
+    ],
+    "achievements": [],
+    "linkedin_url": "https://linkedin.com/in/ravi-teja",
+    "github_url": "https://github.com/ravi-teja",
+    "portfolio_url": "",
+    "twitter_url": "",
+    "verification_status": "verified",
+    "verification_document": null,
+    "verified_at": "2026-03-01T07:13:35.559Z",
+    "verified_by": null,
+    "available_for_mentoring": false,
+    "available_for_referrals": false,
+    "created_at": "2026-03-01T07:00:02.580Z",
+    "updated_at": "2026-03-01T18:12:04.028Z"
+  }
+},
+{
+  "model": "accounts.alumniprofile",
+  "pk": 21,
+  "fields": {
+    "user": [
+      "alumni.cse.01@vvit.net"
+    ],
+    "graduation_year": 2023,
+    "roll_number": "19BQ1A0551",
+    "location": null,
+    "profile_picture": null,
+    "resume": null,
+    "current_company": "TCS",
+    "current_designation": "Software Engineer",
+    "current_location": null,
+    "industry": null,
+    "experience_years": 0,
+    "bio": null,
+    "skills": [
+      "SQL",
+      "Python",
+      "Java"
+    ],
+    "expertise_areas": [],
+    "social_profiles": {},
+    "work_experience": [],
+    "achievements": [],
+    "linkedin_url": null,
+    "github_url": null,
+    "portfolio_url": null,
+    "twitter_url": null,
+    "verification_status": "verified",
+    "verification_document": null,
+    "verified_at": null,
+    "verified_by": null,
+    "available_for_mentoring": false,
+    "available_for_referrals": false,
+    "created_at": "2026-03-02T02:50:15.069Z",
+    "updated_at": "2026-03-02T02:50:15.069Z"
+  }
+},
+{
+  "model": "accounts.alumniprofile",
+  "pk": 22,
+  "fields": {
+    "user": [
+      "alumni.cse.02@vvit.net"
+    ],
+    "graduation_year": 2023,
+    "roll_number": "19BQ1A0552",
+    "location": null,
+    "profile_picture": null,
+    "resume": null,
+    "current_company": "Infosys",
+    "current_designation": "Software Engineer",
+    "current_location": null,
+    "industry": null,
+    "experience_years": 0,
+    "bio": null,
+    "skills": [
+      "JavaScript",
+      "Java",
+      "React"
+    ],
+    "expertise_areas": [],
+    "social_profiles": {},
+    "work_experience": [],
+    "achievements": [],
+    "linkedin_url": null,
+    "github_url": null,
+    "portfolio_url": null,
+    "twitter_url": null,
+    "verification_status": "verified",
+    "verification_document": null,
+    "verified_at": null,
+    "verified_by": null,
+    "available_for_mentoring": false,
+    "available_for_referrals": false,
+    "created_at": "2026-03-02T02:50:16.600Z",
+    "updated_at": "2026-03-02T02:50:16.600Z"
+  }
+},
+{
+  "model": "accounts.alumniprofile",
+  "pk": 23,
+  "fields": {
+    "user": [
+      "alumni.csm.01@vvit.net"
+    ],
+    "graduation_year": 2023,
+    "roll_number": "19BQ1A4251",
+    "location": null,
+    "profile_picture": null,
+    "resume": null,
+    "current_company": "Infosys",
+    "current_designation": "Software Engineer",
+    "current_location": null,
+    "industry": null,
+    "experience_years": 0,
+    "bio": null,
+    "skills": [
+      "NLP",
+      "Deep Learning",
+      "TensorFlow"
+    ],
+    "expertise_areas": [],
+    "social_profiles": {},
+    "work_experience": [],
+    "achievements": [],
+    "linkedin_url": null,
+    "github_url": null,
+    "portfolio_url": null,
+    "twitter_url": null,
+    "verification_status": "verified",
+    "verification_document": null,
+    "verified_at": null,
+    "verified_by": null,
+    "available_for_mentoring": false,
+    "available_for_referrals": false,
+    "created_at": "2026-03-02T02:50:21.939Z",
+    "updated_at": "2026-03-02T02:50:21.939Z"
+  }
+},
+{
+  "model": "accounts.alumniprofile",
+  "pk": 24,
+  "fields": {
+    "user": [
+      "alumni.csm.02@vvit.net"
+    ],
+    "graduation_year": 2023,
+    "roll_number": "19BQ1A4252",
+    "location": null,
+    "profile_picture": null,
+    "resume": null,
+    "current_company": "Wipro",
+    "current_designation": "Software Engineer",
+    "current_location": null,
+    "industry": null,
+    "experience_years": 0,
+    "bio": null,
+    "skills": [
+      "Machine Learning",
+      "Deep Learning",
+      "NLP"
+    ],
+    "expertise_areas": [],
+    "social_profiles": {},
+    "work_experience": [],
+    "achievements": [],
+    "linkedin_url": null,
+    "github_url": null,
+    "portfolio_url": null,
+    "twitter_url": null,
+    "verification_status": "verified",
+    "verification_document": null,
+    "verified_at": null,
+    "verified_by": null,
+    "available_for_mentoring": false,
+    "available_for_referrals": false,
+    "created_at": "2026-03-02T02:50:23.347Z",
+    "updated_at": "2026-03-02T02:50:23.347Z"
+  }
+},
+{
+  "model": "accounts.alumniprofile",
+  "pk": 25,
+  "fields": {
+    "user": [
+      "alumni.aid.01@vvit.net"
+    ],
+    "graduation_year": 2023,
+    "roll_number": "19BQ1A5451",
+    "location": null,
+    "profile_picture": null,
+    "resume": null,
+    "current_company": "Wipro",
+    "current_designation": "Software Engineer",
+    "current_location": null,
+    "industry": null,
+    "experience_years": 0,
+    "bio": null,
+    "skills": [
+      "R",
+      "Machine Learning",
+      "SQL"
+    ],
+    "expertise_areas": [],
+    "social_profiles": {},
+    "work_experience": [],
+    "achievements": [],
+    "linkedin_url": null,
+    "github_url": null,
+    "portfolio_url": null,
+    "twitter_url": null,
+    "verification_status": "verified",
+    "verification_document": null,
+    "verified_at": null,
+    "verified_by": null,
+    "available_for_mentoring": false,
+    "available_for_referrals": false,
+    "created_at": "2026-03-02T02:50:29.113Z",
+    "updated_at": "2026-03-02T02:50:29.113Z"
+  }
+},
+{
+  "model": "accounts.alumniprofile",
+  "pk": 26,
+  "fields": {
+    "user": [
+      "alumni.aid.02@vvit.net"
+    ],
+    "graduation_year": 2023,
+    "roll_number": "19BQ1A5452",
+    "location": null,
+    "profile_picture": null,
+    "resume": null,
+    "current_company": "Accenture",
+    "current_designation": "Software Engineer",
+    "current_location": null,
+    "industry": null,
+    "experience_years": 0,
+    "bio": null,
+    "skills": [
+      "Tableau",
+      "SQL",
+      "Python"
+    ],
+    "expertise_areas": [],
+    "social_profiles": {},
+    "work_experience": [],
+    "achievements": [],
+    "linkedin_url": null,
+    "github_url": null,
+    "portfolio_url": null,
+    "twitter_url": null,
+    "verification_status": "verified",
+    "verification_document": null,
+    "verified_at": null,
+    "verified_by": null,
+    "available_for_mentoring": false,
+    "available_for_referrals": false,
+    "created_at": "2026-03-02T02:50:30.650Z",
+    "updated_at": "2026-03-02T02:50:30.650Z"
+  }
+},
+{
+  "model": "accounts.alumniprofile",
+  "pk": 27,
+  "fields": {
+    "user": [
+      "alumni.aiml.01@vvit.net"
+    ],
+    "graduation_year": 2023,
+    "roll_number": "19BQ1A6151",
+    "location": null,
+    "profile_picture": null,
+    "resume": null,
+    "current_company": "Accenture",
+    "current_designation": "Software Engineer",
+    "current_location": null,
+    "industry": null,
+    "experience_years": 0,
+    "bio": null,
+    "skills": [
+      "Python",
+      "PyTorch",
+      "Computer Vision"
+    ],
+    "expertise_areas": [],
+    "social_profiles": {},
+    "work_experience": [],
+    "achievements": [],
+    "linkedin_url": null,
+    "github_url": null,
+    "portfolio_url": null,
+    "twitter_url": null,
+    "verification_status": "verified",
+    "verification_document": null,
+    "verified_at": null,
+    "verified_by": null,
+    "available_for_mentoring": false,
+    "available_for_referrals": false,
+    "created_at": "2026-03-02T02:50:36.053Z",
+    "updated_at": "2026-03-02T02:50:36.053Z"
+  }
+},
+{
+  "model": "accounts.alumniprofile",
+  "pk": 28,
+  "fields": {
+    "user": [
+      "alumni.aiml.02@vvit.net"
+    ],
+    "graduation_year": 2023,
+    "roll_number": "19BQ1A6152",
+    "location": null,
+    "profile_picture": null,
+    "resume": null,
+    "current_company": "Cognizant",
+    "current_designation": "Software Engineer",
+    "current_location": null,
+    "industry": null,
+    "experience_years": 0,
+    "bio": null,
+    "skills": [
+      "AI",
+      "ML",
+      "Computer Vision"
+    ],
+    "expertise_areas": [],
+    "social_profiles": {},
+    "work_experience": [],
+    "achievements": [],
+    "linkedin_url": null,
+    "github_url": null,
+    "portfolio_url": null,
+    "twitter_url": null,
+    "verification_status": "verified",
+    "verification_document": null,
+    "verified_at": null,
+    "verified_by": null,
+    "available_for_mentoring": false,
+    "available_for_referrals": false,
+    "created_at": "2026-03-02T02:50:37.556Z",
+    "updated_at": "2026-03-02T02:50:37.556Z"
+  }
+},
+{
+  "model": "accounts.alumniprofile",
+  "pk": 29,
+  "fields": {
+    "user": [
+      "alumni.cso.01@vvit.net"
+    ],
+    "graduation_year": 2023,
+    "roll_number": "19BQ1A4951",
+    "location": null,
+    "profile_picture": null,
+    "resume": null,
+    "current_company": "Cognizant",
+    "current_designation": "Software Engineer",
+    "current_location": null,
+    "industry": null,
+    "experience_years": 0,
+    "bio": null,
+    "skills": [
+      "Arduino",
+      "Node.js",
+      "Python"
+    ],
+    "expertise_areas": [],
+    "social_profiles": {},
+    "work_experience": [],
+    "achievements": [],
+    "linkedin_url": null,
+    "github_url": null,
+    "portfolio_url": null,
+    "twitter_url": null,
+    "verification_status": "verified",
+    "verification_document": null,
+    "verified_at": null,
+    "verified_by": null,
+    "available_for_mentoring": false,
+    "available_for_referrals": false,
+    "created_at": "2026-03-02T02:50:43.142Z",
+    "updated_at": "2026-03-02T02:50:43.142Z"
+  }
+},
+{
+  "model": "accounts.alumniprofile",
+  "pk": 30,
+  "fields": {
+    "user": [
+      "alumni.cic.01@vvit.net"
+    ],
+    "graduation_year": 2023,
+    "roll_number": "19BQ1A4751",
+    "location": null,
+    "profile_picture": null,
+    "resume": null,
+    "current_company": "HCL Technologies",
+    "current_designation": "Software Engineer",
+    "current_location": null,
+    "industry": null,
+    "experience_years": 0,
+    "bio": null,
+    "skills": [
+      "Cybersecurity",
+      "Python",
+      "Blockchain"
+    ],
+    "expertise_areas": [],
+    "social_profiles": {},
+    "work_experience": [],
+    "achievements": [],
+    "linkedin_url": null,
+    "github_url": null,
+    "portfolio_url": null,
+    "twitter_url": null,
+    "verification_status": "verified",
+    "verification_document": null,
+    "verified_at": null,
+    "verified_by": null,
+    "available_for_mentoring": false,
+    "available_for_referrals": false,
+    "created_at": "2026-03-02T02:50:49.137Z",
+    "updated_at": "2026-03-02T02:50:49.138Z"
+  }
+},
+{
+  "model": "accounts.alumniprofile",
+  "pk": 31,
+  "fields": {
+    "user": [
+      "alumni.cic.02@vvit.net"
+    ],
+    "graduation_year": 2023,
+    "roll_number": "19BQ1A4752",
+    "location": null,
+    "profile_picture": null,
+    "resume": null,
+    "current_company": "Tech Mahindra",
+    "current_designation": "Software Engineer",
+    "current_location": null,
+    "industry": null,
+    "experience_years": 0,
+    "bio": null,
+    "skills": [
+      "Blockchain",
+      "Solidity",
+      "Python"
+    ],
+    "expertise_areas": [],
+    "social_profiles": {},
+    "work_experience": [],
+    "achievements": [],
+    "linkedin_url": null,
+    "github_url": null,
+    "portfolio_url": null,
+    "twitter_url": null,
+    "verification_status": "verified",
+    "verification_document": null,
+    "verified_at": null,
+    "verified_by": null,
+    "available_for_mentoring": false,
+    "available_for_referrals": false,
+    "created_at": "2026-03-02T02:50:50.609Z",
+    "updated_at": "2026-03-02T02:50:50.609Z"
+  }
+},
+{
+  "model": "accounts.alumniprofile",
+  "pk": 32,
+  "fields": {
+    "user": [
+      "alumni.ece.01@vvit.net"
+    ],
+    "graduation_year": 2023,
+    "roll_number": "19BQ1A0451",
+    "location": null,
+    "profile_picture": null,
+    "resume": null,
+    "current_company": "Tech Mahindra",
+    "current_designation": "Software Engineer",
+    "current_location": null,
+    "industry": null,
+    "experience_years": 0,
+    "bio": null,
+    "skills": [
+      "VLSI Design",
+      "Verilog",
+      "Embedded Systems"
+    ],
+    "expertise_areas": [],
+    "social_profiles": {},
+    "work_experience": [],
+    "achievements": [],
+    "linkedin_url": null,
+    "github_url": null,
+    "portfolio_url": null,
+    "twitter_url": null,
+    "verification_status": "verified",
+    "verification_document": null,
+    "verified_at": null,
+    "verified_by": null,
+    "available_for_mentoring": false,
+    "available_for_referrals": false,
+    "created_at": "2026-03-02T02:50:56.821Z",
+    "updated_at": "2026-03-02T02:50:56.821Z"
+  }
+},
+{
+  "model": "accounts.alumniprofile",
+  "pk": 33,
+  "fields": {
+    "user": [
+      "alumni.ece.02@vvit.net"
+    ],
+    "graduation_year": 2023,
+    "roll_number": "19BQ1A0452",
+    "location": null,
+    "profile_picture": null,
+    "resume": null,
+    "current_company": "Amazon",
+    "current_designation": "Software Engineer",
+    "current_location": null,
+    "industry": null,
+    "experience_years": 0,
+    "bio": null,
+    "skills": [
+      "Embedded Systems",
+      "Arduino",
+      "VLSI Design"
+    ],
+    "expertise_areas": [],
+    "social_profiles": {},
+    "work_experience": [],
+    "achievements": [],
+    "linkedin_url": null,
+    "github_url": null,
+    "portfolio_url": null,
+    "twitter_url": null,
+    "verification_status": "verified",
+    "verification_document": null,
+    "verified_at": null,
+    "verified_by": null,
+    "available_for_mentoring": false,
+    "available_for_referrals": false,
+    "created_at": "2026-03-02T02:50:58.455Z",
+    "updated_at": "2026-03-02T02:50:58.455Z"
+  }
+},
+{
+  "model": "accounts.alumniprofile",
+  "pk": 34,
+  "fields": {
+    "user": [
+      "alumni.eee.01@vvit.net"
+    ],
+    "graduation_year": 2023,
+    "roll_number": "19BQ1A0251",
+    "location": null,
+    "profile_picture": null,
+    "resume": null,
+    "current_company": "Amazon",
+    "current_designation": "Software Engineer",
+    "current_location": null,
+    "industry": null,
+    "experience_years": 0,
+    "bio": null,
+    "skills": [
+      "Control Systems",
+      "MATLAB",
+      "PLC Programming"
+    ],
+    "expertise_areas": [],
+    "social_profiles": {},
+    "work_experience": [],
+    "achievements": [],
+    "linkedin_url": null,
+    "github_url": null,
+    "portfolio_url": null,
+    "twitter_url": null,
+    "verification_status": "verified",
+    "verification_document": null,
+    "verified_at": null,
+    "verified_by": null,
+    "available_for_mentoring": false,
+    "available_for_referrals": false,
+    "created_at": "2026-03-02T02:51:04.154Z",
+    "updated_at": "2026-03-02T02:51:04.154Z"
+  }
+},
+{
+  "model": "accounts.alumniprofile",
+  "pk": 35,
+  "fields": {
+    "user": [
+      "alumni.eee.02@vvit.net"
+    ],
+    "graduation_year": 2023,
+    "roll_number": "19BQ1A0252",
+    "location": null,
+    "profile_picture": null,
+    "resume": null,
+    "current_company": "Google",
+    "current_designation": "Software Engineer",
+    "current_location": null,
+    "industry": null,
+    "experience_years": 0,
+    "bio": null,
+    "skills": [
+      "PLC Programming",
+      "Control Systems",
+      "MATLAB"
+    ],
+    "expertise_areas": [],
+    "social_profiles": {},
+    "work_experience": [],
+    "achievements": [],
+    "linkedin_url": null,
+    "github_url": null,
+    "portfolio_url": null,
+    "twitter_url": null,
+    "verification_status": "verified",
+    "verification_document": null,
+    "verified_at": null,
+    "verified_by": null,
+    "available_for_mentoring": false,
+    "available_for_referrals": false,
+    "created_at": "2026-03-02T02:51:05.539Z",
+    "updated_at": "2026-03-02T02:51:05.539Z"
+  }
+},
+{
+  "model": "accounts.alumniprofile",
+  "pk": 36,
+  "fields": {
+    "user": [
+      "alumni.it.01@vvit.net"
+    ],
+    "graduation_year": 2023,
+    "roll_number": "19BQ1A1251",
+    "location": null,
+    "profile_picture": null,
+    "resume": null,
+    "current_company": "Google",
+    "current_designation": "Software Engineer",
+    "current_location": null,
+    "industry": null,
+    "experience_years": 0,
+    "bio": null,
+    "skills": [
+      "Web Development",
+      "Java",
+      "Cloud Computing"
+    ],
+    "expertise_areas": [],
+    "social_profiles": {},
+    "work_experience": [],
+    "achievements": [],
+    "linkedin_url": null,
+    "github_url": null,
+    "portfolio_url": null,
+    "twitter_url": null,
+    "verification_status": "verified",
+    "verification_document": null,
+    "verified_at": null,
+    "verified_by": null,
+    "available_for_mentoring": false,
+    "available_for_referrals": false,
+    "created_at": "2026-03-02T02:51:10.684Z",
+    "updated_at": "2026-03-02T02:51:10.684Z"
+  }
+},
+{
+  "model": "accounts.alumniprofile",
+  "pk": 37,
+  "fields": {
+    "user": [
+      "alumni.it.02@vvit.net"
+    ],
+    "graduation_year": 2023,
+    "roll_number": "19BQ1A1252",
+    "location": null,
+    "profile_picture": null,
+    "resume": null,
+    "current_company": "Microsoft",
+    "current_designation": "Software Engineer",
+    "current_location": null,
+    "industry": null,
+    "experience_years": 0,
+    "bio": null,
+    "skills": [
+      "Cloud Computing",
+      "DevOps",
+      "Python"
+    ],
+    "expertise_areas": [],
+    "social_profiles": {},
+    "work_experience": [],
+    "achievements": [],
+    "linkedin_url": null,
+    "github_url": null,
+    "portfolio_url": null,
+    "twitter_url": null,
+    "verification_status": "verified",
+    "verification_document": null,
+    "verified_at": null,
+    "verified_by": null,
+    "available_for_mentoring": false,
+    "available_for_referrals": false,
+    "created_at": "2026-03-02T02:51:11.956Z",
+    "updated_at": "2026-03-02T02:51:11.956Z"
+  }
+},
+{
+  "model": "accounts.alumniprofile",
+  "pk": 38,
+  "fields": {
+    "user": [
+      "alumni.civ.01@vvit.net"
+    ],
+    "graduation_year": 2023,
+    "roll_number": "19BQ1A0151",
+    "location": null,
+    "profile_picture": null,
+    "resume": null,
+    "current_company": "Microsoft",
+    "current_designation": "Software Engineer",
+    "current_location": null,
+    "industry": null,
+    "experience_years": 0,
+    "bio": null,
+    "skills": [
+      "STAAD Pro",
+      "AutoCAD",
+      "Revit"
+    ],
+    "expertise_areas": [],
+    "social_profiles": {},
+    "work_experience": [],
+    "achievements": [],
+    "linkedin_url": null,
+    "github_url": null,
+    "portfolio_url": null,
+    "twitter_url": null,
+    "verification_status": "verified",
+    "verification_document": null,
+    "verified_at": null,
+    "verified_by": null,
+    "available_for_mentoring": false,
+    "available_for_referrals": false,
+    "created_at": "2026-03-02T02:51:20.855Z",
+    "updated_at": "2026-03-02T02:51:20.855Z"
+  }
+},
+{
+  "model": "accounts.alumniprofile",
+  "pk": 39,
+  "fields": {
+    "user": [
+      "alumni.mec.01@vvit.net"
+    ],
+    "graduation_year": 2023,
+    "roll_number": "19BQ1A0351",
+    "location": null,
+    "profile_picture": null,
+    "resume": null,
+    "current_company": "TCS",
+    "current_designation": "Software Engineer",
+    "current_location": null,
+    "industry": null,
+    "experience_years": 0,
+    "bio": null,
+    "skills": [
+      "CATIA",
+      "CNC Programming",
+      "AutoCAD"
+    ],
+    "expertise_areas": [],
+    "social_profiles": {},
+    "work_experience": [],
+    "achievements": [],
+    "linkedin_url": null,
+    "github_url": null,
+    "portfolio_url": null,
+    "twitter_url": null,
+    "verification_status": "verified",
+    "verification_document": null,
+    "verified_at": null,
+    "verified_by": null,
+    "available_for_mentoring": false,
+    "available_for_referrals": false,
+    "created_at": "2026-03-02T02:53:39.228Z",
+    "updated_at": "2026-03-02T02:53:39.228Z"
+  }
+},
+{
+  "model": "accounts.alumniprofile",
+  "pk": 40,
+  "fields": {
+    "user": [
+      "alumni.mec.02@vvit.net"
+    ],
+    "graduation_year": 2023,
+    "roll_number": "19BQ1A0352",
+    "location": null,
+    "profile_picture": null,
+    "resume": null,
+    "current_company": "Infosys",
+    "current_designation": "Software Engineer",
+    "current_location": null,
+    "industry": null,
+    "experience_years": 0,
+    "bio": null,
+    "skills": [
+      "SolidWorks",
+      "ANSYS",
+      "CATIA"
+    ],
+    "expertise_areas": [],
+    "social_profiles": {},
+    "work_experience": [],
+    "achievements": [],
+    "linkedin_url": null,
+    "github_url": null,
+    "portfolio_url": null,
+    "twitter_url": null,
+    "verification_status": "verified",
+    "verification_document": null,
+    "verified_at": null,
+    "verified_by": null,
+    "available_for_mentoring": false,
+    "available_for_referrals": false,
+    "created_at": "2026-03-02T02:53:41.082Z",
+    "updated_at": "2026-03-02T02:53:41.082Z"
+  }
+},
+{
+  "model": "events.event",
+  "pk": 7,
+  "fields": {
+    "created_by": [
+      "admin@vvit.net"
+    ],
+    "title": "Annual Alumni Meet 2024",
+    "description": "Join us for the Annual Alumni Meet 2024!\n\n**Event Highlights:**\n- Networking opportunities\n- Panel discussions with industry leaders\n- Cultural performances\n- Dinner and awards ceremony\n\n**Schedule:**\n- 10:00 AM - Registration\n- 11:00 AM - Welcome address\n- 12:00 PM - Panel discussions\n- 2:00 PM - Lunch\n- 4:00 PM - Networking session\n- 7:00 PM - Cultural program and dinner\n\nAll alumni and current students are welcome!",
+    "cover_image": null,
+    "event_type": "meetup",
+    "status": "upcoming",
+    "start_datetime": "2026-04-14T04:30:00Z",
+    "end_datetime": "2026-04-14T14:30:00Z",
+    "venue": "College Auditorium",
+    "is_online": false,
+    "meeting_link": null,
+    "max_attendees": 500,
+    "registration_deadline": null,
+    "tags": [],
+    "target_audience": [],
+    "created_at": "2026-03-01T00:00:08.823Z",
+    "updated_at": "2026-03-01T00:00:08.823Z"
+  }
+},
+{
+  "model": "events.event",
+  "pk": 8,
+  "fields": {
+    "created_by": [
+      "admin@vvit.net"
+    ],
+    "title": "Campus Recruitment Drive 2024",
+    "description": "Annual Campus Recruitment Drive for final year students.\n\n**Participating Companies:**\n- Google\n- Amazon\n- Microsoft\n- Flipkart\n- And many more...\n\n**Eligibility:**\n- Final year B.Tech/M.Tech students\n- Minimum 7.0 CGPA\n- No active backlogs\n\n**Documents required:**\n- Resume\n- Academic transcripts\n- ID proof\n\nPrepare well and good luck!",
+    "cover_image": null,
+    "event_type": "other",
+    "status": "upcoming",
+    "start_datetime": "2026-03-15T03:30:00Z",
+    "end_datetime": "2026-03-15T12:30:00Z",
+    "venue": "College Campus",
+    "is_online": false,
+    "meeting_link": null,
+    "max_attendees": 1000,
+    "registration_deadline": null,
+    "tags": [],
+    "target_audience": [],
+    "created_at": "2026-03-01T00:00:08.830Z",
+    "updated_at": "2026-03-01T00:00:08.830Z"
+  }
+},
+{
+  "model": "events.event",
+  "pk": 9,
+  "fields": {
+    "created_by": [
+      "admin@vvit.net"
+    ],
+    "title": "Tech Talk: Future of AI",
+    "description": "Join us for an exciting tech talk on the Future of Artificial Intelligence.\n\n**Speaker:** Dr. Sarah Johnson, AI Research Lead at OpenAI\n\n**Topics covered:**\n- Current state of AI\n- Large Language Models\n- AI in industry applications\n- Career opportunities in AI\n\n**Who should attend:**\n- Students interested in AI/ML\n- Researchers\n- Industry professionals\n\nQ&A session included!",
+    "cover_image": null,
+    "event_type": "webinar",
+    "status": "upcoming",
+    "start_datetime": "2026-02-28T11:30:00Z",
+    "end_datetime": "2026-02-28T13:30:00Z",
+    "venue": "Online (Zoom)",
+    "is_online": true,
+    "meeting_link": null,
+    "max_attendees": 1000,
+    "registration_deadline": null,
+    "tags": [],
+    "target_audience": [],
+    "created_at": "2026-03-01T00:00:08.835Z",
+    "updated_at": "2026-03-01T00:00:08.835Z"
+  }
+},
+{
+  "model": "blogs.blog",
+  "pk": 10,
+  "fields": {
+    "author": [
+      "aditya.verma@vvit.net"
+    ],
+    "title": "My Journey from VVITU to Tech Giant",
+    "slug": "my-journey-from-vvitu-to-tech-giant",
+    "excerpt": "From a nervous freshman to landing my dream job - here's how VVITU shaped my career.",
+    "content": "When I joined VVITU in 2018, I had dreams but wasn't sure how to achieve them. \n            \nToday, working at a top tech company, I can confidently say that VVITU provided the perfect foundation. Here's my story......\n\n## Early Days\n\nThe first year was challenging. Adapting to college life, understanding the curriculum, and finding my passion - it was overwhelming. But our professors and mentors guided us through.\n\n## The Turning Point\n\nIn my second year, I joined the coding club and started participating in hackathons. This exposure changed everything. I learned about real-world problem-solving and teamwork.\n\n## Internships and Learning\n\nSummer internships were crucial. I interned at a startup in my third year, which taught me more than any classroom ever could. The hands-on experience was invaluable.\n\n## Placement Preparation\n\nThe placement cell at VVITU was extremely supportive. Mock interviews, resume building workshops, and constant guidance helped me prepare thoroughly.\n\n## Key Takeaways\n\n1. Never stop learning\n2. Build projects, not just grades\n3. Network with seniors and alumni\n4. Participate in extracurricular activities\n5. Stay consistent and persistent\n\nTo all current students: Your journey is unique. Make the most of every opportunity!",
+    "cover_image": "",
+    "tags": [
+      "Career",
+      "Journey",
+      "Placement",
+      "Advice"
+    ],
+    "category": "Career",
+    "status": "published",
+    "views_count": 0,
+    "likes_count": 0,
+    "published_at": "2026-03-01T07:13:04.357Z",
+    "created_at": "2026-03-01T00:00:08.772Z",
+    "updated_at": "2026-03-02T06:29:02.707Z"
+  }
+},
+{
+  "model": "blogs.blog",
+  "pk": 11,
+  "fields": {
+    "author": [
+      "pooja.menon@vvit.net"
+    ],
+    "title": "Top 5 Skills Every Engineering Student Must Have",
+    "slug": "top-5-skills-every-engineering-student-must-have",
+    "excerpt": "Beyond technical knowledge - essential skills for a successful engineering career.",
+    "content": "As an alumnus working in the industry for 3+ years, I've realized that technical knowledge alone isn't enough. Here are the top 5 skills that will set you apart:\n\n## 1. Communication Skills\n\nBeing able to explain complex technical concepts in simple terms is crucial. Practice this by:\n- Writing technical blogs\n- Giving presentations\n- Participating in group discussions\n\n## 2. Problem-Solving Ability\n\nEmployers value candidates who can think critically. Improve this by:\n- Solving coding problems regularly\n- Participating in hackathons\n- Working on real-world projects\n\n## 3. Teamwork and Collaboration\n\nAlmost all projects involve teams. Learn to:\n- Work with different personalities\n- Give and receive constructive feedback\n- Use collaboration tools like Git, Jira\n\n## 4. Continuous Learning\n\nTechnology evolves rapidly. Stay updated by:\n- Following industry blogs and podcasts\n- Taking online courses\n- Attending tech conferences\n\n## 5. Time Management\n\nBalancing academics, projects, and personal life is essential. Practice by:\n- Setting realistic goals\n- Prioritizing tasks\n- Using productivity tools\n\nStart developing these skills today. Your future self will thank you!",
+    "cover_image": null,
+    "tags": [
+      "Skills",
+      "Career Development",
+      "Advice",
+      "Students"
+    ],
+    "category": "Skills",
+    "status": "published",
+    "views_count": 0,
+    "likes_count": 0,
+    "published_at": "2026-03-01T07:13:04.357Z",
+    "created_at": "2026-03-01T00:00:08.780Z",
+    "updated_at": "2026-03-01T00:00:08.780Z"
+  }
+},
+{
+  "model": "blogs.blog",
+  "pk": 12,
+  "fields": {
+    "author": [
+      "fohoy67092@netoiu.com"
+    ],
+    "title": "Top 5 Skills Every Engineering Student Must Have",
+    "slug": "top-5-skills-every-engineering-student-must-have-1",
+    "excerpt": "Beyond technical knowledge – essential skills for a successful engineering career.",
+    "content": "Introduction\n\nEngineering is not just about coding, circuits, or formulas. In today’s competitive world, students need a combination of technical and soft skills to succeed. Here are the top 5 skills every engineering student should develop:-\n\n1. Problem-Solving Ability\n\nEngineering is all about solving real-world problems. Focus on understanding concepts deeply rather than memorizing. Practice puzzles, algorithmic problems, and case studies to sharpen your analytical thinking.\n\n2. Communication Skills\n\nYou must be able to explain your ideas clearly — whether in interviews, presentations, or teamwork situations. Strong communication improves collaboration and increases your impact in professional settings.\n\n3. Programming & Technical Proficiency\n\nEven non-CS branches benefit from programming knowledge. Learn at least one strong language (Python, Java, C++, etc.) and practice applying it to projects or competitions.\n\n# Example: Simple Python program\ndef greet(name):\n    return f\"Hello, {name}!\"\n\nprint(greet(\"VVITU Students\"))\n4. Teamwork & Collaboration\n\nMost projects in the industry are team-based. Learn how to work with different personalities, contribute effectively, and resolve conflicts constructively.\n\n5. Adaptability & Continuous Learning\n\nTechnology evolves fast. Stay updated with new tools, frameworks, and industry trends. Join webinars, online courses, and tech communities to keep learning.\n\nConclusion\n\nDegrees open doors, but skills build careers. Focus on developing both your technical knowledge and soft skills to succeed in the modern engineering landscape.\n\n![maxresdefault.jpg](https://res.cloudinary.com/dbnkhibzi/image/upload/v1772387656/alumni-connect/blogs/ckblmpphtjsr4ccsqqj7.jpg)",
+    "cover_image": "",
+    "tags": [
+      "#Skills #CareerDevelopment #Engineering #StudentSuccess #Tips #Advice #Learning #ProblemSolving #Communication #Teamwork #Adaptability #TechSkills #VVITUAlumni #EngineeringCareer"
+    ],
+    "category": "Tips & Advice",
+    "status": "published",
+    "views_count": 0,
+    "likes_count": 0,
+    "published_at": "2026-03-01T17:55:41.370Z",
+    "created_at": "2026-03-01T17:17:05.397Z",
+    "updated_at": "2026-03-01T17:56:55.119Z"
+  }
+},
+{
+  "model": "blogs.blog",
+  "pk": 13,
+  "fields": {
+    "author": [
+      "fohoy67092@netoiu.com"
+    ],
+    "title": "The Future of AI in Engineering: What Students Should Prepare For",
+    "slug": "the-future-of-ai-in-engineering-what-students-should-prepare-for",
+    "excerpt": "Artificial Intelligence is transforming every engineering field. Here’s what students must learn today to stay relevant tomorrow.",
+    "content": "Introduction\n\nArtificial Intelligence (AI) is no longer limited to research labs or tech giants. From civil engineering to mechanical design and electronics, AI is reshaping how industries operate.\n\nFor engineering students, this shift presents both opportunity and responsibility. Understanding where AI is heading can help you prepare for the future job market.\n\n1. AI is Becoming Cross-Disciplinary\n\nAI is not just for Computer Science students anymore.\n\nMechanical engineers use AI for predictive maintenance.\n\nCivil engineers use AI for smart city planning.\n\nElectrical engineers use AI in embedded and IoT systems.\n\nBiomedical engineers apply AI in diagnostics.\n\nNo matter your branch, having basic AI knowledge will give you an advantage.\n\n2. Data is the New Core Skill\n\nAI runs on data. Students should learn:\n\nData analysis\n\nData visualization\n\nBasic statistics\n\nSQL fundamentals\n\n# Example: Simple data analysis using Python\nimport numpy as np\n\ndata = [72, 85, 90, 68, 88]\naverage = np.mean(data)\nprint(\"Average:\", average)\n\nUnderstanding data helps you make smarter engineering decisions.\n\n3. Automation Will Change Job Roles\n\nMany repetitive engineering tasks are becoming automated.\n\nThis does NOT mean jobs will disappear — it means roles will evolve.\n\nFuture engineers must:\n\nFocus on problem-solving\n\nUnderstand system design\n\nWork alongside intelligent tools\n\nThink strategically\n\n4. Soft Skills Will Matter More\n\nAs AI handles technical repetition, human skills become more valuable:\n\nCritical thinking\n\nLeadership\n\nCreativity\n\nEthical decision-making\n\nEngineers who combine technical expertise with strong communication will lead future teams.\n\n5. Continuous Learning is Non-Negotiable\n\nTechnology evolves rapidly. Stay updated through:\n\nOnline courses\n\nIndustry webinars\n\nTechnical blogs\n\nOpen-source contributions\n\nAI tools will change — your ability to learn must stay constant.\n\nConclusion\n\nAI is not here to replace engineers — it is here to enhance them.\n\nStudents who adapt early, build strong fundamentals, and stay curious will thrive in this new era of intelligent engineering.\n\nThe future belongs to engineers who can think, adapt, and innovate.\n\n![2023-04-02 (1).png](https://res.cloudinary.com/dbnkhibzi/image/upload/v1772388004/alumni-connect/blogs/bwazzutr0gpxro7n7mxm.jpg)",
+    "cover_image": "https://mmpolytechnic.edu.in/wp-content/uploads/future-of-ai-1.png",
+    "tags": [
+      "AI",
+      "Artificial Intelligence",
+      "Engineering",
+      "Industry Trends",
+      "Technology",
+      "Innovation",
+      "Future Jobs",
+      "Automation",
+      "Data Science",
+      "Career Growth"
+    ],
+    "category": "Industry Insights",
+    "status": "published",
+    "views_count": 0,
+    "likes_count": 2,
+    "published_at": "2026-03-01T18:00:42.206Z",
+    "created_at": "2026-03-01T18:00:42.195Z",
+    "updated_at": "2026-03-01T18:00:42.206Z"
+  }
+},
+{
+  "model": "blogs.bloglike",
+  "pk": 1,
+  "fields": {
+    "blog": 13,
+    "user": [
+      "fohoy67092@netoiu.com"
+    ],
+    "created_at": "2026-03-01T18:12:23.592Z"
+  }
+},
+{
+  "model": "blogs.bloglike",
+  "pk": 2,
+  "fields": {
+    "blog": 13,
+    "user": [
+      "22bq1a42g7@vvit.net"
+    ],
+    "created_at": "2026-03-02T06:18:53.217Z"
+  }
+},
+{
+  "model": "blogs.blogsave",
+  "pk": 2,
+  "fields": {
+    "blog": 11,
+    "user": [
+      "fohoy67092@netoiu.com"
+    ],
+    "saved_at": "2026-03-01T11:01:23.988Z"
+  }
+},
+{
+  "model": "blogs.blogsave",
+  "pk": 3,
+  "fields": {
+    "blog": 12,
+    "user": [
+      "fohoy67092@netoiu.com"
+    ],
+    "saved_at": "2026-03-01T17:18:03.326Z"
+  }
+},
+{
+  "model": "blogs.blogsave",
+  "pk": 4,
+  "fields": {
+    "blog": 13,
+    "user": [
+      "22bq1a42g7@vvit.net"
+    ],
+    "saved_at": "2026-03-02T06:19:33.404Z"
+  }
+},
+{
+  "model": "blogs.blogsave",
+  "pk": 6,
+  "fields": {
+    "blog": 13,
+    "user": [
+      "aditya.verma@vvit.net"
+    ],
+    "saved_at": "2026-03-05T00:31:50.676Z"
+  }
+},
+{
+  "model": "blogs.blogsave",
+  "pk": 7,
+  "fields": {
+    "blog": 13,
+    "user": [
+      "22bq1a4225@vvit.net"
+    ],
+    "saved_at": "2026-03-05T02:49:30.584Z"
+  }
+},
+{
+  "model": "jobs.job",
+  "pk": 7,
+  "fields": {
+    "posted_by": [
+      "aditya.verma@vvit.net"
+    ],
+    "title": "Software Development Engineer",
+    "company": "TCS Digital",
+    "company_logo": null,
+    "description": "We are looking for talented Software Development Engineers to join our team!\n\n**About TCS Digital:**\nTCS Digital is the digital transformation arm of Tata Consultancy Services, working on cutting-edge technologies and innovative solutions.\n\n**Responsibilities:**\n- Design and develop scalable web applications\n- Write clean, maintainable code\n- Collaborate with cross-functional teams\n- Participate in code reviews\n- Debug and fix production issues\n\n**Work Culture:**\n- Hybrid work model\n- Learning and development opportunities\n- Great work-life balance\n- Excellent benefits package",
+    "requirements": "- B.Tech/BE in Computer Science or related field\n- Strong programming skills in Java/Python/JavaScript\n- Understanding of data structures and algorithms\n- Good problem-solving abilities\n- Excellent communication skills",
+    "responsibilities": "",
+    "job_type": "full_time",
+    "location": "Hyderabad",
+    "is_remote": false,
+    "salary_min": "600000.00",
+    "salary_max": "800000.00",
+    "salary_currency": "INR",
+    "experience_min": 0,
+    "experience_max": null,
+    "skills_required": [
+      "Java",
+      "Python",
+      "Spring Boot",
+      "React",
+      "SQL"
+    ],
+    "qualifications": [],
+    "application_url": null,
+    "application_email": null,
+    "status": "open",
+    "deadline": "2026-03-15",
+    "views_count": 0,
+    "applications_count": 0,
+    "created_at": "2026-03-01T00:00:08.786Z",
+    "updated_at": "2026-03-01T00:00:08.786Z"
+  }
+},
+{
+  "model": "jobs.job",
+  "pk": 8,
+  "fields": {
+    "posted_by": [
+      "pooja.menon@vvit.net"
+    ],
+    "title": "Data Science Intern",
+    "company": "Amazon",
+    "company_logo": null,
+    "description": "Amazon is hiring Data Science Interns for Summer 2026!\n\n**About the Role:**\nWork on real-world machine learning problems at Amazon scale. You'll be part of a team building ML models that impact millions of customers.\n\n**What You'll Do:**\n- Analyze large datasets to extract insights\n- Build and evaluate ML models\n- Work with senior data scientists\n- Present findings to stakeholders\n\n**What We Offer:**\n- Stipend: ₹50,000/month\n- 6-month internship\n- Pre-placement offer possibility\n- Mentorship from industry experts\n- Access to AWS resources",
+    "requirements": "- Currently pursuing B.Tech/M.Tech\n- Strong foundation in mathematics and statistics\n- Experience with Python and ML libraries\n- Knowledge of SQL\n- Previous internship experience is a plus",
+    "responsibilities": "",
+    "job_type": "internship",
+    "location": "Bangalore",
+    "is_remote": false,
+    "salary_min": "50000.00",
+    "salary_max": "50000.00",
+    "salary_currency": "INR",
+    "experience_min": 0,
+    "experience_max": null,
+    "skills_required": [
+      "Python",
+      "Machine Learning",
+      "TensorFlow",
+      "SQL",
+      "Statistics"
+    ],
+    "qualifications": [],
+    "application_url": null,
+    "application_email": null,
+    "status": "open",
+    "deadline": "2026-02-28",
+    "views_count": 0,
+    "applications_count": 0,
+    "created_at": "2026-03-01T00:00:08.793Z",
+    "updated_at": "2026-03-01T00:00:08.793Z"
+  }
+},
+{
+  "model": "jobs.job",
+  "pk": 9,
+  "fields": {
+    "posted_by": [
+      "vikram.joshi@vvit.net"
+    ],
+    "title": "Frontend Developer",
+    "company": "Google",
+    "company_logo": null,
+    "description": "Join Google's frontend team and build products used by billions!\n\n**About Google:**\nAt Google, we work on products that impact the lives of people globally. Our frontend team creates beautiful, responsive, and accessible web applications.\n\n**Role Description:**\nAs a Frontend Developer, you'll be responsible for building user-facing features and ensuring exceptional user experience.\n\n**Responsibilities:**\n- Develop new user-facing features\n- Build reusable code and libraries\n- Optimize applications for speed and scalability\n- Collaborate with designers and backend engineers\n- Ensure technical feasibility of UI/UX designs\n\n**Why Google:**\n- Competitive compensation\n- World-class benefits\n- Learning and growth opportunities\n- Work with the best engineers\n- Impact billions of users",
+    "requirements": "- B.Tech/M.Tech in Computer Science or equivalent\n- 2+ years of frontend development experience\n- Expert knowledge of JavaScript, HTML, CSS\n- Experience with modern frameworks (React, Vue, Angular)\n- Strong understanding of web performance\n- Portfolio of impressive projects",
+    "responsibilities": "",
+    "job_type": "full_time",
+    "location": "Bangalore",
+    "is_remote": false,
+    "salary_min": "2000000.00",
+    "salary_max": "3000000.00",
+    "salary_currency": "INR",
+    "experience_min": 0,
+    "experience_max": null,
+    "skills_required": [
+      "JavaScript",
+      "React",
+      "TypeScript",
+      "CSS",
+      "HTML",
+      "Web Performance"
+    ],
+    "qualifications": [],
+    "application_url": null,
+    "application_email": null,
+    "status": "open",
+    "deadline": "2026-03-31",
+    "views_count": 0,
+    "applications_count": 0,
+    "created_at": "2026-03-01T00:00:08.798Z",
+    "updated_at": "2026-03-01T00:00:08.798Z"
+  }
+},
+{
+  "model": "jobs.savedjob",
+  "pk": 2,
+  "fields": {
+    "user": [
+      "ananya.gupta@vvit.net"
+    ],
+    "job_id": "698e8d7bc139fed4c95052ec",
+    "saved_at": "2026-03-01T03:00:39.242Z"
+  }
+},
+{
+  "model": "jobs.savedjob",
+  "pk": 10,
+  "fields": {
+    "user": [
+      "fohoy67092@netoiu.com"
+    ],
+    "job_id": "69a480c2db2138f6603ad633",
+    "saved_at": "2026-03-01T18:09:19.811Z"
+  }
+},
+{
+  "model": "jobs.savedjob",
+  "pk": 11,
+  "fields": {
+    "user": [
+      "22bq1a42g7@vvit.net"
+    ],
+    "job_id": "69a480c2db2138f6603ad633",
+    "saved_at": "2026-03-02T06:19:55.690Z"
+  }
+},
+{
+  "model": "jobs.savedjob",
+  "pk": 12,
+  "fields": {
+    "user": [
+      "22bq1a42g7@vvit.net"
+    ],
+    "job_id": "698e8d7bc139fed4c95052ec",
+    "saved_at": "2026-03-02T06:19:58.656Z"
+  }
+},
+{
+  "model": "jobs.savedjob",
+  "pk": 13,
+  "fields": {
+    "user": [
+      "22bq1a42g7@vvit.net"
+    ],
+    "job_id": "698e8d7bc139fed4c95052eb",
+    "saved_at": "2026-03-02T06:20:00.200Z"
+  }
+},
+{
+  "model": "jobs.savedjob",
+  "pk": 14,
+  "fields": {
+    "user": [
+      "22bq1a4225@vvit.net"
+    ],
+    "job_id": "69a480c2db2138f6603ad633",
+    "saved_at": "2026-03-05T00:20:12.318Z"
+  }
+},
+{
+  "model": "accounts.emailotp",
+  "pk": 16,
+  "fields": {
+    "user": [
+      "22bq1a4225@vvit.net"
+    ],
+    "otp_code": "573536",
+    "purpose": "signup",
+    "created_at": "2026-03-01T06:52:00.649Z",
+    "expires_at": "2026-03-01T06:57:00.647Z",
+    "is_verified": true,
+    "verified_at": "2026-03-01T06:52:43.929Z"
+  }
+},
+{
+  "model": "accounts.emailotp",
+  "pk": 17,
+  "fields": {
+    "user": [
+      "fohoy67092@netoiu.com"
+    ],
+    "otp_code": "896475",
+    "purpose": "signup",
+    "created_at": "2026-03-01T07:00:02.676Z",
+    "expires_at": "2026-03-01T07:05:02.675Z",
+    "is_verified": true,
+    "verified_at": "2026-03-01T07:00:48.067Z"
+  }
+},
+{
+  "model": "accounts.emailotp",
+  "pk": 18,
+  "fields": {
+    "user": [
+      "22bq1a42h3@vvit.csm"
+    ],
+    "otp_code": "373123",
+    "purpose": "signup",
+    "created_at": "2026-03-02T06:05:44.678Z",
+    "expires_at": "2026-03-02T06:10:44.676Z",
+    "is_verified": false,
+    "verified_at": null
+  }
+},
+{
+  "model": "accounts.emailotp",
+  "pk": 19,
+  "fields": {
+    "user": [
+      "22bq1a42g7@vvit.net"
+    ],
+    "otp_code": "876325",
+    "purpose": "signup",
+    "created_at": "2026-03-02T06:15:26.483Z",
+    "expires_at": "2026-03-02T06:20:26.482Z",
+    "is_verified": true,
+    "verified_at": "2026-03-02T06:17:49.150Z"
+  }
+}
+]

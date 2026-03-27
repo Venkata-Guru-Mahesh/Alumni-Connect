@@ -10,7 +10,7 @@ const PublicLayout = () => {
           <div className="flex items-center justify-between h-16">
             <Link to="/" className="flex items-center gap-3">
               <img
-                src="https://www.vvitu.ac.in/src/assets/images/VVIT_logo.png"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXUjEM0r0I5UGvyH_3xy596muEJhbvBMVasg&s"
                 alt="VVITU Logo"
                 className="h-12"
               />
@@ -225,7 +225,7 @@ const PublicLayout = () => {
             <div>
               <div className="flex items-center gap-2 mb-4">
                 <img
-                  src="https://www.vvitu.ac.in/src/assets/images/VVIT_logo.png"
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXUjEM0r0I5UGvyH_3xy596muEJhbvBMVasg&s"
                   alt="VVITU Logo"
                   className="h-10"
                 />

@@ -31,4 +31,8 @@ applications:
           headers:
             - key: Cache-Control
               value: public, max-age=31536000, immutable
+      rewrites:
+        - source: '</^((?!\.(?:css|gif|ico|jpg|js|png|txt|svg|woff|woff2|ttf|map|webp)$).)*$>'
+          target: '/index.html'
+          status: 200
 

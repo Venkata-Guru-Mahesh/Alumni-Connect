@@ -52,7 +52,7 @@ const Navbar = ({ onMenuClick, title }) => {
           </button>
           
           <Link to="/" className="flex items-center gap-2">
-            <img src="https://www.vvitu.ac.in/src/assets/images/VVIT_logo.png" alt="VVITU" className="h-8" />
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXUjEM0r0I5UGvyH_3xy596muEJhbvBMVasg&s" alt="VVITU" className="h-8 rounded" />
             <span className="font-bold text-xl text-gray-900 hidden sm:block">
               VVITU Alumni
             </span>
