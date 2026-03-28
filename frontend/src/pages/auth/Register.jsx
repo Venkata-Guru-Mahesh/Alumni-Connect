@@ -438,7 +438,7 @@ const Register = () => {
           {/* Logo & Title */}
           <div className="text-center mb-8">
             <div className="inline-flex items-center justify-center mb-4">
-              <img src="https://www.vvitu.ac.in/src/assets/images/VVIT_logo.png" alt="VVITU Logo" className="h-16" />
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXUjEM0r0I5UGvyH_3xy596muEJhbvBMVasg&s" alt="VVITU Logo" className="h-16" />
             </div>
             <h1 className="text-2xl font-bold text-gray-900">
               {otpStep ? 'Verify Your Email' : 'Create Account'}

@@ -28,12 +28,18 @@ const AlumniDirectory = () => {
     currentPage: 1,
     totalPages: 1,
     totalItems: 0,
-    itemsPerPage: 12,
+    itemsPerPage: 20,
   });
 
   useEffect(() => {
     fetchAlumni();
   }, [filters, pagination.currentPage]);
+
+  useEffect(() => {
+    setPagination((prev) =>
+      prev.currentPage === 1 ? prev : { ...prev, currentPage: 1 }
+    );
+  }, [filters]);
 
   const fetchAlumni = async () => {
     try {
@@ -41,9 +47,12 @@ const AlumniDirectory = () => {
       // Use appropriate API based on user role
       const api = user?.role === 'alumni' ? alumniApi : studentApi;
       const response = await api.getAlumniDirectory({
-        ...filters,
+        department: filters.department,
+        graduation_year: filters.graduationYear,
+        company: filters.company,
+        location: filters.location,
+        search: filters.search,
         page: pagination.currentPage,
-        limit: pagination.itemsPerPage,
       });
       // Backend returns paginated data: {results: [], count: X, page: Y}
       const alumniData = Array.isArray(response.data) ? response.data : response.data.results || [];

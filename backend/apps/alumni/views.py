@@ -5,6 +5,7 @@ from rest_framework import generics, permissions
 from rest_framework.views import APIView
 from django.contrib.auth import get_user_model
 from django.db.models import Count
+from django.db.models import Q
 
 from common.permissions import RolePermission, ScopePermission, DepartmentPermission
 from common.utils import success_response, error_response
@@ -43,8 +44,11 @@ class AlumniListView(generics.ListAPIView):
         if user_role == 'hod' and self.request.user.department:
             queryset = queryset.filter(department=self.request.user.department)
         
-        # Filter by graduation year
-        graduation_year = self.request.query_params.get('graduation_year')
+        # Filter by graduation year (accept both snake_case and camelCase)
+        graduation_year = (
+            self.request.query_params.get('graduation_year')
+            or self.request.query_params.get('graduationYear')
+        )
         if graduation_year:
             queryset = queryset.filter(
                 alumni_profile__graduation_year=graduation_year
@@ -55,6 +59,14 @@ class AlumniListView(generics.ListAPIView):
         if company:
             queryset = queryset.filter(
                 alumni_profile__current_company__icontains=company
+            )
+
+        # Filter by location
+        location = self.request.query_params.get('location')
+        if location:
+            queryset = queryset.filter(
+                Q(alumni_profile__location__icontains=location)
+                | Q(alumni_profile__current_location__icontains=location)
             )
         
         # Filter by industry
@@ -69,6 +81,18 @@ class AlumniListView(generics.ListAPIView):
         if available_for_mentoring == 'true':
             queryset = queryset.filter(
                 alumni_profile__available_for_mentoring=True
+            )
+
+        # Free-text search (name/email/company/designation/industry)
+        search = self.request.query_params.get('search')
+        if search:
+            queryset = queryset.filter(
+                Q(first_name__icontains=search)
+                | Q(last_name__icontains=search)
+                | Q(email__icontains=search)
+                | Q(alumni_profile__current_company__icontains=search)
+                | Q(alumni_profile__current_designation__icontains=search)
+                | Q(alumni_profile__industry__icontains=search)
             )
         
         return queryset.select_related('alumni_profile')
