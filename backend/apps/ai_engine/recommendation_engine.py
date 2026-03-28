@@ -69,11 +69,17 @@ class CareerRecommendationEngine:
         except StudentProfile.DoesNotExist:
             return []
         
-        # Get verified alumni who are available for mentoring
+        # Prefer mentors who opted in, but fall back to verified alumni
+        # so recommendations still work in seeded/test datasets.
         alumni_profiles = AlumniProfile.objects.filter(
             user__is_verified=True,
             available_for_mentoring=True
         ).select_related('user')
+
+        if not alumni_profiles.exists():
+            alumni_profiles = AlumniProfile.objects.filter(
+                user__is_verified=True
+            ).select_related('user')
         
         if not alumni_profiles.exists():
             return []
@@ -104,32 +110,32 @@ class CareerRecommendationEngine:
         student_skills_lower = set(s.lower() for s in self._extract_skill_names(student.skills or []))
         
         for idx in top_indices:
-            if similarities[idx] > 0:  # Only include if there's some similarity
-                alumni = alumni_list[idx]
+            alumni = alumni_list[idx]
 
-                # Skill-overlap based score (more meaningful than raw TF-IDF cosine %)
-                # 60% weight: % of mentor's skills the student already has
-                # 40% weight: % of student's skills the mentor can guide on
-                alumni_skills_lower = set(s.lower() for s in self._extract_skill_names(alumni.skills or []))
-                if alumni_skills_lower and student_skills_lower:
-                    overlap = len(student_skills_lower & alumni_skills_lower)
-                    pct_mentor = overlap / len(alumni_skills_lower)
-                    pct_student = overlap / len(student_skills_lower)
-                    similarity_score = round((pct_mentor * 0.6 + pct_student * 0.4) * 100, 1)
-                else:
-                    similarity_score = round(float(similarities[idx]) * 100, 1)
+            # Skill-overlap based score (more meaningful than raw TF-IDF cosine %)
+            # 60% weight: % of mentor's skills the student already has
+            # 40% weight: % of student's skills the mentor can guide on
+            alumni_skills_lower = set(s.lower() for s in self._extract_skill_names(alumni.skills or []))
+            if alumni_skills_lower and student_skills_lower:
+                overlap = len(student_skills_lower & alumni_skills_lower)
+                pct_mentor = overlap / len(alumni_skills_lower)
+                pct_student = overlap / len(student_skills_lower)
+                similarity_score = round((pct_mentor * 0.6 + pct_student * 0.4) * 100, 1)
+            else:
+                similarity_score = round(float(similarities[idx]) * 100, 1)
 
-                recommendations.append({
-                    'alumni_id': alumni.user.id,
-                    'name': alumni.user.full_name,
-                    'email': alumni.user.email,
-                    'company': alumni.current_company,
-                    'designation': alumni.current_designation,
-                    'industry': alumni.industry,
-                    'skills': alumni.skills,
-                    'expertise_areas': alumni.expertise_areas,
-                    'similarity_score': similarity_score
-                })
+            recommendations.append({
+                'alumni_id': alumni.user.id,
+                'name': alumni.user.full_name,
+                'email': alumni.user.email,
+                'company': alumni.current_company,
+                'designation': alumni.current_designation,
+                'industry': alumni.industry,
+                'skills': alumni.skills,
+                'expertise_areas': alumni.expertise_areas,
+                'similarity_score': similarity_score,
+                'available_for_mentoring': alumni.available_for_mentoring
+            })
         
         return recommendations
     

@@ -240,11 +240,17 @@ class MLMentorMatcher:
         except StudentProfile.DoesNotExist:
             return []
         
-        # Get verified alumni who are available for mentoring
+        # Prefer mentors who opted in, but fall back to verified alumni
+        # so recommendations still work in seeded/test datasets.
         alumni_profiles = AlumniProfile.objects.filter(
             user__is_verified=True,
             available_for_mentoring=True
         ).select_related('user')
+
+        if not alumni_profiles.exists():
+            alumni_profiles = AlumniProfile.objects.filter(
+                user__is_verified=True
+            ).select_related('user')
         
         if not alumni_profiles.exists():
             return []
